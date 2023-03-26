@@ -1,18 +1,23 @@
 ---
-title: hexo入门
+title: Getting started with hexo
 updated: '2023-03-26 23:33:20'
-excerpt: 这是一篇hexo入门指南，详细描述了怎么从零开始搭建一个hexo博客。
+excerpt: This is a beginner's guide to Hexo, which provides a detailed description of how to build a Hexo blog from scratch.
 tags:
-  - 入门
+  - get-started
   - hexo
 categories:
-  - _posts
-permalink: /post/hexo-get-started-zkubxb.html
+  - Blog tutor
+  - Hexo
 comments: true
 toc: true
 ---
 
-
+<article class="message message-immersive is-primary">
+<div class="message-body">
+<i class="fas fa-globe-asia mr-2"></i>This article is also available in 
+<a href="{% post_path zh-CN/hexo-get-started-zkubxb %}">简体中文</a>.
+</div>
+</article>
 
 Welcome to [Hexo](https://hexo.io/)! This is your very first post. Check [documentation](https://hexo.io/docs/) for more info. If you get any problems when using Hexo, you can find the answer in [troubleshooting](https://hexo.io/docs/troubleshooting.html) or you can ask me on [GitHub](https://github.com/hexojs/hexo/issues).
 

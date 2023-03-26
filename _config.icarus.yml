@@ -170,7 +170,7 @@ article:
 search:
     type: insight
     # Whether to include pages in the search results
-    index_pages: true
+    index_pages: false
 # Comment plugin configurations
 # https://ppoffice.github.io/hexo-theme-icarus/categories/Plugins/Comment/
 comment:
@@ -224,7 +224,7 @@ sidebar:
     # Left sidebar configurations
     left:
         # Whether the sidebar sticks to the top when page scrolls
-        sticky: false
+        sticky: true
     # Right sidebar configurations
     right:
         # Whether the sidebar sticks to the top when page scrolls
@@ -238,33 +238,32 @@ widgets:
         position: left
         type: profile
         # Author name
-        author: Your name
+        author: Terwer
         # Author title
-        author_title: Your title
+        author_title: 纸上得来终觉浅，绝知此事要躬行。
         # Author's current location
-        location: Your location
+        # location: 深圳
+        location:
         # URL or path to the avatar image
-        avatar: 
+        avatar: /img/photo.svg
         # Whether show the rounded avatar image
-        avatar_rounded: false
+        avatar_rounded: true
         # Email address for the Gravatar
-        gravatar: 
+        # gravatar: youweics@163.com
+        gravatar:
         # URL or path for the follow button
-        follow_link: https://github.com/ppoffice
+        follow_link: https://github.com/terwer
         # Links to be shown on the bottom of the profile widget
         social_links:
             Github:
                 icon: fab fa-github
-                url: https://github.com/ppoffice
+                url: https://github.com/terwer
             Facebook:
                 icon: fab fa-facebook
-                url: https://facebook.com
+                url: https://facebook.com/tangyouwei
             Twitter:
                 icon: fab fa-twitter
-                url: https://twitter.com
-            Dribbble:
-                icon: fab fa-dribbble
-                url: https://dribbble.com
+                url: https://twitter.com/youweitang
             RSS:
                 icon: fas fa-rss
                 url: /
@@ -276,37 +275,31 @@ widgets:
         # Whether to show the index of each heading
         index: true
         # Whether to collapse sub-headings when they are out-of-view
-        collapsed: true
+        collapsed: false
         # Maximum level of headings to show (1-6)
         depth: 3
     # Recommendation links widget configurations
-    -
-        # Where should the widget be placed, left sidebar or right sidebar
-        position: left
-        type: links
-        # Names and URLs of the sites
-        links:
-            Hexo: https://hexo.io
-            Bulma: https://bulma.io
+#    -
+#        # Where should the widget be placed, left sidebar or right sidebar
+#        position: left
+#        type: links
+#        # Names and URLs of the sites
+#        links:
+#            Hexo: https://hexo.io
     # Categories widget configurations
     -
         # Where should the widget be placed, left sidebar or right sidebar
         position: left
         type: categories
     # Recent posts widget configurations
-    -
-        # Where should the widget be placed, left sidebar or right sidebar
-        position: left
-        type: recent_posts
-    # Archives widget configurations
-    -
-        # Where should the widget be placed, left sidebar or right sidebar
-        position: left
-        type: archives
+#    -
+#        # Where should the widget be placed, left sidebar or right sidebar
+#        position: left
+#        type: recent_posts
     # Tags widget configurations
     -
         # Where should the widget be placed, left sidebar or right sidebar
-        position: left
+        position: right
         type: tags
         # How to order tags. For example 'name' to order by name in ascending order, and '-length' to order by number of posts in each tags in descending order
         order_by: name
@@ -314,35 +307,40 @@ widgets:
         amount: 
         # Whether to show tags count, i.e. number of posts in the tag.
         show_count: true
+    # Archives widget configurations
+    -
+        # Where should the widget be placed, left sidebar or right sidebar
+        position: right
+        type: archives
     # Google FeedBurner email subscription widget configurations
-    -
-        # Where should the widget be placed, left sidebar or right sidebar
-        position: left
-        type: subscribe_email
-        # Hint text under the email input
-        description: 
-        # Feedburner ID
-        feedburner_id: ''
+#    -
+#        # Where should the widget be placed, left sidebar or right sidebar
+#        position: left
+#        type: subscribe_email
+#        # Hint text under the email input
+#        description:
+#        # Feedburner ID
+#        feedburner_id: ''
     # Google AdSense unit configurations
-    -
-        # Where should the widget be placed, left sidebar or right sidebar
-        position: left
-        type: adsense
-        # AdSense client ID
-        client_id: ''
-        # AdSense AD unit ID
-        slot_id: ''
+#    -
+#        # Where should the widget be placed, left sidebar or right sidebar
+#        position: left
+#        type: adsense
+#        # AdSense client ID
+#        client_id: ''
+#        # AdSense AD unit ID
+#        slot_id: ''
     # Follow.it email subscription widget configurations
-    -
-        # Where should the widget be placed, left sidebar or right sidebar
-        position: left
-        type: followit
-        # Hint text under the email input
-        description: 
-        # Subscription form action URL
-        action_url: ''
-        # Feed claiming verification code
-        verification_code: ''
+#    -
+#        # Where should the widget be placed, left sidebar or right sidebar
+#        position: left
+#        type: followit
+#        # Hint text under the email input
+#        description:
+#        # Subscription form action URL
+#        action_url: ''
+#        # Feed claiming verification code
+#        verification_code: ''
 # Plugin configurations
 # https://ppoffice.github.io/hexo-theme-icarus/categories/Plugins/
 plugins:
@@ -397,7 +395,7 @@ plugins:
         site_id: 
     # Enable the KaTeX math typesetting support
     # https://katex.org/
-    katex: false
+    katex: true
     # Enable the MathJax math typesetting support
     # https://www.mathjax.org/
     mathjax: false
