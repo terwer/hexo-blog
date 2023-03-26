@@ -1,14 +1,15 @@
 ---
 title: hexo入门
-updated: '2023-03-26 22:37:49'
+updated: '2023-03-26 23:33:20'
 excerpt: 这是一篇hexo入门指南，详细描述了怎么从零开始搭建一个hexo博客。
 tags:
   - 入门
   - hexo
 categories:
-  - 博客教程
+  - _posts
 permalink: /post/hexo-get-started-zkubxb.html
 comments: true
+toc: true
 ---
 
 
