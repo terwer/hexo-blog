@@ -117,13 +117,16 @@ navbar:
         关于: /about
     # Links to be shown on the right of the navigation bar
     links:
-        Download on GitHub:
+        发邮件:
+            icon: fab fa-regular fa-envelope
+            url: mailto:youweics@163.com
+        GitHub:
             icon: fab fa-github
             url: https://github.com/terwer/hexo-blog
 # Page footer configurations
 footer:
     # Copyright text
-    copyright: © 2019
+    # copyright: © 2019
     # Links to be shown on the right of the footer section
     links:
         Creative Commons:
@@ -141,7 +144,8 @@ article:
     highlight:
         # Code highlight themes
         # https://github.com/highlightjs/highlight.js/tree/master/src/styles
-        theme: atom-one-light
+        # theme: atom-one-light
+        theme: vs
         # Show copy code button
         clipboard: true
         # Default folding status of the code blocks. Can be "", "folded", "unfolded"
@@ -423,11 +427,3 @@ providers:
     fontcdn: google
     # Name or URL of the fontawesome icon font CDN provider
     iconcdn: fontawesome
-
-# hexo-asset
-# 启用 Hexo 的资产管理功能，并允许您将自定义资产文件与文章相关联
-asset:
-    post_asset_folder: true
-after_generate:
-    - cp source/css/custom.css public/css/
-    - cp source/js/custom.js public/js/

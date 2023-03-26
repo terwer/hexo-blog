@@ -2,7 +2,6 @@ lockfileVersion: 5.4
 
 specifiers:
   hexo: ^6.3.0
-  hexo-asset: ^1.0.0
   hexo-generator-archive: ^2.0.0
   hexo-generator-category: ^2.0.0
   hexo-generator-index: ^3.0.0
@@ -16,7 +15,6 @@ specifiers:
 
 dependencies:
   hexo: 6.3.0
-  hexo-asset: 1.0.0
   hexo-generator-archive: 2.0.0
   hexo-generator-category: 2.0.0
   hexo-generator-index: 3.0.0
@@ -1972,10 +1970,6 @@ packages:
     engines: {node: '>= 0.4.0'}
     dependencies:
       function-bind: 1.1.1
-    dev: false
-
-  /hexo-asset/1.0.0:
-    resolution: {integrity: sha512-DnYepoIRPb9nVCdjkgHWRYUi13aeLPxnyBxc++uXPNRZqjzQ6TmUW17Xh90h1osQMLsryIrq+bkarYf4vdGdmg==}
     dev: false
 
   /hexo-cli/4.3.0:
