@@ -1,6 +1,6 @@
 ---
 title: hexo入门
-updated: '2023-03-26 20:28:36'
+updated: '2023-03-26 22:31:42'
 excerpt: >-
   welcometohexo_thisisyourveryfirstpostcheckdocumentationformoreinfoifyougetanyproblemswhenusinghexoyoucanfindtheanswerintroubleshootingoryoucanaskmeongithubquickstartcreateanewposthexonewmoreinfo_writingrunserverhexoservermoreinfo_servergeneratestaticfiles
 tags:
