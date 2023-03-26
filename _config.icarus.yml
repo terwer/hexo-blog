@@ -109,7 +109,8 @@ navbar:
     # Navigation menu items
     menu:
         首页: /
-        归档: /archives
+        文章: /archives
+        心情: /tags/timeline
         分类: /categories
         标签: /tags
         友链: /links
