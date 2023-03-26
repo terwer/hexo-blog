@@ -7,9 +7,12 @@ excerpt: >-
 tags:
   - 二级缓存
   - mybatis
-categories: []
+categories:
+  - 后端开发
+  - MyBatis
 permalink: /post/mybatis-s-secondary-cache-z2ssaab.html
 comments: true
+toc: true
 ---
 
 

@@ -9,9 +9,12 @@ tags:
   - 组件
   - 可以
   - 扩展
-categories: []
+categories:
+  - 后端开发
+  - MyBatis
 permalink: /post/introduction-and-principle-of-mybatis-mechanism-2x4q8s.html
 comments: true
+toc: true
 ---
 
 

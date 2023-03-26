@@ -1,6 +1,61 @@
 @import "./style/fonts"
+
+// -------------------------------------------------变量定义-后续可扩展---------------------------------------------------
+// 变量定义
+_border-color-light = rgba(0, 0, 0, 12%)
+
+:root
+  --zhi-border-color _border-color-light
+// -------------------------------------------------变量定义-后续可扩展---------------------------------------------------
+
+// 整体样式
 body
   font-family $fontFamily
-  // 站点头部logo
-  .navbar-logo img
-    height 1.75rem
+  textarea
+    font-family $fontFamily
+
+// 字体修改
+code
+pre
+  font-family $fontFamily
+figure.highlight figcaption span
+  font-family $fontFamily
+figure.highlight figcaption span
+  font-family $fontFamily
+.cc-window
+.cc-revoke
+  font-family $fontFamily
+.is-family-primary
+  font-family $fontFamily
+is-family-secondary
+  font-family $fontFamily
+is-family-sans-serif
+  font-family $fontFamily
+is-family-monospace
+  font-family $fontFamily
+is-family-code
+  font-family $fontFamily
+
+// 站点头部logo
+.navbar-logo img
+  height 1.75rem
+
+// 代码块Mac风格
+figure.highlight.foldable div.level-left:after
+  content " "
+  position absolute
+  background #fa625c
+  box-shadow 23px 0 #fdbc40, 45px 0 #35cd4b
+  border-radius 50%
+  top 9px
+  left 30px
+  height 12px
+  width 12px
+  z-index 1
+figure.highlight
+  border 0.5px solid var(--zhi-border-color)
+  border-radius 5px
+// 带代码选项卡点击去掉背景
+.tabs.is-boxed a:hover
+  // background-color #f5f5f5
+  background unset

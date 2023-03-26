@@ -13,6 +13,7 @@ tags:
 categories: []
 permalink: /post/anki-use-example-ir73c.html
 comments: true
+toc: true
 ---
 
 

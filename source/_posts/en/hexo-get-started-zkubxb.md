@@ -6,10 +6,11 @@ tags:
   - get-started
   - hexo
 categories:
-  - Blog tutor
+  - 博客搭建
   - Hexo
 comments: true
 toc: true
+hidden: true
 ---
 
 <article class="message message-immersive is-primary">
