@@ -1,8 +1,7 @@
 ---
 title: hexo入门
-updated: '2023-03-26 22:31:42'
-excerpt: >-
-  welcometohexo_thisisyourveryfirstpostcheckdocumentationformoreinfoifyougetanyproblemswhenusinghexoyoucanfindtheanswerintroubleshootingoryoucanaskmeongithubquickstartcreateanewposthexonewmoreinfo_writingrunserverhexoservermoreinfo_servergeneratestaticfiles
+updated: '2023-03-26 22:37:49'
+excerpt: 这是一篇hexo入门指南，详细描述了怎么从零开始搭建一个hexo博客。
 tags:
   - 入门
   - hexo
