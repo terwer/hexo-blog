@@ -6,7 +6,7 @@ tags:
   - 入门
   - hexo
 categories:
-  - _posts
+  - 博客教程
 permalink: /post/hexo-get-started-zkubxb.html
 comments: true
 ---
