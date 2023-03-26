@@ -3,13 +3,13 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Hexo
-subtitle: ''
-description: ''
-keywords:
-author: John Doe
-language: en
-timezone: ''
+title: '浅海拾贝 - 寻找未知的技术拼图'
+subtitle: '寻找未知的技术拼图'
+description: '浅海拾贝是关注与分享互联网及服务端开发技术的个人博客，致力于Java后端开发及服务端技术、软件架构、微服务技术分享'
+keywords: '软件架构,服务端开发,Java,Spring,Dubbo,Zookeeper,微服务'
+author: 'Terwer'
+language: zh-CN
+timezone: 'Asia/Shanghai'
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
