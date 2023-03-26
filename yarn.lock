@@ -696,6 +696,11 @@ hexo-theme-landscape@^0.0.3:
   resolved "https://registry.npmmirror.com/hexo-theme-landscape/-/hexo-theme-landscape-0.0.3.tgz#87d1f4d613da9be5245dad0d4b80479eab70d386"
   integrity sha512-b0Di+TUVs4ESrNX4ULEh9uQmADpO6kr10rIJ2OGZM8suNQNFKdxn+vJUjnLfKkCPJAfVmS7/S83KCNYe4tpoNw==
 
+hexo-theme-volantis@^5.7.7:
+  version "5.7.7"
+  resolved "https://registry.yarnpkg.com/hexo-theme-volantis/-/hexo-theme-volantis-5.7.7.tgz#83ad5459dec59f4765f040f057b54a3d81de2f52"
+  integrity sha512-pnB5MnSRkQ8eQYnyDOZPJBEPFcF84HzrqgwDXSHp0Kygg1tryD6cbJrriBBuvQkzGaXC5pWeQcnk5cnE6Rpbfw==
+
 hexo-util@^2.0.0, hexo-util@^2.7.0:
   version "2.7.0"
   resolved "https://registry.npmmirror.com/hexo-util/-/hexo-util-2.7.0.tgz#13d09292e79d260db35399710b3e19f3995443a3"
