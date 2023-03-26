@@ -1,15 +1,13 @@
 ---
 title: hexo入门
-updated: '2023-03-26 20:28:21'
+updated: '2023-03-26 20:28:36'
 excerpt: >-
   welcometohexo_thisisyourveryfirstpostcheckdocumentationformoreinfoifyougetanyproblemswhenusinghexoyoucanfindtheanswerintroubleshootingoryoucanaskmeongithubquickstartcreateanewposthexonewmoreinfo_writingrunserverhexoservermoreinfo_servergeneratestaticfiles
 tags:
   - 入门
-  - h
-  - e
-  - x
-  - o
-categories: []
+  - hexo
+categories:
+  - _posts
 permalink: /post/hexo-get-started-zkubxb.html
 comments: true
 ---
