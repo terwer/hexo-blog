@@ -1,6 +1,6 @@
 ---
 title: '[精华]使用NRWL-NX-workspace创建一个Node-js-命令行库'
-updated: '2023-03-30 00:55:44'
+updated: '2023-03-30 01:03:11'
 excerpt: >-
   在这篇文章中，我会分享我在思源笔记 zhi
   主题开发过程中创建命令行库时精确的开发流程。这个统一的开发栈帮助我在我的各个子项目之间共享库时减少了大量重复工作和时间。
@@ -118,15 +118,6 @@ nx generate @nrwl/js:library zhi-cli --publishable --importPath=zhi-cli  --bundl
 }
 ```
 
-In file `packages/cli/tsconfig.lib.json`​
-This step is optional. If you plan to mix `.ts`​ files with `.js`​ files:
-
-```json
-"compilerOptions": {
-    "allowJs": true
-}
-```
-
 在文件 `packages/zhi-cli/project.json` ​中，当构建包时，您应该指示 NX 将包使用的依赖项包含在生成的 package.json 中。
 
 ```
@@ -140,13 +131,11 @@ This step is optional. If you plan to mix `.ts`​ files with `.js`​ files:
 
 ## 将库转换为为 ES 模块
 
-> 编写 ES 模块库时，导入文件时应该包括扩展名 `.js`​ 。例如 `import { rootDebug } from './utils.js'`​。
-
 要导入 ES 模块库，你的库也应该是 ==ES 模块==。有关更多信息，请参见 [@nrwl/node 应用程序未转换为 esm · Issue #10296 · nrwl/nx](https://github.com/nrwl/nx/issues/10296) 。请通过以下步骤进行：
 
-* 在文件 `packages/cli/package.json`​ 中添加 `"type": "module"`​ ，这个在上面一步已经说过了。
+* 在文件 `packages/zhi-cli/package.json`​ 中添加 `"type": "module"`​ ，这个在上面一步已经说过了。
 
-* 在文件 `packages/cli/tsconfig.lib.json` ​中，将 `module`​ 值更改为 `esnext`​。
+* 在文件 `packages/zhi-cli/tsconfig.json`​ 中，将 `module`​ 值更改为 `esnext`​。
 
 * 在文件 `tsconfig.base.json` ​中，将 `target`​ 编译器值更改为 `esnext`​。
 
@@ -155,8 +144,6 @@ This step is optional. If you plan to mix `.ts`​ files with `.js`​ files:
 > 在继续指南之前，现在是将您的工作区提交到 Github 的好时机。
 
 在前面的部分，您创建了一个工作区并准备好了您的命令。现在是添加命令的时候了。
-
-The recommended structure for the library:
 
 library 的推荐结构：
 
@@ -181,7 +168,7 @@ packages
 │   └── vite.config.ts
 ```
 
-在本文中，我们将创建一个名为 `doSomething` ​的命令，除了写入控制台外，什么也不做。
+在本文中，我们将创建一个名为 `init`​ 的命令，除了写入控制台外，什么也不做。
 
 ## 安装推荐的库
 
@@ -200,8 +187,6 @@ packages
 pnpm add commander debug
 pnpm add @types/debug @types/node -D
 ```
-
-### [   ](https://dev.to/eransakal/create-a-nodejs-command-line-library-with-nrwl-nx-workspace-5hin#add-the-initial-command-code)   Add the initial command code
 
 ## 添加初始命令代码
 
@@ -375,8 +360,8 @@ zhi-cli:init Zhi-cli is executing now.... +0ms
 ```bash
 cd dist/packages/zhi-cli
 npm link
-
-
+## for linux, like Debian, Ubuntu, Deepin, UOS, you should use the following command
+## sudo npm link
 ```
 
 完成后，您可以导航返回根文件夹。
@@ -389,7 +374,7 @@ npm link
 added 1 package in 713ms
 ```
 
-使用npx运行这个库。例如，`npx zhi-cli`​：
+使用 npx 运行这个库。例如，`npx zhi-cli`​：
 
 ```
 ➜  zhi-cli git:(dev) npx zhi-cli
