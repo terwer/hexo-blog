@@ -1,15 +1,19 @@
 ---
-title: 使用NRWL-NX-workspace创建一个Node-js-命令行库
-updated: '2023-03-29 17:00:23'
+title: '[精华]使用NRWL-NX-workspace创建一个Node-js-命令行库'
+updated: '2023-03-30 00:55:44'
 excerpt: >-
-  为什么要费心写另一篇关于cli库的文章呢？有无数关于创建nodejs命令行库的文章可用而本文并不尝试重新发明轮子。它被作为一个统一的工作流专门为我们组所采用并在产品中使用的技术堆栈量身定制_nrwlnx工作区语义化版本控制githubactionsgithubpackages多分发渠道（即功能预发布分支）以及netlifyvercel服务。在这篇文章中我会分享我在思源笔记zhi主题开发过程中创建命令行库时精确的开发流程。这个统一的开发栈帮助我在我的各个子项目之间共享库时减少了大量重复工作和时间。阅读本文对
+  在这篇文章中，我会分享我在思源笔记 zhi
+  主题开发过程中创建命令行库时精确的开发流程。这个统一的开发栈帮助我在我的各个子项目之间共享库时减少了大量重复工作和时间。
 tags:
   - 使用
   - 创建
   - 工作
   - 一个
   - 命令
-categories: []
+  - zhi
+  - zhi-cli
+categories:
+  - _posts
 permalink: /post/use-nrwlnxworkspace-to-create-a-nodejscommand-line-library-1urtj8.html
 comments: true
 ---
@@ -18,7 +22,7 @@ comments: true
 
 ## 为什么要费心写另一篇关于 CLI 库的文章呢？
 
-有无数关于创建 Node.js 命令行库的文章可用，而本文并不尝试重新发明轮子。它被作为一个统一的工作流，专门为我们组所采用并在产品中使用的技术堆栈量身定制：NRWL NX 工作区、语义化版本控制、GitHub actions、GitHub packages、多分发渠道（即功能/预发布分支）以及 Netlify/Vercel 服务。
+有无数关于创建 Node.js 命令行库的文章可用，而本文并不尝试重新发明轮子。它被作为一个统一的工作流，专门为 zhi 主题所采用并为 zhi 所使用的技术堆栈进行了量身定制：NRWL NX 工作区、语义化版本控制、GitHub actions、GitHub packages、多分发渠道（即功能/预发布分支）以及 Netlify/Vercel 服务。
 
 在这篇文章中，我会分享我在 [思源笔记 zhi 主题](https://github.com/terwer/zhi) 开发过程中创建命令行库时精确的开发流程。这个统一的开发栈帮助我在我的各个子项目之间共享库时减少了大量重复工作和时间。
 
@@ -27,17 +31,17 @@ comments: true
 本文将指导您如何：
 
 1. 创建一个基于 NX 的工作区
-2. 在 NX 工作区中创建一个 Typescript 的  Node 项目
+2. 在 NX 工作区中创建一个 Typescript 的  Vite 项目
 3. 将该项目暴露为 node.js CLI 执行项目
 4. 转译为 ESM 模块
 5. 将代码分割成命令
 
 文章末尾有一些跟进文章：
 
-1. 使用 GitHub Actions 自动将库部署到 NPM 注册表中。
+1. 使用 GitHub Actions 自动将库发布到 NPM 仓库中。
 2. 在开发机器上使用环境参数运行库。
 
-一个可行的例子可以在 [terwer/zhi](https://github.com/terwer/zhi/tree/dev/packages/zhi-cli "zhi-cli") 中找到。
+一个可运行的例子可以在 [terwer/zhi](https://github.com/terwer/zhi/tree/dev/packages/zhi-cli "zhi-cli") 中找到。
 
 ## 先决条件
 
@@ -57,10 +61,10 @@ npx create-nx-workspace@latest
 
 create-nx-workspace 脚本会创建一个以您提供的项目名称命名的文件夹。进入新创建的文件夹。
 
-添加 `.nvmrc`​ 文件并将内容设置为所需的 Node.js 版本号。例如，如果您正在使用 Node v18：
+添加 `.nvmrc`​ 文件并将内容设置为所需的 Node.js 版本号。例如，如果您正在使用 Node v16：
 
 ```
-18
+16
 ```
 
 现在，请运行以下命令在工作区中创建一个基于 Vite 的新项目。
@@ -73,45 +77,57 @@ nx generate @nrwl/js:library zhi-cli --publishable --importPath=zhi-cli  --bundl
 ## In the selection option select Vitest as Unit test framework
 ```
 
-In file `packages/cli/package.json`​:
+在文件 `packages/zhi-cli/package.json`​ 中：
 
-* set version to `1.0.0`​.
-* make the script executable
+* 将版本设置为 `1.0.0`​.
+* 让脚本可执行。
 
-```
-"bin": "./src/cli.js"
-```
+  ```
+  "bin": "./index.js"
+  ```
 
-Note: once deployed to [NPM](https://npmjs.com/), you will then be able to run the library using its name, for example by running `npx obsidian-album --help`​
+注意：一旦部署到 [NPM](https://npmjs.com/)，您将可以使用其名称运行该库，例如通过运行 `npx zhi-cli --help`​ 。
 
-* add some scripts that will help you during the development
+* 添加一些脚本，这些脚本可以在开发过程中帮助你。注意：在根目录加，不是子项目。
 
-```
-"scripts": {  
-  "build": "nx run cli:build",  
-  "watch": "nx run cli:build --watch",
-  "cli": "node dist/packages/cli"
-},
-```
+  ```json
+  {
+    "name": "zhi",
+    "version": "1.0.0",
+    "license": "GPL",
+    "type": "module",
+    "scripts": {
+      "dev:zhi-cli": "node --experimental-specifier-resolution=node --loader ts-node/esm packages/zhi-cli/index.ts",
+      "watch:zhi-cli": "nx run zhi-cli:build --watch",
+      "cli:zhi-cli": "node --experimental-specifier-resolution=node dist/packages/zhi-cli"
+    },
+  }
+  ```
 
-In file `packages/cli/tsconfig.lib.json`​
-Add a flag to avoid the Typescript error when a library doesn't export a default object.
+注意：上面我们设置了 `"type": "module"`​​ , 这样保证直接 ESM 的方式运行 js 文件，否则就需要设置文件后缀名为 mjs。
 
-```
-compilerOptions { "allowSyntheticDefaultImports": true }}
+还有：如果直接运行 ts 文件，还需要安装 `ts-node`​ 。
+
+在文件 `packages/cli/tsconfig.lib.json` ​中添加一个标志以避免 Typescript 错误，当库没有导出默认对象时。
+
+```json
+{
+  compilerOptions { 
+    "allowSyntheticDefaultImports": true 
+  }
+}
 ```
 
 In file `packages/cli/tsconfig.lib.json`​
 This step is optional. If you plan to mix `.ts`​ files with `.js`​ files:
 
-```
+```json
 "compilerOptions": {
     "allowJs": true
 }
 ```
 
-In file `packages/cli/project.json`​
-You should instruct NX to include the dependencies used by the package in the generated package.json when building the package.
+在文件 `packages/zhi-cli/project.json` ​中，当构建包时，您应该指示 NX 将包使用的依赖项包含在生成的 package.json 中。
 
 ```
 "targets": {
@@ -122,183 +138,272 @@ You should instruct NX to include the dependencies used by the package in the ge
 }
 ```
 
-### [   ](https://dev.to/eransakal/create-a-nodejs-command-line-library-with-nrwl-nx-workspace-5hin#transpile-the-library-to-es-module)   Transpile the library to ES Module
+## 将库转换为为 ES 模块
 
-> When writing the ES Module library, you should include the extension `.js`​ when importing files. For example `import { rootDebug } from './utils.js'`​
+> 编写 ES 模块库时，导入文件时应该包括扩展名 `.js`​ 。例如 `import { rootDebug } from './utils.js'`​。
 
-To import ES Module libraries, your library should also be ES Module. See [@nrwl/node application not transpiling to esm · Issue #10296 · nrwl/nx](https://github.com/nrwl/nx/issues/10296) for more information.
+要导入 ES 模块库，你的库也应该是 ==ES 模块==。有关更多信息，请参见 [@nrwl/node 应用程序未转换为 esm · Issue #10296 · nrwl/nx](https://github.com/nrwl/nx/issues/10296) 。请通过以下步骤进行：
 
-In file `packages/cli/package.json`​:
-add `"type": "module"`​.
+* 在文件 `packages/cli/package.json`​ 中添加 `"type": "module"`​ ，这个在上面一步已经说过了。
 
-In file `packages/cli/tsconfig.lib.json`​
-Change the "module" value to `esnext`​.
+* 在文件 `packages/cli/tsconfig.lib.json` ​中，将 `module`​ 值更改为 `esnext`​。
 
-In file  `tsconfig.base.json`​:
-Change the "target" compiler value to `esnext`​.
+* 在文件 `tsconfig.base.json` ​中，将 `target`​ 编译器值更改为 `esnext`​。
 
-## [   ](https://dev.to/eransakal/create-a-nodejs-command-line-library-with-nrwl-nx-workspace-5hin#create-the-initial-command-of-the-cli)   Create the initial command of the CLI
+## 创建初始 CLI 命令
 
-> Before continuing with the guide, this is a good time to commit your workspace to Github.
+> 在继续指南之前，现在是将您的工作区提交到 Github 的好时机。
 
-In the previous section, you created a workspace and prepared it to your commands. Now it is time to add the command.
+在前面的部分，您创建了一个工作区并准备好了您的命令。现在是添加命令的时候了。
 
 The recommended structure for the library:
 
-```
-packages/cli/src                           (folder)
-    ┣ index.ts
-    ┣ cli.ts
-    ┣ utils.ts
-    ┗ {command-name}                       (folder)
-        ┣ any-file-relevant-to-command.ts
-        ┗ command.ts  
-    ┗ {another-command-name}               (folder)
-        ┗ command.ts  
-```
-
-In this article, we will create a command named `doSomething`​ that does nothing besides writing to the console.
-
-### [   ](https://dev.to/eransakal/create-a-nodejs-command-line-library-with-nrwl-nx-workspace-5hin#install-recommended-libraries)   Install recommended libraries
-
-Many excellent libraries can be used to provide a rich and friendly command-line user experience.
-
-In this article, we will install a few mandatory libraries.
-
-1. [commander - npm](https://www.npmjs.com/package/commander) - Required. A library that lets you define the commands and their arguments, options, help, etc.
-2. [debug - npm](https://www.npmjs.com/package/debug) - Required. A popular library to write debug logs.
-3. [fast-glob - npm](https://www.npmjs.com/package/fast-glob) - Recommended. A high-speed and efficient glob library.
-4. [inquirer - npm](https://www.npmjs.com/package/inquirer) - Recommended. A collection of common interactive command line user interfaces.
-
-Install the required libraries (feel free to add a few more).
+library 的推荐结构：
 
 ```
-npm i commander debug
+packages
+├── zhi-cli
+│   ├── package.json
+│   ├── project.json
+│   ├── README.md
+│   ├── src
+│   │   ├── index.ts
+│   │   └── lib
+│   │       ├── zhi-cli.spec.ts
+│   │       ├── zhi-cli.ts
+│   │       ├── {command-name}                    (folder)
+│   │       │       ├── command.ts
+│   │       └── {another-command-name}     (folder)
+│   │                  ├── command.ts
+│   ├── tsconfig.json
+│   ├── tsconfig.lib.json
+│   ├── tsconfig.spec.json
+│   └── vite.config.ts
 ```
 
-### [   ](https://dev.to/eransakal/create-a-nodejs-command-line-library-with-nrwl-nx-workspace-5hin#remove-unused-files)   Remove unused files
+在本文中，我们将创建一个名为 `doSomething` ​的命令，除了写入控制台外，什么也不做。
 
-in the project, delete the `packages/cli/src/lib`​ folder, which was added when you created the node package.
+## 安装推荐的库
 
-Clear the content from the `packages/cli/src/index.ts`​ file. Keep the file as you might need it later, but it can be empty at the moment.
+许多优秀的库可被用于提供丰富且友好的命令行用户体验。
+
+在本文中，我们将安装一些必备的库。
+
+1. [commander - npm](https://www.npmjs.com/package/commander) - 必备的一个库，可让您定义命令及其参数、选项、帮助等。
+2. [debug - npm](https://www.npmjs.com/package/debug) - 必备的一个流行库，可用于编写调试日志。
+3. [fast-glob - npm](https://www.npmjs.com/package/fast-glob) - 推荐的一个高速高效的 Glob 库。
+4. [inquirer - npm](https://www.npmjs.com/package/inquirer) - 推荐的一个常见交互式命令行用户界面的集合。
+
+安装所需的库（可以添加更多）。
+
+```bash
+pnpm add commander debug
+pnpm add @types/debug @types/node -D
+```
 
 ### [   ](https://dev.to/eransakal/create-a-nodejs-command-line-library-with-nrwl-nx-workspace-5hin#add-the-initial-command-code)   Add the initial command code
 
-#### [   ](https://dev.to/eransakal/create-a-nodejs-command-line-library-with-nrwl-nx-workspace-5hin#the-raw-srcutilsts-endraw-file)   The `src/utils.ts`​ file
+## 添加初始命令代码
 
-Copy the following content into the utils file.
+新建 `src/lib/utils.ts` ​文件
 
-```
-import Debug from 'debug';  
+将以下内容复制到 utils 文件中。
 
-// TODO replace `obsidian-album` with a friendly short label that describe best your library  
-export const rootDebug = Debug('obsidian-album')  
+```bash
+import Debug from "debug"
 
-export const printVerboseHook = (thisCommand) => {  
+export const rootDebug = Debug("zhi-cli")
 
-  const options = thisCommand.opts();  
+export const printVerboseHook = (thisCommand: any) => {
+  const options = thisCommand.opts()
 
-  if (options.verbose) {  
-    Debug.enable('obsidian-album*');  
-    rootDebug(`CLI arguments`);  
-    rootDebug(options);  
-  }  
+  if (options.verbose) {
+    Debug.enable("zhi-cli*")
+    rootDebug(`CLI arguments`)
+    rootDebug(options)
+  }
 }
 ```
 
-#### [   ](https://dev.to/eransakal/create-a-nodejs-command-line-library-with-nrwl-nx-workspace-5hin#the-raw-srcdosomethingcommandts-endraw-file)   The `src/doSomething/command.ts`​ file
+### `src/lib/init/command.ts`​ 文件
 
-Please copy the following template and adjust it to your needs.
+请复制以下模板并根据需要进行调整。
 
-```
-import * as fs from "fs";  
-import { Command }  from 'commander';  
-import { printVerboseHook, rootDebug } from '../utils.js';  
-import * as process from "process";  
+```ts
+import * as fs from "fs"
+import { Command } from "commander"
+import { printVerboseHook, rootDebug } from "../utils"
+import * as process from "process"
 
-// TODO general: remember to name the folder of this file as the command name  
-// TODO general: search all the occurrences of `doSomething` and replace with your command name  
+// remember to name the folder of this file as the command name
 
-const debug = rootDebug.extend('doSomething')  
-const debugError = rootDebug.extend('doSomething:error')  
+const debug = rootDebug.extend("init")
+const debugError = rootDebug.extend("init:error")
 
-export const doSomethingCommand = () => {  
-  const command = new Command('doSomething');  
-  command  
-    .argument('[path]', "directory to do something with")  
-    .option('--verbose', 'output debug logs',false)  
-    .option('--target <name>', 'the target name', 'aws')  
-    // .requiredOption('--includeDirectories', 'copy directories')  
-    .hook('preAction', printVerboseHook)  
-    .action(async(path, options) => {  
-      if (path && !fs.existsSync(path)) {  
-        debugError('invalid path provided')  
-        process.exit(1)  
-      }  
+export const initCommand = () => {
+  const command = new Command("init")
+  command
+    .argument("[path]", "directory to do something with")
+    .option("--verbose", "output debug logs", false)
+    .option("--target <name>", "the target name", "node")
+    // .requiredOption('--includeDirectories', 'copy directories')
+    .hook("preAction", printVerboseHook)
+    .action(async (path, options) => {
+      if (path && !fs.existsSync(path)) {
+        debugError("invalid path provided")
+        process.exit(1)
+      }
 
-      debug(`Something important is happening now....`)  
-    });  
-  return command;  
+      debug(`Zhi-cli is executing now....`)
+    })
+  return command
 }
-```
-
-#### [   ](https://dev.to/eransakal/create-a-nodejs-command-line-library-with-nrwl-nx-workspace-5hin#the-raw-srcclits-endraw-file)   the `src/cli.ts`​ file
-
-Create the file and add the following:
 
 ```
-#! /usr/bin/env node  
-import {Command} from 'commander';  
-import {doSomethingCommand} from "./doSomething/command.js";  
 
-const program = new Command();  
-program  
-  .name('Obsidian PDF album creator')  
-  .description('Create printable styled PDF album from Obsidian')  
+### `src/lib/zhi-cli.ts`​ 文件
 
-program.addCommand(doSomethingCommand());  
+创建文件并添加以下内容：
 
-program.parse(process.argv);
+```ts
+import { Command } from "commander"
+import { initCommand } from "./init/commnd"
+
+const program = new Command()
+program.name("Zhi project creator").description("Create projects for zhi theme")
+
+program.addCommand(initCommand())
+
+program.parse(process.argv)
 ```
 
-## [   ](https://dev.to/eransakal/create-a-nodejs-command-line-library-with-nrwl-nx-workspace-5hin#test-the-command)   Test the command
+## 配置 Vite 支持 Node
 
-Run the following command `npm run cli -- doSomething --verbose`​.
+这一步非常重要，否则后面的无法运行，修改 `vite.config.ts`​ ，这里需要添加 `external`​ 和 `output.banner`​ 。
 
-**Note!** the additional `--`​ after the `npm run cli`​ is used to signal NPM to send all the remaining arguments to the underline script, meaning our node CLI library.
-
+```js
+ build: {
+    lib: {
+      // Could also be a dictionary or array of multiple entry points.
+      entry: "src/index.ts",
+      name: "zhi-cli",
+      fileName: "index",
+      // Change this to the formats you want to support.
+      // Don't forgot to update your package.json as well.
+      formats: ["es", "cjs"],
+    },
+    rollupOptions: {
+      // External packages that should not be bundled into your library.
+      external: ["fs", "path", "process", "events"],
+      output: {
+        banner: "#! /usr/bin/env node",
+      },
+    },
 ```
-> obsidian-album@1.0.0 cli
-> node dist/packages/cli/src/cli doSomething --verbose
 
-  obsidian-album CLI arguments +0ms
-  obsidian-album { verbose: true, target: 'aws' } +1ms
-  obsidian-album:doSomething Something important is happening now.... +0ms
+## 测试命令
+
+先运行 `nx build zhi-cli`​
+
+```bash
+➜  zhi git:(dev) ✗ nx build zhi-cli
+
+> nx run zhi-cli:build
+
+vite v4.2.1 building for production...
 ```
 
-### [   ](https://dev.to/eransakal/create-a-nodejs-command-line-library-with-nrwl-nx-workspace-5hin#test-the-command-2)   Test the command #2
+然后运行以下命令 `node --experimental-specifier-resolution=node dist/packages/zhi-cli init --verbose`​​。
 
-You can test it in a way that resembles the deployed application's behavior.
-
-Make sure you build your project.
-
-In the terminal, navigate to `dist/packages/cli`​ and run the `npm link`​ command.
-
-Once done, you can navigate back to the root folder.
-
-Use npx to run the library. For example, `npx obsidian-album`​:
-
+```bash
+➜  zhi git:(dev) ✗ node --experimental-specifier-resolution=node dist/packages/zhi-cli init --verbose
+(node:14065) ExperimentalWarning: The Node.js specifier resolution flag is experimental. It could change or be removed at any time.
+(Use `node --trace-warnings ...` to show where the warning was created)
+zhi-cli CLI arguments +0ms
+zhi-cli { verbose: true, target: 'node' } +1ms
+zhi-cli:init Zhi-cli is executing now.... +0ms
 ```
-Usage: Obsidian PDF album creator [options] [command]
 
-Create a printable styled PDF album from Obsidian
+或者 `pnpm cli:zhi-cli`​
+
+```bash
+➜  zhi git:(dev) ✗ pnpm cli:zhi-cli  
+
+> zhi@1.0.0 cli:zhi-cli /home/terwer/Documents/mydocs/zhi
+> node --experimental-specifier-resolution=node dist/packages/zhi-cli
+
+(node:15205) ExperimentalWarning: The Node.js specifier resolution flag is experimental. It could change or be removed at any time.
+(Use `node --trace-warnings ...` to show where the warning was created)
+Usage: Zhi project creator [options] [command]
+
+Create projects for zhi theme
 
 Options:
-  -h, --help                    display help for command
+  -h, --help             display help for command
 
 Commands:
-  doSomething [options] [path]
-  help [command]                display help for command
+  init [options] [path]
+  help [command]         display help for command
+ ELIFECYCLE  Command failed with exit code 1.
+➜  zhi git:(dev) 
+```
+
+运行 `init`​
+
+```bash
+➜  zhi git:(dev) pnpm cli:zhi-cli init --verbose
+
+> zhi@1.0.0 cli:zhi-cli /home/terwer/Documents/mydocs/zhi
+> node --experimental-specifier-resolution=node dist/packages/zhi-cli "init" "--verbose"
+
+(node:16121) ExperimentalWarning: The Node.js specifier resolution flag is experimental. It could change or be removed at any time.
+(Use `node --trace-warnings ...` to show where the warning was created)
+zhi-cli CLI arguments +0ms
+zhi-cli { verbose: true, target: 'node' } +1ms
+zhi-cli:init Zhi-cli is executing now.... +0ms
+➜  zhi git:(dev) ➜
+```
+
+## 命令行测试命令
+
+你可以以类似于部署应用的行为方式进行测试。
+
+确保您构建了项目。
+
+在终端中，导航到 `dist/packages/zhi-cli`​ ，然后运行 `npm link`​ 命令。
+
+```bash
+cd dist/packages/zhi-cli
+npm link
+
+
+```
+
+完成后，您可以导航返回根文件夹。
+
+```bash
+➜  zhi-cli git:(dev) sudo npm link       
+请输入密码:
+验证成功
+
+added 1 package in 713ms
+```
+
+使用npx运行这个库。例如，`npx zhi-cli`​：
+
+```
+➜  zhi-cli git:(dev) npx zhi-cli
+Usage: Zhi project creator [options] [command]
+
+Create projects for zhi theme
+
+Options:
+  -h, --help             display help for command
+
+Commands:
+  init [options] [path]
+  help [command]         display help for command
+➜  zhi-cli git:(dev)
 ```
 
 ### [   ](https://dev.to/eransakal/create-a-nodejs-command-line-library-with-nrwl-nx-workspace-5hin#test-the-command-3)   Test the command #3
