@@ -1,6 +1,6 @@
 ---
-title: '[精华]使用NRWL-NX-workspace创建一个Node-js-命令行库'
-updated: '2023-03-30 01:03:11'
+title: 使用NRWL-NX-workspace创建一个Node-js-命令行库
+updated: '2023-03-30 11:12:38'
 excerpt: >-
   在这篇文章中，我会分享我在思源笔记 zhi
   主题开发过程中创建命令行库时精确的开发流程。这个统一的开发栈帮助我在我的各个子项目之间共享库时减少了大量重复工作和时间。
@@ -14,6 +14,7 @@ tags:
   - zhi-cli
 categories:
   - _posts
+  - zh-CN
 permalink: /post/use-nrwlnxworkspace-to-create-a-nodejscommand-line-library-1urtj8.html
 comments: true
 toc: true
@@ -105,11 +106,11 @@ nx generate @nrwl/js:library zhi-cli --publishable --importPath=zhi-cli  --bundl
   }
   ```
 
-注意：上面我们设置了 `"type": "module"`​​ , 这样保证直接 ESM 的方式运行 js 文件，否则就需要设置文件后缀名为 mjs。
+注意：上面我们设置了 `"type": "module"`​ , 这样保证直接 ESM 的方式运行 js 文件，否则就需要设置文件后缀名为 mjs。
 
 还有：如果直接运行 ts 文件，还需要安装 `ts-node`​ 。
 
-在文件 `packages/cli/tsconfig.lib.json` ​中添加一个标志以避免 Typescript 错误，当库没有导出默认对象时。
+在文件 `packages/cli/tsconfig.lib.json`​ 中添加一个标志以避免 Typescript 错误，当库没有导出默认对象时。
 
 ```json
 {
@@ -119,7 +120,7 @@ nx generate @nrwl/js:library zhi-cli --publishable --importPath=zhi-cli  --bundl
 }
 ```
 
-在文件 `packages/zhi-cli/project.json` ​中，当构建包时，您应该指示 NX 将包使用的依赖项包含在生成的 package.json 中。
+在文件 `packages/zhi-cli/project.json`​ 中，当构建包时，您应该指示 NX 将包使用的依赖项包含在生成的 package.json 中。
 
 ```
 "targets": {
@@ -135,10 +136,8 @@ nx generate @nrwl/js:library zhi-cli --publishable --importPath=zhi-cli  --bundl
 要导入 ES 模块库，你的库也应该是 ==ES 模块==。有关更多信息，请参见 [@nrwl/node 应用程序未转换为 esm · Issue #10296 · nrwl/nx](https://github.com/nrwl/nx/issues/10296) 。请通过以下步骤进行：
 
 * 在文件 `packages/zhi-cli/package.json`​ 中添加 `"type": "module"`​ ，这个在上面一步已经说过了。
-
 * 在文件 `packages/zhi-cli/tsconfig.json`​ 中，将 `module`​ 值更改为 `esnext`​。
-
-* 在文件 `tsconfig.base.json` ​中，将 `target`​ 编译器值更改为 `esnext`​。
+* 在文件 `tsconfig.base.json`​ 中，将 `target`​ 编译器值更改为 `esnext`​。
 
 ## 创建初始 CLI 命令
 
@@ -191,7 +190,7 @@ pnpm add @types/debug @types/node -D
 
 ## 添加初始命令代码
 
-新建 `src/lib/utils.ts` ​文件
+新建 `src/lib/utils.ts`​ 文件
 
 将以下内容复制到 utils 文件中。
 
@@ -299,7 +298,7 @@ program.parse(process.argv)
 vite v4.2.1 building for production...
 ```
 
-然后运行以下命令 `node --experimental-specifier-resolution=node dist/packages/zhi-cli init --verbose`​​。
+然后运行以下命令 `node --experimental-specifier-resolution=node dist/packages/zhi-cli init --verbose`​。
 
 ```bash
 ➜  zhi git:(dev) ✗ node --experimental-specifier-resolution=node dist/packages/zhi-cli init --verbose
@@ -368,7 +367,7 @@ npm link
 完成后，您可以导航返回根文件夹。
 
 ```bash
-➜  zhi-cli git:(dev) sudo npm link       
+➜  zhi-cli git:(dev) sudo npm link   
 请输入密码:
 验证成功
 
@@ -392,49 +391,73 @@ Commands:
 ➜  zhi-cli git:(dev)
 ```
 
-### [   ](https://dev.to/eransakal/create-a-nodejs-command-line-library-with-nrwl-nx-workspace-5hin#test-the-command-3)   Test the command #3
+## NPM 测试命令
 
-Once deployed to the NPM registry, you can run it without downloading the library using NPX. This is a recommended way if your library is not tight the workflow of the libraries/apps that consume it.
+一旦部署到 NPM 仓库，您可以使用 NPX 运行它，而无需下载库。如果您的库不紧密地与使用它的库/应用程序的工作流程相关，则建议使用此方法。
 
-## [   ](https://dev.to/eransakal/create-a-nodejs-command-line-library-with-nrwl-nx-workspace-5hin#providing-powerful-ux-that-people-will-appreciate)   Providing powerful UX that people will appreciate
+```json
+nx publish zhi-cli --ver=1.2.0 --tag=lates
+```
 
-> The javascript ecosystem is amazing and lets you make your application shine by consuming other libraries. Still, remember that you increase the potential for security vulnerabilities when you rely more and more on 3rd party libraries.
+```json
+npx zhi-cli
+```
 
-I'm using two libraries to improve my project's UX significantly. You can check my usage with them in [esakal/obsidian-album](https://github.com/esakal/obsidian-album).
+结果如下：
 
-### [   ](https://dev.to/eransakal/create-a-nodejs-command-line-library-with-nrwl-nx-workspace-5hin#multiple-ways-to-configure-your-library)   Multiple ways to configure your library
+```bash
+Documents  npx zhi-cli
+Need to install the following packages:
+  zhi-cli@1.2.1
+Ok to proceed? (y) y
+Usage: Zhi project creator [options] [command]
 
-There is a fantastic library [davidtheclark/cosmiconfig: Find and load configuration from a package.json property, rc file, or CommonJS module](https://github.com/davidtheclark/cosmiconfig) that does all the tedious work for you.
+Create projects for zhi theme
 
-Cosmiconfig searches for and loads configuration for your program. For example, if your module's name is `myapp`​, cosmiconfig will search up the directory tree for configuration in the following places:
+Options:
+  -h, --help             display help for command
 
-* a `myapp`​ property in `package.json`​
-* a `.myapprc`​ file in JSON or YAML format
-* a `.myapprc.json`​, `.myapprc.yaml`​, `.myapprc.yml`​, `.myapprc.js`​, or `.myapprc.cjs`​ file
-* a `myapprc`​, `myapprc.json`​, `myapprc.yaml`​, `myapprc.yml`​, `myapprc.js`​ or `myapprc.cjs`​ file inside a `.config`​ subdirectory
-* a `myapp.config.js`​ or `myapp.config.cjs`​ CommonJS module exporting an object
+Commands:
+  init [options] [path]
+  help [command]         display help for command
+terwer   Documents   
+```
 
-### [   ](https://dev.to/eransakal/create-a-nodejs-command-line-library-with-nrwl-nx-workspace-5hin#interact-with-the-users-using-a-friendly-interface)   Interact with the users using a friendly interface
+## 提供用户体验良好的 UX
 
-The library [inquirer - npm](https://www.npmjs.com/package/inquirer) is a collection of common interactive command line user interfaces. Some people struggle with arguments, especially when having many of them. Instead, they prefer to interact with the library, and the inquirer does precisely that.
+> JavaScript 生态系统非常棒，可以通过使用其他库让你的应用程序更加出色。但是，还要记住，当你越来越多地依赖第三方库时，会增加安全漏洞的潜在可能性。
 
-It works great for `create-react-app`​, `create-nx-workspace`​, and many others, so it should also work for you.
+我正在使用两个库显著提高我的项目用户体验。您可以在 [terwer/zhi](https://github.com/terwer/zhi "zhi-cli") 中查看我的使用情况。
 
-## [   ](https://dev.to/eransakal/create-a-nodejs-command-line-library-with-nrwl-nx-workspace-5hin#whats-next)   Whats next
+## 多种配置库的方式。
 
-That is it. You are now ready to add the library logic. Feel free to reach out and ask questions in dev.to
+有一个神奇的库 [davidtheclark/cosmiconfig: 从 package.json 属性、rc 文件或 CommonJS 模块中查找和加载配置](https://github.com/davidtheclark/cosmiconfig)，它可以帮你完成所有繁琐的工作。
 
-## [   ](https://dev.to/eransakal/create-a-nodejs-command-line-library-with-nrwl-nx-workspace-5hin#additional-resources)   Additional resources
+Cosmiconfig 搜索并加载程序的配置。例如，如果您的模块名为“myapp”，cosmiconfig 将在以下位置查找目录树中的配置：
 
-Read [How to deploy automatically to NPM and Github packages from NRWL NX workspace](https://sakalim.com/content/how-to-deploy-automatically-to-npm-and-github-packages-from-nrwl-nx-workspace) to support automatic deployments using GitHub Actions and Semantic Releases.
+* 在 `package.json`​ 文件中有一个 `myapp`​ 属性
+* 在 JSON 或 YAML 格式的 `.myapprc`​ 文件
+* 在 `.myapprc.json`​、`.myapprc.yaml`​、`.myapprc.yml`​、`.myapprc.js`​ 或 `.myapprc.cjs`​ 文件中有 `myapprc`​、`myapprc.json`​、`myapprc.yaml`​、`myapprc.yml`​、`myapprc.js`​ 或 `myapprc.cjs`​ 文件
+* 在 `.config`​ 子目录内的 `myapprc`​、`myapprc.json`​、`myapprc.yaml`​、`myapprc.yml`​、`myapprc.js`​ 或 `myapprc.cjs`​ 文件
+* 一个 CommonJS 模块 `myapp.config.js`​ 或 `myapp.config.cjs`​ 导出一个对象
 
-Read [Handy tips when working on CLI library during development](https://sakalim.com/content/handy-tips-when-working-on-cli-library-during-development) to learn about some helpful development techniques.
+使用友好的界面与用户交互。
 
-Read [How to use private GitHub packages in your repository and with Github Actions](https://sakalim.com/content/how-to-use-private-github-packages-in-your-repository-and-with-github-actions) if you are using GitHub packages in your workflow.
+[inquirer - npm](https://www.npmjs.com/package/inquirer) 库是一个收集常见命令行交互式用户界面的集合。一些人在处理参数时会遇到困难，特别是当参数很多时。相反，他们更喜欢与库进行交互，而 inquirer 正是如此。
 
----
+它在 `create-react-app`​、`create-nx-workspace` ​等许多应用中都表现出色，因此它也应该适用于您。
 
-Photo by [Paul Esch-Laurent](https://unsplash.com/@pinjasaur?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/photos/oZMUrWFHOB4?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
+## 接下来是什么？
+
+就是这样了。您现在已经准备好添加库逻辑了。如有问题欢迎邮件 youweics@163.com 。
+
+## 附加资源
+
+阅读 [如何从 NRWL NX 工作区自动部署到 NPM 和 Github 包](https://sakalim.com/content/how-to-deploy-automatically-to-npm-and-github-packages-from-nrwl-nx-workspace)，以支持使用 GitHub Actions 和语义版本发布进行自动部署。
+
+阅读[在开发过程中使用 CLI 库的实用技巧](https://sakalim.com/content/handy-tips-when-working-on-cli-library-during-development)，了解一些有用的开发技巧。
+
+如果您正在使用 GitHub 包管理器，请阅读[如何在您的仓库以及 Github Actions 中使用私有 GitHub 包](https://sakalim.com/content/how-to-use-private-github-packages-in-your-repository-and-with-github-actions)。
 
 ## 参考
 
