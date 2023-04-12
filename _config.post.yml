@@ -6,15 +6,18 @@ widgets:
     # Whether to show the index of each heading
     index: true
     # Whether to collapse sub-headings when they are out-of-view
-    collapsed: false
+    collapsed: true
     # Maximum level of headings to show (1-6)
-    depth: 3
-  -
-    type: recent_posts
-    position: left
-  -
-    type: categories
-    position: left
+    depth: 4
   -
     type: tags
     position: left
+    order_by: -length
+    amount: 32
+    show_count: true
+  -
+    type: recent_posts
+    position: left
+#  -
+#    type: categories
+#    position: left

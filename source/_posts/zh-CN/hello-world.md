@@ -1,85 +1,71 @@
 ---
-title: 世界，你好！
-date: 2011-09-11 01:57:58
-excerpt: >-
-  这是一篇示例文章，介绍了各种特性的使用方法说明，例如：代码块、选项卡、消息提示等。
+title: Hello World
+updated: 2022-04-24 13:42:19
+tags:
+  - draft
+  - timeline
+categories: []
 permalink: /post/hello-world.html
-tags: hello-world
 comments: true
 toc: true
-sticky: true
 ---
+本文主要用于本博客各种功能效果演示及验证，内容无参考价值。
 
-## 代码高亮
+<!-- more -->
+# Hello World
 
-https://ppoffice.github.io/hexo-theme-icarus/Configuration/icarus%E7%94%A8%E6%88%B7%E6%8C%87%E5%8D%97-%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE/#%E4%BB%A3%E7%A0%81%E9%AB%98%E4%BA%AE
+## Artalk评论
 
-{% codeblock lang:java %}
-public static void main(){
-    System.out.println("Hello, Worlds!");
-}
-{% endcodeblock %}
+请查看本页面底部的评论框，体验效果。
 
-## 代码选项卡
+## Markdown数学公式
 
-https://ppoffice.github.io/hexo-theme-icarus/uncategorized/custom-hexo-tag-helpers/#Tabs
+- 代码
 
-<div class="example-tab-container">
-{% tabs style:toggle-rounded %}
-<!-- tab id:tab11 "icon:fa fa-brands fa-java" title:Java active -->
-{% codeblock lang:java %}
-public static void main(){
-    System.out.println("Hello, Worlds!");
-}
-{% endcodeblock %}
-<!-- endtab -->
-<!-- tab id:tab12 "icon:fa-brands fa-swift" title:Kotlin -->
-{% codeblock lang:kotlin %}
-func main(){
-    print("Hello, Worlds!")
-}
-{% endcodeblock %}
-<!-- endtab -->
-...
-{% endtabs %}
-</div>
+```
+行内公式：$E = mc^2$
 
-<div class="example-tab-container">
-{% tabs style:boxed %}
-<!-- tab id:tab_boxed_icon_1 "icon:fa-brands fa-github" "title:GitHub" active -->
-这个标签页的图标(`icon`)为`"icon:fa-brands fa-github"`。
-<!-- endtab -->
-<!-- tab id:tab_boxed_icon_2 "icon:fa-brands fa-node-js" "title:Node.js" -->
-这个标签页的图标(`icon`)为`"icon:fa-brands fa-node-js"`。
-<!-- endtab -->
-{% endtabs %}
-</div>
+$\sum_{a}^{b}$
 
-## 消息提示
+行块公式：
 
-https://ppoffice.github.io/hexo-theme-icarus/uncategorized/%E8%87%AA%E5%AE%9A%E4%B9%89hexo%E6%A0%87%E7%AD%BE%E6%8F%92%E4%BB%B6/#%E6%B6%88%E6%81%AF
+$$
+i\hbar\frac{\partial \psi}{\partial t} = \frac{-\hbar^2}{2m} ( \frac{\partial^2}{\partial x^2} + \frac{\partial^2}{\partial y^2} + \frac{\partial^2}{\partial z^2} ) \psi + V \psi.
+$$
+```
 
-{% message color:primary title:温馨提示 %}
-这是一个提示信息
-{% endmessage %}
+- 效果
 
-## 文章语言
+行内公式：$E = mc^2$
 
-在 front formatter 写上 `language: zh-CN` 可支持中文文章。
+$\sum_{a}^{b}$
 
-## 文章置顶
+行块公式：
 
-在 front formatter 写上 `sticky: true` 即可将文章置顶。
+$$
+i\hbar\frac{\partial \psi}{\partial t} = \frac{-\hbar^2}{2m} ( \frac{\partial^2}{\partial x^2} + \frac{\partial^2}{\partial y^2} + \frac{\partial^2}{\partial z^2} ) \psi + V \psi.
+$$
 
-## 首页隐藏文章
+## 使用标记
 
-https://github.com/prinsss/hexo-hide-posts/blob/master/README_ZH.md
+- 代码
 
-在 front formatter 写上 `hidden: true` 即可将文章在首页隐藏，但是该文章仍然可以通过永久链接访问。
+```
+#### 《沁园春·雪》 <Badge text="摘"/>
 
+北国风光<Badge text="注释" type="warning"/>，千里冰封，万里雪飘。
 
-<article class="message message-immersive is-warning">
-<div class="message-body">
-<i class="fas fa-question-circle mr-2"></i>文章内容有误？点击<a href="https://github.com/terwer/hexo-blog/edit/main/source/_posts/zh-CN/hello-world.md">此处</a>提交修改。
-</div>
-</article>
+> <Badge text="译文" type="error" vertical="middle"/>: 北方的风光。
+```
+
+- 效果
+
+#### 《沁园春·雪》 <Badge text="摘"/>
+
+北国风光<Badge text="注释" type="warning"/>，千里冰封，万里雪飘。
+
+> <Badge text="译文" type="error" vertical="middle"/>: 北方的风光。
+
+## 参考
+
+[https://doc.xugaoyi.com/pages/197691/#%E4%BB%A3%E7%A0%81%E5%9D%97%E9%80%89%E9%A1%B9%E5%8D%A1](https://doc.xugaoyi.com/pages/197691/#%E4%BB%A3%E7%A0%81%E5%9D%97%E9%80%89%E9%A1%B9%E5%8D%A1)

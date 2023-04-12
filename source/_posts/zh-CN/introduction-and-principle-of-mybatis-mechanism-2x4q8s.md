@@ -1,24 +1,18 @@
 ---
 title: MyBatis机制介绍与原理
-updated: '2023-03-26 13:31:20'
-excerpt: >-
-  插件简介什么是插件插件是一种软件组件可以在另一个软件程序中添加功能或特性。插件通常被设计成可以==随时添加或删除==的而不影响==主程序==的功能。插件可以==扩展==软件程序的功能这让用户可以根据自己的需求定制软件提高工作效率。常见的插件包括浏览器插件音频和视频编辑软件的特效插件图形处理软件的滤镜插件等。mybatis插件介绍mybatis作为一个通用的dao层框架也提供了插件的机制例如_我们可以用插件实现分页分表监控等功能。mybatis在四大组件（==exector====statmenthandl
+updated: 2023-02-22 20:29:49
+excerpt: mybatis机制介绍与原理插件简介什么是插件插件是一种软件组件可以在另一个软件程序中添加功能或特性。插件通常被设计成可以==随时添加或删除==的而不影响==主程序==的功能。插件可以==扩展==软件程序的功能这让用户可以根据自己的需求定制软件提高工作效率。常见的插件包括浏览器插件音频和视频编辑软件的特效插件图形处理软件的滤镜插件等。mybatis插件介绍mybatis作为一个通用的dao层框架也提供了插件的机制例如_我们可以用插件实现分页分表监控等功能。mybatis在四大组件（==exector===
 tags:
   - 插件
   - 功能
   - 组件
   - 可以
   - 扩展
-categories:
-  - 后端开发
-  - MyBatis
+categories: []
 permalink: /post/introduction-and-principle-of-mybatis-mechanism-2x4q8s.html
 comments: true
 toc: true
 ---
-
-
-
 ## 插件简介
 
 什么是插件
@@ -35,7 +29,7 @@ MyBatis 对持久层的操作依赖于这四大核心组件对象。MyBatis 支�
 
 总之，MyBatis 的四大核心组件和扩展点提供了灵活和可扩展的持久层操作方式，使得开发人员可以根据具体的应用场景来选择适合的方式来操作数据库。同时，插件机制也提供了一种简单、方便的方式来增强 MyBatis 的功能，扩展 MyBatis 的能力。
 
-​![MyBatis4大组件](https://img1.terwer.space/api/public/202303232307565.png "组件")​
+​![](https://img1.terwer.space/api/public/202303232307565.png)​
 
 ## MyBatis 允许拦截的方法
 
@@ -46,4 +40,16 @@ MyBatis 对持久层的操作依赖于这四大核心组件对象。MyBatis 支�
 
 ## MyBatis 插件的原理
 
-参考 [Mybatis基本流程](https://hexo.terwer.space/post/mybatis-basic-process-and-configuration-file-analysis.html)
+参考 [Mybatis基本流程](https://terwer.space/post/mybatis-basic-process-and-configuration-file-analysis.html)
+
+​![image](assets/image-20230325134233-k1byy1x.png)​
+
+​![image](assets/image-20230325154535-ejti1z2.png)​
+
+
+
+​![这是个图片锚文本](assets/image-20230325160900-tfvy42x.png "这是个图片标题")​
+
+​![image](assets/image-20230325173641-f9tzx1c.png)​
+
+​![image](assets/image-20230325200855-mvbm00s.png)​
