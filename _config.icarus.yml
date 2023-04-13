@@ -113,9 +113,9 @@ navbar:
         心情: /tags/timeline
         分类: /categories
         标签: /tags
-        友链: /links
-        留言: /guestbook
-        关于: /about
+        友链: /links.html
+        留言: /guestbook.html
+        关于: /about.html
     # Links to be shown on the right of the navigation bar
     links:
         发邮件:
@@ -183,44 +183,45 @@ comment:
 # Donate plugin configurations
 # https://ppoffice.github.io/hexo-theme-icarus/categories/Plugins/Donation/
 donates:
-    # "Afdian.net" donate button configurations
+    # Wechat donate button configurations
     -
-        type: afdian
-        # URL to the "Afdian.net" personal page
-        url: ''
+        type: wechat
+        # Wechat qrcode image URL
+        qrcode: ''
     # Alipay donate button configurations
     -
         type: alipay
         # Alipay qrcode image URL
         qrcode: ''
+    # "Afdian.net" donate button configurations
+    -
+        type: afdian
+        # URL to the "Afdian.net" personal page
+        url: ''
     # "Buy me a coffee" donate button configurations
     -
         type: buymeacoffee
         # URL to the "Buy me a coffee" page
         url: ''
     # Patreon donate button configurations
-    -
-        type: patreon
-        # URL to the Patreon page
-        url: ''
+#    -
+#        type: patreon
+#        # URL to the Patreon page
+#        url: ''
     # Paypal donate button configurations
-    -
-        type: paypal
-        # Paypal business ID or email address
-        business: ''
-        # Currency code
-        currency_code: USD
-    # Wechat donate button configurations
-    -
-        type: wechat
-        # Wechat qrcode image URL
-        qrcode: ''
+#    -
+#        type: paypal
+#        # Paypal business ID or email address
+#        business: ''
+#        # Currency code
+#        currency_code: USD
+
 # Share plugin configurations
-# https://ppoffice.github.io/hexo-theme-icarus/categories/Plugins/Share/
-share:
-    type: sharethis
-    # URL to the ShareThis share plugin script
-    install_url: ''
+# https://ppoffice.github.io/hexo-theme-icarus/categories/Pluginstall_urlins/Share/
+#share:
+#    type: sharethis
+#    # URL to the ShareThis share plugin script
+#    install_url: ''
 # Sidebar configurations.
 # Please be noted that a sidebar is only visible when it has at least one widget
 sidebar:
@@ -355,7 +356,7 @@ plugins:
     # https://tongji.baidu.com
     baidu_analytics:
         # Baidu Analytics tracking ID
-        tracking_id: 
+        tracking_id: ecf13ffee9f4083d9a74b337b541f90b
     # Bing Webmaster Tools plugin settings
     # https://www.bing.com/toolbox/webmaster/
     bing_webmaster:
@@ -408,17 +409,17 @@ plugins:
     # Show a progress bar at top of the page on page loading
     progressbar: true
     # Statcounter statistics
-    # https://statcounter.com/
-    statcounter:
-        # Statcounter project id
-        project: 
-        # Statcounter project security code
-        security: 
+    # https://statcount/guestbook.htmler.com/
+#    statcounter:
+#        # Statcounter project id
+#        project:
+#        # Statcounter project security code
+#        security:
     # Twitter conversion tracking plugin settings
     # https://business.twitter.com/en/help/campaign-measurement-and-analytics/conversion-tracking-for-websites.html
-    twitter_conversion_tracking:
-        # Twitter Pixel ID
-        pixel_id: 
+#    twitter_conversion_tracking:
+#        # Twitter Pixel ID
+#        pixel_id:
 # CDN provider settings
 # https://ppoffice.github.io/hexo-theme-icarus/Configuration/Theme/speed-up-your-site-with-custom-cdn/
 providers:
