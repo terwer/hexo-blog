@@ -1,7 +1,7 @@
 ---
 title: Java获取url中参数
-date: &id001 2023-02-03 10:53:53
-updated: *id001
+date: '2023-02-03 10:53:53'
+updated: '2023-02-03 10:53:53'
 excerpt: 方案在java中你可以利用urlencoder​​和urldecoder​​来对url字符串进行编解码然后使用stringsplit()​方法或者使用正则表达式​来从url字符串中获取参数。代码示例获取url中的参数at_paramurl链接at_paramkey参数keyat_return参数值publicstaticstringgetparameterfromurl(stringurlstringkey){string[]params=urlsplit(string[]queryparams=para
 tags:
   - 参数

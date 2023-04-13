@@ -1,7 +1,7 @@
 ---
 title: NIO编程及其三大核心原理
-date: &id001 2022-05-04 14:35:45
-updated: *id001
+date: '2022-05-04 14:35:45'
+updated: '2022-05-04 14:35:45'
 excerpt: Java NIO，全称为java non-blocking IO，是指JDK提供得到新API。从JDK1.4开始，Java提供了一系列改进的输入/输出的新特性，被统称为NIO（New
   IO），是同步非阻塞的。
 tags:

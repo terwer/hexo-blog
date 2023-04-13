@@ -1,7 +1,7 @@
 ---
 title: Struts2的Action中自定义方法的输入校验
-date: &id001 2022-11-03 21:23:05
-updated: *id001
+date: '2022-11-03 21:23:05'
+updated: '2022-11-03 21:23:05'
 excerpt: 自定义方法的输入校验对于通过action​的method​属性所指定的自定义方法myexecute​其对应的自定义输入校验方法名为validatemyexecute​。（底层是通过反射调用的）publicvoidvalidatemyexecute(){systemoutprintln(thisaddactionerror(}publicstringmyexecute()throwsexception{systemoutprintln(returnsuccess_}校验方法的执行顺序当在action​中指定
 tags:
   - 方法
@@ -15,8 +15,8 @@ tags:
   - msg
   - message
 categories:
-  - 后端开发
   - Struts2
+  - 后端开发
 permalink: /post/the-input-verification-of-the-custom-method-in-the-action-method-in-struts2-zuo2wb.html
 comments: true
 toc: true

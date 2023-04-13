@@ -1,7 +1,7 @@
 ---
 title: node发送邮件
-date: &id001 2022-07-07 18:34:05
-updated: *id001
+date: '2022-07-07 18:34:05'
+updated: '2022-07-07 18:34:05'
 excerpt: 代码mailmjsimportnodemailerfromexportdefaultasyncfunctionsendmail(totitlemsg){创建transporterconsttransporter=nodemailercreatetransport({host_邮箱的smtp地址auth_{user_邮箱的smtp地址pass_processenvqqmail_smtp_token邮箱授权码}})_配置邮件信息constmailinfo={from_to_tosubject_titlesub
 tags:
   - 邮箱

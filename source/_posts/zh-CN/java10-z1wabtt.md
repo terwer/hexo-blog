@@ -1,7 +1,7 @@
 ---
 title: Java_10
-date: &id001 2022-10-07 21:42:34
-updated: *id001
+date: '2022-10-07 21:42:34'
+updated: '2022-10-07 21:42:34'
 excerpt: openjdk于年月日发布。主要特性此次更新包含以下个新特性_jep_局部变量类型推断jep_实验性的基于java的jit编译器。这是linuxx下graal动态编译器的集成。jep_应用程序类级别数据共享jep_基于时间的版本命名jep_适用于g的多线程完全垃圾回收jep_垃圾回收器接口jep_更多的unicode语言标签扩展jep_内置根证书jep_线程本地握手jep_在可选的内存设备上申请堆内存空间jep_删除本地代码头文件生成器javahjep_将所有jdk分支集成到同一个版本库中java更新版本
 tags:
   - 版本
@@ -15,9 +15,9 @@ tags:
   - javase
   - 修补
 categories:
-  - Java语言新特性
   - JavaSE
   - 后端开发
+  - Java语言新特性
 permalink: /post/java10-z1wabtt.html
 comments: true
 toc: true

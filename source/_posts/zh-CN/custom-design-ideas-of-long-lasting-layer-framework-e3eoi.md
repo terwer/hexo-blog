@@ -1,7 +1,7 @@
 ---
 title: 自定义持久层框架的设计思路
-date: &id001 2022-08-27 16:17:11
-updated: *id001
+date: '2022-08-27 16:17:11'
+updated: '2022-08-27 16:17:11'
 excerpt: 核心要点解析配置文件数据库配置信息sql的封装构建sqlsessionfactory注意这里的opensession方法拿到sqlsesion定义sqlsession基本方法封装具体的执行逻辑executorexecute的query方法就对应jdbc操作优化使用jdk动态代理避免statementid的硬编码将sqlsession的操作封装到dao层使用端（项目）引入自定义持久层框架的jar包提供两部分配置信息数据库配置信息sql配置信息_sql语句参数类型返回值类型使用配置文件来提供这两部分配置信息_
 tags:
   - custom

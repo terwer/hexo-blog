@@ -1,7 +1,7 @@
 ---
 title: vagrant用户无法访问vboxsf的共享文件夹解决方案
-date: &id001 2022-05-13 02:21:47
-updated: *id001
+date: '2022-05-13 02:21:47'
+updated: '2022-05-13 02:21:47'
 excerpt: vagrant用户无法访问vboxsf的共享文件夹解决方案，将vagrant用户添加到vboxsf用户组即可。
 tags:
   - vagrant

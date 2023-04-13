@@ -1,7 +1,7 @@
 ---
 title: dotenv加载变量
-date: &id001 2022-08-20 21:32:47
-updated: *id001
+date: '2022-08-20 21:32:47'
+updated: '2022-08-20 21:32:47'
 excerpt: '@tsignoreimportdotenvfromdotenvimportpathfrompath_初始化测试环境变量exportconstinittestenv=()={const__dirname=pathdirname(importmetaurl)_constenvpath=pathrelative(processcwd()pathjoin(__dirnameenvdevelopmentlocal))replace()consolelog(envpath)dotenvconfig({path_env'
 tags:
   - 测试

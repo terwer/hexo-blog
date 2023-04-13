@@ -1,7 +1,7 @@
 ---
 title: Java_9
-date: &id001 2022-10-07 20:40:56
-updated: *id001
+date: '2022-10-07 20:40:56'
+updated: '2022-10-07 20:40:56'
 excerpt: 在年的javaone中oracle讨论了一些他们希望在年于java中发布的功能。[]java应当对千兆级堆拥有更好的支持同时能够更好地集成本机代码且拥有新的垃圾收集器g和能够自我调节的jvm。[]年初java的发布被重新定为年月_年月时发布日期又被拖延至年月_[]后来又因java执行委员会对jigsaw项目实现的分歧而最终定为年月日在此期间oracle回应了部分疑问并对一些重要的技术问题进行了修正。在年月的最后几天jcp对拟议的模块系统方案达成了共识。主要特性jsr_在jigsaw项目中将jdk模块化（参
 tags:
   - 发布
@@ -15,9 +15,9 @@ tags:
   - javase
   - 年月日
 categories:
-  - Java语言新特性
   - JavaSE
   - 后端开发
+  - Java语言新特性
 permalink: /post/java_9-msiil.html
 comments: true
 toc: true

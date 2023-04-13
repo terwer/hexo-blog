@@ -1,7 +1,7 @@
 ---
 title: 使用TypeScript开发一个自定义的Node-js前端开发脚手架
-date: &id001 2023-03-08 11:28:08
-updated: *id001
+date: '2023-03-08 11:28:08'
+updated: '2023-03-08 11:28:08'
 excerpt: 使用typescript开发一个自定义的nodejs前端开发脚手架本文将从零开始介绍如何用nodejs​和typescript​​开发脚手架。可用版本的github地址_zhiclinpm的地址_zhicli需求来源如果我们之前花很大力气搭建了一个项目开发工具包但是有了新项目想用咋办常规办法就是拷贝模板文件。但是每次拷贝模版再去修改总是麻烦的不如来开发一个脚手架用命令行生成新的nodejs项目。什么是脚手架？我们都用过脚手架像vuecli​reactnativecli​expressgenerator​等
 tags:
   - 项目

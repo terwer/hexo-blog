@@ -1,7 +1,7 @@
 ---
 title: JavaSE之单例模式
-date: &id001 2022-05-05 22:21:08
-updated: *id001
+date: '2022-05-05 22:21:08'
+updated: '2022-05-05 22:21:08'
 excerpt: Java SE Lesson 3：单例模式
 tags: []
 categories:

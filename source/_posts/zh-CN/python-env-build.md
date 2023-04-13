@@ -1,14 +1,14 @@
 ---
 title: Python环境搭建
-date: &id001 2022-05-31 22:48:14
-updated: *id001
+date: '2022-05-31 22:48:14'
+updated: '2022-05-31 22:48:14'
 excerpt: Python环境搭建。
 tags:
   - python
   - env
 categories:
-  - 大数据开发新思路
   - 新笔记
+  - 大数据开发新思路
 permalink: /post/python-env-build.html
 comments: true
 toc: true

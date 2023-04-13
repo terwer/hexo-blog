@@ -1,7 +1,7 @@
 ---
 title: Confluence安装MetaWeblogApi插件配合MWeb打造知识库
-date: &id001 2022-03-28 01:20:55
-updated: *id001
+date: '2022-03-28 01:20:55'
+updated: '2022-03-28 01:20:55'
 excerpt: Confluence安装MetaWeblogApi插件配合MWeb打造知识库，官方插件使用文档。
 tags:
   - confluence

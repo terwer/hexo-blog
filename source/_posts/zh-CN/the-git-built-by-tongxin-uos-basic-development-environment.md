@@ -1,7 +1,7 @@
 ---
 title: 统信 UOS 基本开发环境搭建之 git
-date: &id001 2022-06-07 23:55:17
-updated: *id001
+date: '2022-06-07 23:55:17'
+updated: '2022-06-07 23:55:17'
 excerpt: 统信 UOS 基本开发环境搭建之 git。
 tags:
   - uos

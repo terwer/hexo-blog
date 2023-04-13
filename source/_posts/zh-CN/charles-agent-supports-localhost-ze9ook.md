@@ -1,7 +1,7 @@
 ---
 title: Charles代理支持localhost
-date: &id001 2022-08-06 14:01:29
-updated: *id001
+date: '2022-08-06 14:01:29'
+updated: '2022-08-06 14:01:29'
 excerpt: charles代理支持localhost使用下面的地址代替localhostlocalhostcharlesproxycom
 tags:
   - 代理

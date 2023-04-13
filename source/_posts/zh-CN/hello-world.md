@@ -1,7 +1,7 @@
 ---
 title: Hello World
-date: &id001 2022-04-24 13:42:19
-updated: *id001
+date: '2022-04-24 13:42:19'
+updated: '2022-04-24 13:42:19'
 tags:
   - draft
   - timeline

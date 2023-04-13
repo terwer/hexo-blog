@@ -1,7 +1,7 @@
 ---
 title: dojo利用promise实现多个异步校验
-date: &id001 2022-11-26 21:30:51
-updated: *id001
+date: '2022-11-26 21:30:51'
+updated: '2022-11-26 21:30:51'
 excerpt: 代码如下_敏感词过滤varpromiseall=checksenstivewords()_promiseallthen(function(results){consolelog(results)consolelog(consolelog(consolelog(if(results[]flag==true){tipfail({]replace(])replace()})_return_}if(results[]flag==true){tipfail({]replace(])replace()})_retur
 tags:
   - promise

@@ -1,7 +1,7 @@
 ---
 title: 在Vite+TypeScript的项目中使用~和@代替src根路径的方法
-date: &id001 2022-11-22 17:25:36
-updated: *id001
+date: '2022-11-22 17:25:36'
+updated: '2022-11-22 17:25:36'
 excerpt: 原由当前端项目组件比较多的时候引用组件会面临路径特别长的情况不易维护且容易出错。定义绝对路径映射是个好办法下面就介绍vitetypescript的项目中中的具体实现。方案​viteconfigts​resolve_{alias_{)}}​tsconfigjson​{_{_{]}}使用import{api_type_constants}fromimportmetaweblogmainfrom原来的import{api_type_constants}fromimportmetaweblogmainfrom
 tags:
   - 项目

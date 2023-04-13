@@ -1,7 +1,7 @@
 ---
 title: Netty高级进阶之基于Netty的群聊天室案例
-date: &id001 2022-04-27 02:07:51
-updated: *id001
+date: '2022-04-27 02:07:51'
+updated: '2022-04-27 02:07:51'
 excerpt: 本文通过实战演练，学习了如何使用Netty开发一个群聊天室。
 tags:
   - netty

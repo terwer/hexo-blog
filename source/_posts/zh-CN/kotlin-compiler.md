@@ -1,7 +1,7 @@
 ---
 title: Kotlin编译器
-date: &id001 2022-05-27 23:03:00
-updated: *id001
+date: '2022-05-27 23:03:00'
+updated: '2022-05-27 23:03:00'
 excerpt: Kotlin 编译器。
 tags:
   - kt

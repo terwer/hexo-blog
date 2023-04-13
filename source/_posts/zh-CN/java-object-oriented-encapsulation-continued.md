@@ -1,7 +1,7 @@
 ---
 title: Java_SE_第十讲：面向对象之封装续
-date: &id001 2022-10-10 21:45:05
-updated: *id001
+date: '2022-10-10 21:45:05'
+updated: '2022-10-10 21:45:05'
 excerpt: 类中的属性又叫做成员变量（membervariable）属性用英文表示为property或者attribute。对象（object）又叫做实例（instance）。生成一个对象的过程又叫做实例化。命名约定a)类_首字母大写如果一个类名由多个单词构成那么每个单词的首字母都大写中间不使用任何的连接符。比如person类membertest类。b)方法_首字母小写。如果一个方法由多个单词构成那么第一个单词的所有字母全都小写从第二个单词开始每个单词的首字母大写。比如addaddthreeint。c)属性_命名约定
 tags:
   - 使用

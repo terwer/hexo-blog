@@ -1,13 +1,13 @@
 ---
 title: 脚本编程与交互式编程
-date: &id001 2022-06-05 22:18:57
-updated: *id001
+date: '2022-06-05 22:18:57'
+updated: '2022-06-05 22:18:57'
 excerpt: 脚本编程与交互式编程。
 tags:
   - python
 categories:
-  - 大数据开发新思路
   - 新笔记
+  - 大数据开发新思路
 permalink: /post/scripting-and-interactive-programming.html
 comments: true
 toc: true

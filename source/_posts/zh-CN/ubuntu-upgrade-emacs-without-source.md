@@ -1,15 +1,15 @@
 ---
 title: 在ubuntu中，升级emacs到最新版本（非源码安装）
-date: &id001 2022-05-18 17:54:17
-updated: *id001
+date: '2022-05-18 17:54:17'
+updated: '2022-05-18 17:54:17'
 excerpt: 在ubuntu中，升级emacs到最新版本（非源码安装）
 tags:
   - ubuntu
   - emacs
 categories:
-  - 开发流程
   - 过程改进
   - 开发效率
+  - 开发流程
 permalink: /post/ubuntu-upgrade-emacs-without-source.html
 comments: true
 toc: true

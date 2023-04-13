@@ -1,7 +1,7 @@
 ---
 title: CentOS_7-6_安装Oracle_12c
-date: &id001 2022-10-17 14:25:49
-updated: *id001
+date: '2022-10-17 14:25:49'
+updated: '2022-10-17 14:25:49'
 excerpt: 下载地址_http_wwworaclecomtechnetworkdatabaseenterpriseeditiondownloadsindexhtmlhttps_wwworaclecomtechnetworkdatabaseenterpriseeditiondownloadsoracleclinuxhtml整个过程下载可能会比较慢最好是抓取下载链接然后使用wget下载例如​[root@terwergreenopt]#wgethttps_downloadoraclecomotnlinuxoraclecli
 tags:
   - 下载

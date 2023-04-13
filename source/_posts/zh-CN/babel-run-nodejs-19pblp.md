@@ -1,7 +1,7 @@
 ---
 title: babel运行nodejs
-date: &id001 2022-07-24 17:24:44
-updated: *id001
+date: '2022-07-24 17:24:44'
+updated: '2022-07-24 17:24:44'
 excerpt: 安装依赖yarnadd@babelcore@babelcli@babelnode@babelpresetenvd或者全局安装yarnglobaladd@babelcore@babelcli@babelnode@babelpresetenv注意_全局安装需要把yarn的全局目录添加到windows的path查找path命令如下yarnglobalbin不建议全局安装很多时候以来都成问题完整的依赖{_{}_{}}配置babelrc{_[[{}]]}接下来运行即可编译babeltestjs编译与执行babeln
 tags:
   - 安装

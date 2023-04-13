@@ -1,7 +1,7 @@
 ---
 title: Vuepress平台配置指南
-date: &id001 2022-09-27 09:54:18
-updated: *id001
+date: '2022-09-27 09:54:18'
+updated: '2022-09-27 09:54:18'
 excerpt: 特别提示注意_这个是vuepress源码目录结构不是构建文件部署的。这个是vuepress源码目录结构不是构建文件部署的。这个是vuepress源码目录结构不是构建文件部署的。githubpages不能用这个配置githubpages请参考hugohexo或者jekyll（github内置默认支持）。推荐vuepress的v版本配合vuepressthemevdoing使用后续bug也只会对v和此主题进行更新vuepress的文档请参考这里假定你非常熟悉vuepress以及vdoing主题如果不熟悉请不要
 tags:
   - 源码
@@ -10,9 +10,9 @@ tags:
   - 这个
   - 不是
 categories:
+  - 平台配置
   - sy-post-publisher
   - 作品展示
-  - 平台配置
 permalink: /post/vuepress-z16zype.html
 comments: true
 toc: true

@@ -1,7 +1,7 @@
 ---
 title: 使用SSH方式操作GitHub
-date: &id001 2022-04-17 10:27:12
-updated: *id001
+date: '2022-04-17 10:27:12'
+updated: '2022-04-17 10:27:12'
 excerpt: 本文介绍了使用SSH方式操作GitHub的方法。生成SSHkeysshkeygented25519Cyouweics@163com拷贝SSHkeyvim~/ssh/id_ed25519pub直接拷贝秘钥字符串然后打开GitHub，Settings&gtSSHandGPGkeys，点击NewSSHkey然后对包起个秘钥名字，把秘钥字符串粘贴到秘钥框内，点击AddSSHkey提交即可。接下来就能用SSH的方式操作GitHub了。
 tags:
   - ssh

@@ -1,15 +1,15 @@
 ---
 title: 使用vagrant搭建可移植的跨平台的开发环境
-date: &id001 2022-05-09 10:44:13
-updated: *id001
+date: '2022-05-09 10:44:13'
+updated: '2022-05-09 10:44:13'
 excerpt: 使用vagrant搭建可移植的跨平台的开发环境。
 tags:
   - env
   - vagrant
 categories:
-  - 开发流程
   - 过程改进
   - 开发效率
+  - 开发流程
 permalink: /post/use-vagrant-to-build-a-portable-cross-platform-development-environment.html
 comments: true
 toc: true

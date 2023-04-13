@@ -1,7 +1,7 @@
 ---
 title: NodeJS创建一个空文件
-date: &id001 2022-04-28 21:32:35
-updated: *id001
+date: '2022-04-28 21:32:35'
+updated: '2022-04-28 21:32:35'
 tags:
   - node
   - nodejs

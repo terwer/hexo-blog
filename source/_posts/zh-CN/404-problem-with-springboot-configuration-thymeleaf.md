@@ -1,7 +1,7 @@
 ---
 title: 关于Springboot配置thymeleaf的404问题
-date: &id001 2022-04-30 23:42:57
-updated: *id001
+date: '2022-04-30 23:42:57'
+updated: '2022-04-30 23:42:57'
 tags:
   - error
   - '404'

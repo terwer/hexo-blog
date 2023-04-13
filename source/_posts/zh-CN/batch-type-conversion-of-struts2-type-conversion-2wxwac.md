@@ -1,7 +1,7 @@
 ---
 title: Struts2类型转换之批量类型转换
-date: &id001 2022-11-01 23:17:26
-updated: *id001
+date: '2022-11-01 23:17:26'
+updated: '2022-11-01 23:17:26'
 excerpt: 输入页面inputjsppageencoding=userinfo_userinfo_userinfo_userinfo_流程跳转strutsxml!doctypestrutspublic业务处理action类useractionpackagespaceterwerstruts_importjavautillist_importcomopensymphonyxworkactionsupport_importspaceterwerbeanuser_publicclassuseractionextendsac
 tags:
   - 输入
@@ -13,8 +13,8 @@ tags:
   - 批量
   - multi
 categories:
-  - 后端开发
   - Struts2
+  - 后端开发
 permalink: /post/batch-type-conversion-of-struts2-type-conversion-2wxwac.html
 comments: true
 toc: true

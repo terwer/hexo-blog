@@ -1,7 +1,7 @@
 ---
 title: 一个令人沮丧的问题：Mac的unzip竟然不支持中文名
-date: &id001 2022-05-11 23:50:34
-updated: *id001
+date: '2022-05-11 23:50:34'
+updated: '2022-05-11 23:50:34'
 excerpt: 一个令人沮丧的问题：Mac的unzip竟然不支持中文名。
 tags:
   - mac

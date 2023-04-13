@@ -1,13 +1,13 @@
 ---
 title: JavaSE阅读目录
-date: &id001 2022-05-08 23:06:12
-updated: *id001
+date: '2022-05-08 23:06:12'
+updated: '2022-05-08 23:06:12'
 tags:
   - javase
   - menu
 categories:
-  - 阅读目录
   - 页面
+  - 阅读目录
 permalink: /post/javase-read-menu.html
 comments: true
 toc: true

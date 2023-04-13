@@ -1,7 +1,7 @@
 ---
 title: js正则替换和删除字符串
-date: &id001 2022-06-20 15:20:08
-updated: *id001
+date: '2022-06-20 15:20:08'
+updated: '2022-06-20 15:20:08'
 excerpt: js正则替换和删除字符串最近在用mweb发布文章的时候，发现有些字符显示的不是预期效果，具体在发布到confluence的时候，页面展示出现了问题。于是，想出了下面的办法：去掉多余的换行bodyvaluereplace/[\r\n]&lt\/code&gt&lt\/pre&gt[\r\n]/g&lt/code&gt&lt/pre&gt去掉h1标签contentcontentreplace/&lth1*?&gt*?&lt\/h1&gt\n/ig完整的例子letbody{value&lth1&gt&ltaid
 tags:
   - js

@@ -1,7 +1,7 @@
 ---
 title: Java_7
-date: &id001 2022-10-07 19:56:58
-updated: *id001
+date: '2022-10-07 19:56:58'
+updated: '2022-10-07 19:56:58'
 excerpt: java（代号dolphin​[]）是一个重大的更新在年月日亮相[]并在年月日开放给开发者使用。[]发展时期被分类成十三个重要阶段最后一个阶段在年月日完成。[][]平均来看每个里程碑各有个版本（就是一般包括的功能增强和漏洞修复）。在openjdk项目中的功能清单（点击查看归档页面）中列出了很多的改变。jdk版本从jdk后年才发布原因是中间经历了sun公司被收购。大体发布历程是_年月sun开始开发jdkmilestone。年月sun在devoxx大会上宣布将闭包特性加入jdk并将jdk的发布日期推迟到年底。
 tags:
   - 支持
@@ -12,9 +12,9 @@ tags:
   - java
   - javase
 categories:
-  - Java语言新特性
   - JavaSE
   - 后端开发
+  - Java语言新特性
 permalink: /post/java_7-25povo.html
 comments: true
 toc: true

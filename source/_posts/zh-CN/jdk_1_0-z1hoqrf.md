@@ -1,7 +1,7 @@
 ---
 title: JDK_1-0
-date: &id001 2022-09-30 21:20:47
-updated: *id001
+date: '2022-09-30 21:20:47'
+updated: '2022-09-30 21:20:47'
 excerpt: 版本历史第一个版本于年月日发布叫做为oak[]。而真正第一个稳定的版本jdk被称作java。[]总结java其实做了两件主要的事情_awt和applet。英文原文_javawasnotableprimarilyfortwothingsfirstitdefinedanabstractwindowingtoolkit(awt)forthecreationofportablegraphicaluserinterfaces(guis)seconditdefinedappletsawayinwhichwebbrow
 tags:
   - 第一个
@@ -11,9 +11,9 @@ tags:
   - java
   - version
 categories:
-  - Java语言新特性
   - JavaSE
   - 后端开发
+  - Java语言新特性
 permalink: /post/jdk_1_0-z1hoqrf.html
 comments: true
 toc: true

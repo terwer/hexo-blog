@@ -1,7 +1,7 @@
 ---
 title: JDBC的问题分析
-date: &id001 2022-08-27 16:16:11
-updated: *id001
+date: '2022-08-27 16:16:11'
+updated: '2022-08-27 16:16:11'
 excerpt: jdbc的问题分析核心实现packagetest_importjavasqlconnection_importjavasqldrivermanager_importjavasqlpreparedstatement_importjavasqlresultset_at_authorterwerat_descriptionat_create_publicclassmain{publicstaticvoidmain(string[]args){connectionconnection=null_prepareds
 tags:
   - 数据库

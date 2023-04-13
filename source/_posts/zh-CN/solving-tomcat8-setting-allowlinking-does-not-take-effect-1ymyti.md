@@ -1,7 +1,7 @@
 ---
 title: 解决Tomcat8+设置allowLinking不生效问题
-date: &id001 2022-10-31 21:23:24
-updated: *id001
+date: '2022-10-31 21:23:24'
+updated: '2022-10-31 21:23:24'
 excerpt: 升级到tomcat版本后原先项目中的软连接目录都不好用了查了一下资料发现是配置发生了改变参考资料_https_tomcatapacheorgmigrationhtmlforexample_​tomcat​​tomcat​以上ps_tomcat​如果遇到设置allowlinking=​不生效解决办法与tomcat​一样。
 tags:
   - 升级

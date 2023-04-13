@@ -1,7 +1,7 @@
 ---
 title: 后端服务CORS预检请求验证问题探究
-date: &id001 2022-08-06 13:58:45
-updated: *id001
+date: '2022-08-06 13:58:45'
+updated: '2022-08-06 13:58:45'
 excerpt: 问题探索问题引入目前在vitevue的项目中使用fetchapi调用siyuan的api时候如果加上api鉴权就会返回cors错误如下_​根据https_developermozillaorgenusdocsglossarypreflight_request这篇文章的理解在检测到cors跨域复杂请求（例如post等）时候会发送一个options的预检请求请求会返回下一个请求允许的header和method检测请求可以看到可以看到思源服务端返回的accesscontrolrequestheaders并没有a
 tags:
   - 请求

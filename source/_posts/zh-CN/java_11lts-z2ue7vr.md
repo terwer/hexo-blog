@@ -1,7 +1,7 @@
 ---
 title: Java_11-LTS
-date: &id001 2022-10-07 21:58:55
-updated: *id001
+date: '2022-10-07 21:58:55'
+updated: '2022-10-07 21:58:55'
 excerpt: jdk于年月日发布[]。java为什么重要？java是继java之后的第二个lts（longtermsupport）版本。自java起oraclejdk将不再免费提供商业用途。您可以在开发阶段使用它但要在商业上使用它则需要购买许可证。java是最后一个可以下载的免费oraclejdk。oracle从年月开始就停止了对java的支持。您需要支付更多的支持费用。如果不这样做虽然您可以继续使用它但不会获得任何补丁安全更新。自java起oracle将不再为任何单个java版本提供免费的长期支持（lts）。尽管or
 tags:
   - 修补
@@ -15,9 +15,9 @@ tags:
   - java11
   - javase
 categories:
-  - Java语言新特性
   - JavaSE
   - 后端开发
+  - Java语言新特性
 permalink: /post/java_11lts-z2ue7vr.html
 comments: true
 toc: true

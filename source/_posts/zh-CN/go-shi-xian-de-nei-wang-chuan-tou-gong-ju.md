@@ -1,7 +1,7 @@
 ---
 title: 介绍一个Go实现的内网穿透神器frp
-date: &id001 2022-04-17 12:12:38
-updated: *id001
+date: '2022-04-17 12:12:38'
+updated: '2022-04-17 12:12:38'
 tags:
   - proxy
   - network

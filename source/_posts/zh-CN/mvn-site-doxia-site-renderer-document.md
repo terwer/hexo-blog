@@ -1,7 +1,7 @@
 ---
 title: 解决一个maven的site命令报错问题
-date: &id001 2022-06-16 22:47:57
-updated: *id001
+date: '2022-06-16 22:47:57'
+updated: '2022-06-16 22:47:57'
 excerpt: 新建的maven的Spring Boot项目一致保存 org.apache.maven.doxia.siterenderer.DocumentContent
   not found。
 tags:

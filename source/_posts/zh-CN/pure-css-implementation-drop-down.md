@@ -1,7 +1,7 @@
 ---
 title: 纯css实现下拉菜单
-date: &id001 2022-07-09 15:36:00
-updated: *id001
+date: '2022-07-09 15:36:00'
+updated: '2022-07-09 15:36:00'
 excerpt: 纯css实现下拉菜单ul，li版本&ltnavrolenavigation&gt&ltul&gt&ltli&gt&ltahref#&gtone&lt/a&gt&lt/li&gt&ltli&gt&ltahref#&gttwo&lt/a&gt&ltulclassdropdown&gt&ltli&gt&ltahref#&gtsub1&lt/a&gt&lt/li&gt&ltli&gt&ltahref#&gtsub2&lt/a&gt&lt/li&gt&ltli&gt&ltahref#&gtsub3&lt/a&gt&
 tags:
   - css

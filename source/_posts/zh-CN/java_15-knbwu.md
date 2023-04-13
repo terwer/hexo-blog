@@ -1,7 +1,7 @@
 ---
 title: Java_15
-date: &id001 2022-10-08 00:42:12
-updated: *id001
+date: '2022-10-08 00:42:12'
+updated: '2022-10-08 00:42:12'
 excerpt: java在年月发布虽然不是长久支持版本但是也带来了个新功能这些新功能中有不少是十分实用的。主要特性java新功能_jep描述jep爱德华曲线算法（eddsa）jepsealedclasses（密封类）预览jephiddenclasses（隐藏类）jep移除nashornjavascript引擎jep重新实现datagramsocketapijep禁用和废弃偏向锁（biasedlocking）jepinstanceof类型匹配(二次预览)jepzgc_可扩展低延迟垃圾收集器（正式发布）jep文本块jepsh
 tags:
   - 功能
@@ -14,9 +14,9 @@ tags:
   - java15
   - javase
 categories:
-  - Java语言新特性
   - JavaSE
   - 后端开发
+  - Java语言新特性
 permalink: /post/java_15-knbwu.html
 comments: true
 toc: true

@@ -1,13 +1,13 @@
 ---
 title: Mybatis阅读目录
-date: &id001 2022-05-04 23:46:03
-updated: *id001
+date: '2022-05-04 23:46:03'
+updated: '2022-05-04 23:46:03'
 tags:
   - mybatis
   - mrnu
 categories:
-  - 阅读目录
   - 页面
+  - 阅读目录
 permalink: /post/mybatis-read-menu.html
 comments: true
 toc: true

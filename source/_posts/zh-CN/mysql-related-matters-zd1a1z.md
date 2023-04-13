@@ -1,7 +1,7 @@
 ---
 title: CentOS7安装与配置MySQL
-date: &id001 2022-09-28 00:52:06
-updated: *id001
+date: '2022-09-28 00:52:06'
+updated: '2022-09-28 00:52:06'
 excerpt: 安装rpm版本的mysql安装源#卸载旧版rpmqa_grepmysqlsudorpmenodepsmysqlcommunityreleaseelnoarch#安装新版wgethttp_repomysqlcommysqlcommunityreleaseelnoarchrpmsudorpmuvhmysqlcommunityreleaseelnoarchrpm#导入keysudorpmimporthttps_repomysqlcomrpmgpgkeymysql安装mysqlsudodnfinstallymys
 tags:
   - 重启

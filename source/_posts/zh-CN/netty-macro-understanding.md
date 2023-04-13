@@ -1,14 +1,14 @@
 ---
 title: Netty的宏观理解
-date: &id001 2022-05-05 00:40:28
-updated: *id001
+date: '2022-05-05 00:40:28'
+updated: '2022-05-05 00:40:28'
 excerpt: Netty的宏观理解
 tags:
   - newnote
   - netty
 categories:
-  - Netty新思路
   - 新笔记
+  - Netty新思路
 permalink: /post/netty-macro-understanding.html
 comments: true
 toc: true

@@ -1,7 +1,7 @@
 ---
 title: Java_SE_Lesson_3：接口、单例模式、包与访问控制
-date: &id001 2022-09-30 20:42:53
-updated: *id001
+date: '2022-09-30 20:42:53'
+updated: '2022-09-30 20:42:53'
 excerpt: 接口中所声明的方法都是抽象方法。接口中的方法都是public​的。接口中也可以定义成员变量。接口中的成员变量都是publicfinalstatic的。一个类不能既是final又是abstract的。因为abstract的主要目的是啥定义一种约定让子类去实现这种约定而final表示该类不能被继承。这样abstract希望该类可以被继承而final明确说明该类不能被继承两者矛盾。因此一个类不能既是final的又是abstract的。desginpattern（设计模式）。单例模式（singleton）publ
 tags:
   - 接口

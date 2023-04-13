@@ -1,7 +1,7 @@
 ---
 title: Java_SE_第六讲：流程控制语句
-date: &id001 2022-10-10 20:33:56
-updated: *id001
+date: '2022-10-10 20:33:56'
+updated: '2022-10-10 20:33:56'
 excerpt: 条件运算符（三元表达式）其形式为_typed=a?b_c_​具体化形式为_intd=轻量级的文本编辑器_ultraediteditplusvivimgvim流程控制语句if的用法为_第一种形式_if(布尔表达式){待执行的代码}第二种形式_if(布尔表达式){待执行的代码}else{待执行的代码}第三种形式_javaif(布尔表达式){待执行的代码}elseif(布尔表达式){待执行的代码}elseif(布尔表达式){待执行的代码}else{待执行的代码}switch语句使用形式为_javaswitch(
 tags:
   - 执行

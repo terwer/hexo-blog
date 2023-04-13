@@ -1,7 +1,7 @@
 ---
 title: Struts2-3环境准备以及构建第一个Struts2-3的hello-word项目
-date: &id001 2022-10-24 21:44:05
-updated: *id001
+date: '2022-10-24 21:44:05'
+updated: '2022-10-24 21:44:05'
 excerpt: myeclipse下载myeclipse下载地址链接_https_panbaiducomsxabceuwgnlnthgniaamq请发邮件至youweics@com获取提取码以及破解教程struts下载https_archiveapacheorgdiststrutsstrutsallzip备用下载链接_https_panbaiducomsauftabecimgasgyhw请发邮件至youweics@com获取提取码注意_struts之后最低需要jdkmyeclipse只支持jdk因此只能用strutsto
 tags:
   - 下载
@@ -13,8 +13,8 @@ tags:
   - jdk
   - java
 categories:
-  - 后端开发
   - Struts2
+  - 后端开发
 permalink: /post/struts23-environmental-preparation-and-constructing-the-first-struts23-helloword-project-z13zigc.html
 comments: true
 toc: true

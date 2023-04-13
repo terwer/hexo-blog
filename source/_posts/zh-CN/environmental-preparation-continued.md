@@ -1,7 +1,7 @@
 ---
 title: Git应用开发详解之环境准备续
-date: &id001 2022-11-26 18:00:33
-updated: *id001
+date: '2022-11-26 18:00:33'
+updated: '2022-11-26 18:00:33'
 excerpt: git系列涉及的内容续git对象类型与索引git分支如何创建切换与删除分支git分支在项目开发中的作用git分支在工程化项目中的最佳实践分支常见重要命令详解
 tags:
   - git
@@ -12,8 +12,8 @@ tags:
   - 涉及
   - 内容
 categories:
-  - 开发流程
   - 源代码管理
+  - 开发流程
 permalink: /post/environmental-preparation-continued.html
 comments: true
 toc: true

@@ -1,7 +1,7 @@
 ---
 title: 统信 UOS 安装 zsh 并使用 oh-my-zsh 美化终端
-date: &id001 2022-06-07 23:53:43
-updated: *id001
+date: '2022-06-07 23:53:43'
+updated: '2022-06-07 23:53:43'
 excerpt: 注意：此操作之前请先安装 git。参考我的文章：统信 UOS 基本开发环境搭建之 git。
 tags:
   - uos

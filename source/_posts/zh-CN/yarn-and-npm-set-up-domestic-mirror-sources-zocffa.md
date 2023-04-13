@@ -1,7 +1,7 @@
 ---
 title: yarn和npm设置国内镜像源
-date: &id001 2022-08-16 20:10:25
-updated: *id001
+date: '2022-08-16 20:10:25'
+updated: '2022-08-16 20:10:25'
 excerpt: feat_更新最新镜像地址。由于npm包部分依赖下载速度缓慢最好使用国内镜像源来解决一般使用淘宝开源的镜像。安装yarnnpmigyarnyarn设置国内源yarnconfigsetregistryhttps_registrynpmmirrorcomglobalyarnconfigsetdisturlhttps_npmmirrorcompackagedistglobalyarnconfigsetsass_binary_sitehttps_cdnnpmmirrorcombinariesnodesassglo
 tags:
   - 镜像

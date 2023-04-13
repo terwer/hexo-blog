@@ -1,7 +1,7 @@
 ---
 title: Struts2使用标签库找不到URI:[struts-tags]的taglib[s]问题解决
-date: &id001 2022-10-30 13:17:38
-updated: *id001
+date: '2022-10-30 13:17:38'
+updated: '2022-10-30 13:17:38'
 excerpt: 找到strutscore​的jar​包将其复制到无关文件夹中当作压缩文件解压在其中的metainf​​目录中找到strutstagstld​​文件将其复制到项目中webappwebinf​​目录下然后在webxml​​文件中（之前）添加以下内容_
 tags:
   - struts2

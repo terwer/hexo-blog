@@ -1,7 +1,7 @@
 ---
 title: 统信 UOS 基本开发环境搭建之 docker
-date: &id001 2022-06-08 02:11:43
-updated: *id001
+date: '2022-06-08 02:11:43'
+updated: '2022-06-08 02:11:43'
 excerpt: 统信 UOS 基本开发环境搭建之 docker。
 tags:
   - uos

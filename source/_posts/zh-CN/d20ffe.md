@@ -1,7 +1,7 @@
 ---
 title: Docker_Desktop_for_mac太差
-date: &id001 2022-06-11 14:13:47
-updated: *id001
+date: '2022-06-11 14:13:47'
+updated: '2022-06-11 14:13:47'
 tags:
   - timeline
 categories: []

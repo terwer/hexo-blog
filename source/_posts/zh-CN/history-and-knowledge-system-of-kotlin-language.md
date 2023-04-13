@@ -1,7 +1,7 @@
 ---
 title: Kotlin语言的历史与知识体系
-date: &id001 2022-05-07 22:20:22
-updated: *id001
+date: '2022-05-07 22:20:22'
+updated: '2022-05-07 22:20:22'
 excerpt: Kotlin语言的历史与知识体系。
 tags:
   - kotlin

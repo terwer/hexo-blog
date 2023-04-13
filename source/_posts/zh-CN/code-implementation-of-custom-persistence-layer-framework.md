@@ -1,7 +1,7 @@
 ---
 title: 自定义持久层框架的代码实现一
-date: &id001 2022-05-08 19:39:38
-updated: *id001
+date: '2022-05-08 19:39:38'
+updated: '2022-05-08 19:39:38'
 excerpt: 项目结构├──ipersistence│├──ipersistenceiml│├──pomxml│└──src└──ipersistence_test├──ipersistence_testiml├──pomxml├──src└──target具体代码sqlmapperconfigxml配置文件usermapperxml配置文件selectfromuserselectfromuserwhereid=#{id}andusername=#{username}读取资源处理resources类资源处理类@name
 tags:
   - 配置文件

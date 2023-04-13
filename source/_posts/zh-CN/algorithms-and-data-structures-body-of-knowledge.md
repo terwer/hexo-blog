@@ -1,13 +1,13 @@
 ---
 title: 算法与数据结构知识体系
-date: &id001 2022-06-05 21:43:26
-updated: *id001
+date: '2022-06-05 21:43:26'
+updated: '2022-06-05 21:43:26'
 excerpt: 算法与数据结构知识体系。
 tags:
   - data-structure
 categories:
-  - 算法与数据结构C++版新思路
   - 新笔记
+  - 算法与数据结构C++版新思路
 permalink: /post/algorithms-and-data-structures-body-of-knowledge.html
 comments: true
 toc: true

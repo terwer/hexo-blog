@@ -1,7 +1,7 @@
 ---
 title: git修改提交的用户名
-date: &id001 2022-06-13 10:35:55
-updated: *id001
+date: '2022-06-13 10:35:55'
+updated: '2022-06-13 10:35:55'
 tags:
   - git
 categories:

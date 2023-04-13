@@ -1,7 +1,7 @@
 ---
 title: Parallels Desktop安装Fedora34并切换Xfce Desktop桌面环境
-date: &id001 2022-05-25 23:28:14
-updated: *id001
+date: '2022-05-25 23:28:14'
+updated: '2022-05-25 23:28:14'
 excerpt: 在 Parallels Desktop 上默认下载安装了最新的 Fedora34 ，但是里面默认是 Fedora Workstation 环境。如果想要切换成xfce4，可以按照以下操作。
 tags:
   - parallels
@@ -10,9 +10,9 @@ tags:
   - xfce4
   - fedora
 categories:
-  - 开发流程
   - 过程改进
   - 开发效率
+  - 开发流程
 permalink: /post/parallels-desktop-install-fedora-34-and-switch-xfce-desktop-environment.html
 comments: true
 toc: true

@@ -1,13 +1,13 @@
 ---
 title: Java字节码文件结构剖析
-date: &id001 2022-06-05 21:18:45
-updated: *id001
+date: '2022-06-05 21:18:45'
+updated: '2022-06-05 21:18:45'
 excerpt: Java字节码文件结构剖析。
 tags:
   - jvm
 categories:
-  - JVM进阶新思路
   - 新笔记
+  - JVM进阶新思路
 permalink: /post/analysis-of-java-bytecode-file-structure.html
 comments: true
 toc: true

@@ -1,7 +1,7 @@
 ---
 title: Java_17-LTS
-date: &id001 2022-10-08 01:07:50
-updated: *id001
+date: '2022-10-08 01:07:50'
+updated: '2022-10-08 01:07:50'
 excerpt: java发布于年月日。java版本是切换到新的个月发布周期以来的第二个长期支持（lts）版本（第一个是java）[]。主要特性这次更新共带来个新功能。openjdkjava文档_https_openjdkjavanetprojectsjdkjep描述jep恢复始终严格的浮点语义jep增强的伪随机数生成器jep使用新的macos渲染库jep支持macosaarch架构jep删除已启用的appletapijep更强的封装jdk内部封装jepswitch模式匹配（预览）jep移除rmiactivationjep
 tags:
   - 下载
@@ -15,9 +15,9 @@ tags:
   - java17
   - javase
 categories:
-  - Java语言新特性
   - JavaSE
   - 后端开发
+  - Java语言新特性
 permalink: /post/java_17-10uhjn.html
 comments: true
 toc: true

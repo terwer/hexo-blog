@@ -1,7 +1,7 @@
 ---
 title: Java_SE_第二讲：原生数据类型
-date: &id001 2022-10-10 19:49:40
-updated: *id001
+date: '2022-10-10 19:49:40'
+updated: '2022-10-10 19:49:40'
 excerpt: windows_notepadeditplusultraeditgvimlinux_vivimgeditjava中的数据类型分为两大类_）原生数据类型（primitivedatatype））引用类型（对象类型）（referencetype）变量与常量_所谓常量就是值不会变化的量_所谓变量就是值可以变化的量。如何定义变量？变量类型变量名_inta_如何为变量赋值？变量名=变量值_a=_=表示赋值将等号右边的值赋给了左边的变量。java中使用==表示相等等价于数学中的=。综合变量定义与赋值。变量类型变量名_变
 tags:
   - 注释

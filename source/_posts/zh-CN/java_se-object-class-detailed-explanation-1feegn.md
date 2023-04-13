@@ -1,7 +1,7 @@
 ---
 title: Java_SE之Object类详解
-date: &id001 2022-10-12 20:51:24
-updated: *id001
+date: '2022-10-12 20:51:24'
+updated: '2022-10-12 20:51:24'
 excerpt: 相等性的比较（==）对于原生数据类型比较的是左右两边的值是否相等对于引用类型来说比较的是左右两边的引用是否指向同一个对象或者说左右两边的引用地址是否相同。javalangobject类javalang包在使用时无需显式导入编译时由编译器帮助我们导入。api（applicationprogramminginterface）应用编程接口。tostring当打印引用时实际上会打印引入所指对象的tostring()方法的返回值。因为每个类都直接或者间接的继承自object而object类中定义了tostring(
 tags:
   - 引用

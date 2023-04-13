@@ -1,13 +1,13 @@
 ---
 title: 类加载器深入解析与阶段分解
-date: &id001 2022-06-05 21:26:57
-updated: *id001
+date: '2022-06-05 21:26:57'
+updated: '2022-06-05 21:26:57'
 excerpt: 类加载器深入解析与阶段分解。
 tags:
   - jvm
 categories:
-  - JVM进阶新思路
   - 新笔记
+  - JVM进阶新思路
 permalink: /post/class-loader-in-depth-analysis-and-stage-decomposition.html
 comments: true
 toc: true

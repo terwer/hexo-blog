@@ -1,7 +1,7 @@
 ---
 title: Ubuntu2204安装MySQL5_7
-date: &id001 2022-05-16 13:12:35
-updated: *id001
+date: '2022-05-16 13:12:35'
+updated: '2022-05-16 13:12:35'
 excerpt: Ubuntu直接使用下面的命令默认安装的是MySQL8.0，但是有时候为了兼容我们需要使用MySQL5.7。
 tags:
   - wsl
@@ -9,9 +9,9 @@ tags:
   - mysql
   - mysql57
 categories:
-  - 开发流程
   - 过程改进
   - 开发效率
+  - 开发流程
 permalink: /post/ubuntu-2204-install-mysql57.html
 comments: true
 toc: true

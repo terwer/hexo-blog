@@ -1,7 +1,7 @@
 ---
 title: Nuxt3和Vue3集成FontAwesome
-date: &id001 2022-10-09 23:05:51
-updated: *id001
+date: '2022-10-09 23:05:51'
+updated: '2022-10-09 23:05:51'
 excerpt: 安装依赖yarnadd@fortawesomefontawesomesvgcoreyarnadd@fortawesomefreebrandssvgiconsyarnadd@fortawesomefreesolidsvgiconsyarnadd@fortawesomevuefontawesome添加nuxt插件在nuxt的项目根目录新建plugins文件夹然后新建文件fontawesomeplugints代码如下import{library}from@fortawesomefontawesomesvgcor
 tags:
   - 使用

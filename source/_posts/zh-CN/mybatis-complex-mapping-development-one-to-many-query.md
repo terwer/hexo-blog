@@ -1,7 +1,7 @@
 ---
 title: MyBatis复杂映射开发之一对多查询
-date: &id001 2022-08-30 13:28:58
-updated: *id001
+date: '2022-08-30 13:28:58'
+updated: '2022-08-30 13:28:58'
 excerpt: 一对多查询模型用户和订单表的关系为一个用户有多个订单一个订单只能属于一个用户。一对多查询需求_查询多有用户与此同时查询用户具有的订单信息。一对多查询语句对应的sql语句selectuoordertimeototalouidfromuseruleftjoinordersoonuid=ouid_查询结果如下_idusernamepasswordbirthdayordertimetotaluidlucy____lucy____tom____代码实现修改user实体用户信息@name_user@author_te
 tags:
   - mybatis

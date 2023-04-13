@@ -1,16 +1,16 @@
 ---
 title: 探索一下WSL上Ubuntu的包管理工具
-date: &id001 2022-05-18 16:14:54
-updated: *id001
+date: '2022-05-18 16:14:54'
+updated: '2022-05-18 16:14:54'
 excerpt: 探索一下WSL上Ubuntu的包管理工具。
 tags:
   - wsl
   - ubuntu
   - package
 categories:
-  - 开发流程
   - 过程改进
   - 开发效率
+  - 开发流程
 permalink: /post/explore-ubuntu-package-management-tools-on-wsl.html
 comments: true
 toc: true

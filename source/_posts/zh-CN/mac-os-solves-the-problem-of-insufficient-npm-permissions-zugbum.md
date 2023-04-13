@@ -1,7 +1,7 @@
 ---
 title: MacOS解决npm权限不足问题
-date: &id001 2022-08-24 18:01:34
-updated: *id001
+date: '2022-08-24 18:01:34'
+updated: '2022-08-24 18:01:34'
 excerpt: sudochownr`whoami`~npmsudochownr`whoami`usrlocallibnode_modules错误提示如下_permissiondeniedaccessusrlocallibnode_modules‍
 tags:
   - 错误

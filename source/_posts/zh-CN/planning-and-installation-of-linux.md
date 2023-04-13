@@ -1,7 +1,7 @@
 ---
 title: 基础学习篇目录- for CentOS 7
-date: &id001 2022-05-05 22:31:51
-updated: *id001
+date: '2022-05-05 22:31:51'
+updated: '2022-05-05 22:31:51'
 excerpt: 第一部份Linux 的规划与安装。
 tags:
   - linux

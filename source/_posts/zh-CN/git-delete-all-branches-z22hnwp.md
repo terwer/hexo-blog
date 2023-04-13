@@ -1,7 +1,7 @@
 ---
 title: git删除所有分支
-date: &id001 2022-07-15 11:19:09
-updated: *id001
+date: '2022-07-15 11:19:09'
+updated: '2022-07-15 11:19:09'
 excerpt: todeleteallthelocaltagssimplerunthefollowingcommandgittag_xargsgittagdtodeleteremotetagsafterdeletingthelocaltagsbyrunningtheabovecommandyoucanrunthecomandbelowgitlsremotetagsrefsorigin_cutf_xargsgitpushorigindeletenote_replaceoriginwithyourremotehandler
 tags:
   - git

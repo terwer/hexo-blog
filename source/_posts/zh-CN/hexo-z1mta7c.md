@@ -1,7 +1,7 @@
 ---
 title: Hexo平台配置指南
-date: &id001 2022-12-01 14:36:10
-updated: *id001
+date: '2022-12-01 14:36:10'
+updated: '2022-12-01 14:36:10'
 excerpt: 官网https_hexoiozhcn准备工作npminstallhexoclighexoinithexoblogcdblognpminstallhexoserver发布配置‍
 tags:
   - 准备
@@ -11,9 +11,9 @@ tags:
   - 平台
   - 指南
 categories:
+  - 平台配置
   - sy-post-publisher
   - 作品展示
-  - 平台配置
 permalink: /post/hexo-z1mta7c.html
 comments: true
 toc: true

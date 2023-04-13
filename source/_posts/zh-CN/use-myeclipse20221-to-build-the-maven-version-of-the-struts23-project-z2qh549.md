@@ -1,7 +1,7 @@
 ---
 title: 使用MyEclipse2022-1搭建Maven版本的Struts2-3项目
-date: &id001 2022-10-25 14:45:46
-updated: *id001
+date: '2022-10-25 14:45:46'
+updated: '2022-10-25 14:45:46'
 excerpt: myeclipse下载推荐直接到官网下载不要去其他地方下载避免一些被加载了病毒的安装包。备用下载与破解包下载_链接_https_panbaiducomsgplslejajhpqhrvwhig请发邮件至youweics@com获取提取码破解解压查看readmetxt搭建struts的maven版项目struts下载https_archiveapacheorgdiststrutsstrutsallzip备注_使用eclipse也可以。新建项目注意版本选择_javaee_webjdk_jstl_后面的tomca
 tags:
   - 下载
@@ -15,8 +15,8 @@ tags:
   - maven
   - myeclipse
 categories:
-  - 后端开发
   - Struts2
+  - 后端开发
 permalink: /post/use-myeclipse20221-to-build-the-maven-version-of-the-struts23-project-z2qh549.html
 comments: true
 toc: true

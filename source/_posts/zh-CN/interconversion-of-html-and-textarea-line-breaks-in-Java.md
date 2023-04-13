@@ -1,7 +1,7 @@
 ---
 title: Java中HTML与Textarea换行符的相互转换
-date: &id001 2022-04-25 17:03:40
-updated: *id001
+date: '2022-04-25 17:03:40'
+updated: '2022-04-25 17:03:40'
 tags:
   - java
   - code-snapshot

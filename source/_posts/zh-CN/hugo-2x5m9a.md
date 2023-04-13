@@ -1,7 +1,7 @@
 ---
 title: Hugo平台配置指南
-date: &id001 2022-09-27 10:00:30
-updated: *id001
+date: '2022-09-27 10:00:30'
+updated: '2022-09-27 10:00:30'
 excerpt: hugo官网theworld’sfastestframeworkforbuildingwebsites_hugo(gohugoio)安装hugobrewinstallhugo准备工作hugo博客部署_这个相信大家都已经会了。不过这里还是推荐一个最佳实践。推荐使用hugothemenextstarter生成博客。博客设置参考_hugothemenext我开发此功能的测试博客_https_hugoterwerspace源码_https_githubcomterwerhugobloghugo的frontmatt
 tags:
   - 博客
@@ -10,9 +10,9 @@ tags:
   - 准备
   - 工作
 categories:
+  - 平台配置
   - sy-post-publisher
   - 作品展示
-  - 平台配置
 permalink: /post/hugo-2x5m9a.html
 comments: true
 toc: true

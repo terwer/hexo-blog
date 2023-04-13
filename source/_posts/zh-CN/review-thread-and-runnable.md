@@ -1,7 +1,7 @@
 ---
 title: Java并发之回顾Thread和runnable
-date: &id001 2022-11-08 20:13:45
-updated: *id001
+date: '2022-11-08 20:13:45'
+updated: '2022-11-08 20:13:45'
 excerpt: jdk文档的描述threadathreadisathreadofexecutioninaprogramthejavavirtualmachineallowsanapplicationtohavemultiplethreadsofexecutionrunningconcurrentlyeverythreadhasaprioritythreadswithhigherpriorityareexecutedinpreferencetothreadswithlowerpriorityeachthreadmayorm
 tags:
   - 并发
@@ -12,8 +12,8 @@ tags:
   - thread
   - concurrent
 categories:
-  - 并发新思路
   - 新笔记
+  - 并发新思路
 permalink: /post/review-thread-and-runnable.html
 comments: true
 toc: true

@@ -1,7 +1,7 @@
 ---
 title: Struts1实现国际化
-date: &id001 2022-05-07 20:57:08
-updated: *id001
+date: '2022-05-07 20:57:08'
+updated: '2022-05-07 20:57:08'
 excerpt: Struts1实现国际化的方法。
 tags:
   - struts1

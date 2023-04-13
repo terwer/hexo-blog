@@ -1,7 +1,7 @@
 ---
 title: NIO三大核心之通道（Channel）
-date: &id001 2022-05-04 14:39:34
-updated: *id001
+date: '2022-05-04 14:39:34'
+updated: '2022-05-04 14:39:34'
 excerpt: NIO中所有的IO都是从通道（Channel）开始的。NIO的通道类似于流，但是有区别。
 tags:
   - nio

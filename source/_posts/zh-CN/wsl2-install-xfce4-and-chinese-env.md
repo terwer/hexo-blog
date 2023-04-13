@@ -1,7 +1,7 @@
 ---
 title: 在WSL2上安装xfce桌面以及中文开发环境的配置
-date: &id001 2022-05-15 14:18:13
-updated: *id001
+date: '2022-05-15 14:18:13'
+updated: '2022-05-15 14:18:13'
 excerpt: 在WSL2上安装xfce桌面以及中文开发环境的配置。
 tags:
   - wsl
@@ -10,9 +10,9 @@ tags:
   - zh
   - wsl2
 categories:
+  - 开发效率
   - 开发流程
   - 实用技巧
-  - 开发效率
 permalink: /post/wsl2-install-xfce4-and-chinese-env.html
 comments: true
 toc: true

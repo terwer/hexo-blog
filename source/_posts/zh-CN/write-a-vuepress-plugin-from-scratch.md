@@ -1,7 +1,7 @@
 ---
 title: 从零开始写一个vuepress插件
-date: &id001 2022-11-26 21:18:43
-updated: *id001
+date: '2022-11-26 21:18:43'
+updated: '2022-11-26 21:18:43'
 excerpt: 初始化插件项目在任意目录新建一个插件目录我这里在pkgvuepresspluginsimpleencryptmkdirpkgvuepresspluginsimpleencrypt进入该目录初始化项目yarninit输入插件名vuepresspluginsimpleencrypt入口文件名indexjs其他选项对应填写即可。初始化之后packagejson的文件内容_{_{}_{}_[]_{}}编写入口文件indexjsmoduleexports=(optionsctx)={return{name_vuep
 tags:
   - 插件

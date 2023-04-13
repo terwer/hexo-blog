@@ -1,7 +1,7 @@
 ---
 title: Netty线程模型
-date: &id001 2022-05-04 15:27:07
-updated: *id001
+date: '2022-05-04 15:27:07'
+updated: '2022-05-04 15:27:07'
 excerpt: Netty的设计主要基于主从Reactor的多线程模式，并做了一定的改进。
 tags:
   - reactor

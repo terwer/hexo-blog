@@ -1,7 +1,7 @@
 ---
 title: 包装类与数组
-date: &id001 2022-10-17 22:29:22
-updated: *id001
+date: '2022-10-17 22:29:22'
+updated: '2022-10-17 22:29:22'
 excerpt: 包装类（wrapperclass）。针对原生数据类型的包装。包装类（个）都位于javalang​包下。java中的个包装类分别是_byteshortintegerlongfloatdoublecharacterboolean。他们的使用方式都是一样的可以实现原生数据类型和包装类额双向转换。数组（array）_相同类型数据的集合叫做数组。如何定义数组_type[]变量名=newtype[数组中元素的个数]_按照下列方式定义长度为的数组_int[]a=newint[]_或者inta[]=newint[]_数组
 tags:
   - 数组

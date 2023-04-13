@@ -1,14 +1,14 @@
 ---
 title: Netty知识结构分析
-date: &id001 2022-05-05 01:21:42
-updated: *id001
+date: '2022-05-05 01:21:42'
+updated: '2022-05-05 01:21:42'
 excerpt: Netty的宏观理解
 tags:
   - newnote
   - netty
 categories:
-  - Netty新思路
   - 新笔记
+  - Netty新思路
 permalink: /post/netty-knowledge-structure-analysis.html
 comments: true
 toc: true

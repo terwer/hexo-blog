@@ -1,7 +1,7 @@
 ---
 title: Java_SE之Java_SE平台与JDK
-date: &id001 2022-09-05 12:20:12
-updated: *id001
+date: '2022-09-05 12:20:12'
+updated: '2022-09-05 12:20:12'
 excerpt: java平台javase_javaplatformstandardeditionjavase是一个计算平台用于为桌面和服务器环境开发和部署可移植代码。javase以前称为javaplatformstandardedition(jse)。javame_javaplatformmicroeditionjavame是一个计算平台用于为嵌入式和移动设备（微控制器传感器网关移动电话个人数字助理电视机顶盒打印机）开发和部署可移植代码。javame以前称为javaplatformmicroedition或jme。截至年
 tags:
   - 平台

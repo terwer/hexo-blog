@@ -1,7 +1,7 @@
 ---
 title: MyBatis 注解开发
-date: &id001 2022-05-25 00:31:34
-updated: *id001
+date: '2022-05-25 00:31:34'
+updated: '2022-05-25 00:31:34'
 excerpt: MyBatis 注解开发。
 tags:
   - mybatis

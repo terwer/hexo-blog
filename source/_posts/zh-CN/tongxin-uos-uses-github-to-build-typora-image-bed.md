@@ -1,7 +1,7 @@
 ---
 title: 统信 UOS 利用 Github 打造 Typora 图床
-date: &id001 2022-06-08 01:32:07
-updated: *id001
+date: '2022-06-08 01:32:07'
+updated: '2022-06-08 01:32:07'
 excerpt: 统信 UOS 利用 Github 打造 Typora 图床。
 tags:
   - uos

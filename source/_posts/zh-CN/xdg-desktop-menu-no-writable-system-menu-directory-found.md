@@ -1,7 +1,7 @@
 ---
 title: Deepin_linux_An_error_occurred_while_applying_changes_xdg_desktop-menu_No_writable_system_menu_directory_found解决方案
-date: &id001 2022-07-11 19:50:11
-updated: *id001
+date: '2022-07-11 19:50:11'
+updated: '2022-07-11 19:50:11'
 excerpt: 错误日志selectingpreviouslyunselectedpackageoneblogj(readingdatabasefilesanddirectoriescurrentlyinstalled)preparingtounpackbundlesoneblogjdebunpackingoneblogj()settinguponeblogj()addingshortcuttothemenuanerroroccurredwhileapplyingchanges_anerroroccurredwhilea
 tags:
   - 错误

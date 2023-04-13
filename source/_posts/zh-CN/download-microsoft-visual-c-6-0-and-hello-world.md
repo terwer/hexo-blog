@@ -1,7 +1,7 @@
 ---
 title: Microsoft Visual C++ 6.0 简体中文版
-date: &id001 2013-10-07 12:02:00
-updated: *id001
+date: '2013-10-07 12:02:00'
+updated: '2013-10-07 12:02:00'
 excerpt: visualc简称vc或者vc是微软推出的一款c编译器将“高级语言”翻译为“机器语言（低级语言）”的程序。visualc是一个功能强大的可视化软件开发工具。自年microsoft公司推出visualc后随着其新版本的不断问世visualc已成为专业程序员进行软件开发的首选工具。虽然微软公司推出了visualcnet(visualc)但它的应用有很大的局限性只适用于windowsw
 tags:
   - 软件

@@ -1,7 +1,7 @@
 ---
 title: 统信 UOS 解决 Intellij IDEA 中文光标不能跟随
-date: &id001 2022-06-08 02:15:08
-updated: *id001
+date: '2022-06-08 02:15:08'
+updated: '2022-06-08 02:15:08'
 excerpt: 统信 UOS 解决 Intellij IDEA 中文光标不能跟随。
 tags:
   - uos

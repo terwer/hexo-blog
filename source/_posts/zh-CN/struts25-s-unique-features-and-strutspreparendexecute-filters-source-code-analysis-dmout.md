@@ -1,7 +1,7 @@
 ---
 title: Struts2-3的独有特性与StrutsPrepareAndExecute过滤器源码分析
-date: &id001 2022-10-25 00:06:54
-updated: *id001
+date: '2022-10-25 00:06:54'
+updated: '2022-10-25 00:06:54'
 excerpt: action后缀​action​会自动加上action​例如和效果一样。​其他类型转换loginaction新增两个属性privateintegerage_privatedatedate_publicintegergetage(){returnage_}publicvoidsetage(integerage){thisage=age_}publicdategetdate(){returndate_}publicvoidsetdate(datedate){thisdate=date_}loginjsp年龄_
 tags:
   - 执行
@@ -14,8 +14,8 @@ tags:
   - 过滤器
   - 启动流程
 categories:
-  - 后端开发
   - Struts2
+  - 后端开发
 permalink: /post/struts25-s-unique-features-and-strutspreparendexecute-filters-source-code-analysis-dmout.html
 comments: true
 toc: true

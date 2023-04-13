@@ -1,7 +1,7 @@
 ---
 title: Nety源码剖析
-date: &id001 2022-04-21 23:11:38
-updated: *id001
+date: '2022-04-21 23:11:38'
+updated: '2022-04-21 23:11:38'
 excerpt: 本文对Netty源码进行了深入剖析，透过Netty源码来理解Netty框架背后的原理。
 tags:
   - netty

@@ -1,7 +1,7 @@
 ---
 title: 文档首页
-date: &id001 2022-09-28 14:40:33
-updated: *id001
+date: '2022-09-28 14:40:33'
+updated: '2022-09-28 14:40:33'
 excerpt: 这里是sypostpublisher的文档。文档目录配置入门视频开始上手三种使用方式简介思源笔记挂件模式chrome浏览器扩展模式vercel远程部署模式平台配置博客园语雀wordpressjvueconferencevuepress链滴知识仓库jekyll（githubpages）hugohexonuxtnexttypeecho高级使用之文章与平台绑定高级使用之动态新增平台metaweblogapiwordpressgithubpages系列高级使用之自定义页面布局样式组件化拖拽式所见即所得的设计高级使
 tags:
   - 文档

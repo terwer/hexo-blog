@@ -1,7 +1,7 @@
 ---
 title: Deepin20.5 安装 docker 与 docker-compose
-date: &id001 2022-05-30 20:27:00
-updated: *id001
+date: '2022-05-30 20:27:00'
+updated: '2022-05-30 20:27:00'
 excerpt: Deepin20.5安装docker与docker-compose。
 tags:
   - docker

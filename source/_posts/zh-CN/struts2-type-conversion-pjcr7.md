@@ -1,7 +1,7 @@
 ---
 title: Struts2的类型转换
-date: &id001 2022-10-30 01:26:18
-updated: *id001
+date: '2022-10-30 01:26:18'
+updated: '2022-10-30 01:26:18'
 excerpt: 使用标签注意_struts使用标签库找不到uri_[strutstags]的taglib[s]问题解决新建loginjsp​文件内容如下_pageencoding=查看结果_​在action中使用actionsupport新增页面​loginjsp​pageencoding=​loginactionjava​packagespaceterwer_importorgapachecommonslangstringutils_importcomopensymphonyxworkactionsupport_pub
 tags:
   - 使用
@@ -14,8 +14,8 @@ tags:
   - convert
   - validate
 categories:
-  - 后端开发
   - Struts2
+  - 后端开发
 permalink: /post/struts2-type-conversion-pjcr7.html
 comments: true
 toc: true

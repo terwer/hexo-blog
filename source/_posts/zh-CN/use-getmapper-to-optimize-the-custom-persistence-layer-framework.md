@@ -1,7 +1,7 @@
 ---
 title: 使用getMapper方式对自定义持久层框架进行优化
-date: &id001 2022-08-29 23:43:59
-updated: *id001
+date: '2022-08-29 23:43:59'
+updated: '2022-08-29 23:43:59'
 excerpt: 问题分析dao层使用持久层框架存在代码重复整个操作过程模板重复（加载配置文件创建sqlsessionfactory生产sqlsession）存在硬编码（statementid）解决思路getmapper动态代理方式优化使用代理模式生成dao层接口的实现类​​sqlsession接口新增getmapper方法fun?)_tpublicdefaultsqlsession中getmapper方法的实现overridefun)_t{使用jdk动态代理为dao接口生成代理对象returnproxynewproxyi
 tags:
   - custom

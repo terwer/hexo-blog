@@ -1,7 +1,7 @@
 ---
 title: vue3的reactive和ref的区别
-date: &id001 2022-07-31 12:46:26
-updated: *id001
+date: '2022-07-31 12:46:26'
+updated: '2022-07-31 12:46:26'
 excerpt: vue的reactive和ref的区别首先我们都知道ref函数和reactive函数都是用来定义响应式数据_但是reactive更适合定义复杂的数据类型（jsonarr）ref适合定义基本数据类型（可接收基本数据类型和对象）一句话_使用场景ref简单数据reactive复杂数据ref取数据需要加value参考https_juejincnpost
 tags:
   - 数据

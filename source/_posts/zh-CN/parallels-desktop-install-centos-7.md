@@ -1,7 +1,7 @@
 ---
 title: Parallels Desktop从零开始安装CentOS7
-date: &id001 2022-05-26 02:40:11
-updated: *id001
+date: '2022-05-26 02:40:11'
+updated: '2022-05-26 02:40:11'
 excerpt: Parallels Desktop从零开始安装CentOS7。
 tags:
   - parallels
@@ -9,9 +9,9 @@ tags:
   - centos
   - centos7
 categories:
-  - 开发流程
   - 过程改进
   - 开发效率
+  - 开发流程
 permalink: /post/parallels-desktop-install-centos-7.html
 comments: true
 toc: true

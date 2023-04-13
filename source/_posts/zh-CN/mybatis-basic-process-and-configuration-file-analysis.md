@@ -1,7 +1,7 @@
 ---
 title: Mybatis基本流程及配置文件解析
-date: &id001 2022-08-30 10:52:07
-updated: *id001
+date: '2022-08-30 10:52:07'
+updated: '2022-08-30 10:52:07'
 excerpt: mybatis基本流程利用resources工具类加载配置文件并转换成输入输出流利用解析的配置创建sqlsessionfactory工厂生产sqlsessionsqlsession调用方法mybatis配置文件分析sqlmapconfigxmlmybatis核心配置文件层级mybatis常用配置解析输出日志在sqlmapconfigxml添加如下配置_）environments标签事务管理器（transactionmanager）类型有两种_jdbc_直接使用jdbc的提交和回滚设置依赖于从数据源得到的链
 tags:
   - 配置

@@ -1,7 +1,7 @@
 ---
 title: pnpm安装electron报错404解决方案
-date: &id001 2022-07-12 13:27:11
-updated: *id001
+date: '2022-07-12 13:27:11'
+updated: '2022-07-12 13:27:11'
 excerpt: 自定义镜像地址和版本解决pnpmconfigsetregistryhttps_registrynpmmirrorcompnpmconfigsetelectron_mirror=https_cdnnpmmirrorcombinarieselectronpnpmconfigsetelectron_custom_dir=参考_https_githubcomelectronelectronissues‍
 tags:
   - pnpm

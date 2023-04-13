@@ -1,13 +1,13 @@
 ---
 title: JVM知识体系与工具使用
-date: &id001 2022-06-05 21:09:06
-updated: *id001
+date: '2022-06-05 21:09:06'
+updated: '2022-06-05 21:09:06'
 excerpt: JVM知识体系与工具使用。
 tags:
   - jvm
 categories:
-  - JVM进阶新思路
   - 新笔记
+  - JVM进阶新思路
 permalink: /post/jvm-knowledge-system-and-tool-usage.html
 comments: true
 toc: true

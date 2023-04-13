@@ -1,7 +1,7 @@
 ---
 title: Java_19
-date: &id001 2022-10-08 01:33:49
-updated: *id001
+date: '2022-10-08 01:33:49'
+updated: '2022-10-08 01:33:49'
 excerpt: java在年月日正式发布java不是一个长期支持版本直到年月它将被jdk取代这次更新共带来个新功能。主要特性java带来的个新特性_jep描述record模式匹配(preview)虚拟线程(预览)switch模式匹配(三次预览)linuxriscvportvectorapi(四次孵化)外部函数内存api(preview)structuredconcurrency(incubator)java下载oracle下载https_wwworaclecomjavatechnologiesjavasejdkarchi
 tags:
   - 下载
@@ -15,9 +15,9 @@ tags:
   - java19
   - javase
 categories:
-  - Java语言新特性
   - JavaSE
   - 后端开发
+  - Java语言新特性
 permalink: /post/java_19-jbpwl.html
 comments: true
 toc: true

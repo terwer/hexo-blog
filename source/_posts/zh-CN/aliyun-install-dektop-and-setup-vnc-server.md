@@ -1,15 +1,15 @@
 ---
 title: 阿里云安装桌面环境及VNC连接
-date: &id001 2022-05-16 12:24:49
-updated: *id001
+date: '2022-05-16 12:24:49'
+updated: '2022-05-16 12:24:49'
 excerpt: 阿里云安装桌面环境及VNC连接。
 tags:
   - xfce
   - vncserver
 categories:
-  - 开发流程
   - 过程改进
   - 开发效率
+  - 开发流程
 permalink: /post/aliyun-install-dektop-and-setup-vnc-server.html
 comments: true
 toc: true

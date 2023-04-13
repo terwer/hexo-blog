@@ -1,7 +1,7 @@
 ---
 title: Apache-CXF简介与第一个JAX-WS的入门程序
-date: &id001 2022-11-05 01:06:48
-updated: *id001
+date: '2022-11-05 01:06:48'
+updated: '2022-11-05 01:06:48'
 excerpt: cxf的历史官网_https_cxfapacheorgceltix和xfire合并而来。稳定版本https_archiveapacheorgdistcxf入门项目新建一个普通java项目即可。最好使用maven服务端pomxmlxsi_schemalocation=服务端核心代码myservice接口packagespaceterwercxf_importjavaxjwswebservice_@webservicepublicinterfacemyservice{stringhello(stringuse
 tags:
   - 客户端
@@ -12,8 +12,8 @@ tags:
   - CXF
   - Apache
 categories:
-  - 后端开发
   - Webservice
+  - 后端开发
 permalink: /post/introduction-to-apachecxf-and-the-entry-program-for-the-first-jaxws-286lne.html
 comments: true
 toc: true

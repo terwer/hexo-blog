@@ -1,7 +1,7 @@
 ---
 title: Oracle12c创建表空间、用户
-date: &id001 2022-10-17 14:55:42
-updated: *id001
+date: '2022-10-17 14:55:42'
+updated: '2022-10-17 14:55:42'
 excerpt: 一前言oraclec中新增加了可插入数据库的概念即pdb（pluggabledatabase）允许一个容器数据库即cdb（containerdatabase）承载多个可插入数据库pdb。cdb相当于操作系统调用并管理各个pdbpdb相当于真正提供业务需求的数据库实例。在pdb中创建用户与之前相同但在cdb中创建用户与之前有所不同下面会详细说明。默认会安装一个名字为orcl​的pdb。查看pdb~sqlplussysassysdbasqlshowpdbs）打开sqlplus以system用户登录注意输入密码
 tags:
   - 创建

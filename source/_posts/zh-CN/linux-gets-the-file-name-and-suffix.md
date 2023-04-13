@@ -1,7 +1,7 @@
 ---
 title: Linux获取文件名以及后缀名
-date: &id001 2022-05-11 23:50:25
-updated: *id001
+date: '2022-05-11 23:50:25'
+updated: '2022-05-11 23:50:25'
 excerpt: Linux获取文件名以及后缀名。
 tags:
   - linux

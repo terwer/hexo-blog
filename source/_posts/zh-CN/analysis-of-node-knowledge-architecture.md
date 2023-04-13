@@ -1,13 +1,13 @@
 ---
 title: Node知识架构结构分析
-date: &id001 2022-05-05 22:52:30
-updated: *id001
+date: '2022-05-05 22:52:30'
+updated: '2022-05-05 22:52:30'
 excerpt: Node知识架构结构分析。
 tags:
   - node
 categories:
-  - 新笔记
   - Node新思路
+  - 新笔记
 permalink: /post/analysis-of-node-knowledge-architecture.html
 comments: true
 toc: true

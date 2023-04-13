@@ -1,7 +1,7 @@
 ---
 title: Oracle创建用户表空间
-date: &id001 2022-10-17 14:52:37
-updated: *id001
+date: '2022-10-17 14:52:37'
+updated: '2022-10-17 14:52:37'
 excerpt: 创建用户打开命令提示框输入以下内容输入_sqlplusnolog​进入oralce控制台输入_connassysdba​以管理员权限登录输入_createuserabcidentifiedby_​创建用户名adc密码输入_grantdbatoabc_​授予dba权限分为四步第步_创建临时表空间createtemporarytablespaceuser_temptempfilec_softwareoracleproductdbhome_oradatauser_tempdbfsizemautoextendon
 tags:
   - 创建

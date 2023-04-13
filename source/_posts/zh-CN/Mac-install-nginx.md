@@ -1,7 +1,7 @@
 ---
 title: Mac安装Nginx
-date: &id001 2022-04-29 16:48:36
-updated: *id001
+date: '2022-04-29 16:48:36'
+updated: '2022-04-29 16:48:36'
 tags:
   - mac
   - nginx

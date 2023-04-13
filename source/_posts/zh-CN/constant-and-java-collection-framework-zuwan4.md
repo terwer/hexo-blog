@@ -1,7 +1,7 @@
 ---
 title: 常量与Java集合框架简介
-date: &id001 2022-10-19 00:39:57
-updated: *id001
+date: '2022-10-19 00:39:57'
+updated: '2022-10-19 00:39:57'
 excerpt: 对于java中的常量的命名规则_所有字母的单词都是大写如果有多个单词那马使用下划线_​连接。​publicstaticfinalintage_of_persion=_​javacollection​​​​​​​​​
 tags:
   - 常量

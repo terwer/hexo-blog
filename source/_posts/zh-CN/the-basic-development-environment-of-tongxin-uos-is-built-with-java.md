@@ -1,7 +1,7 @@
 ---
 title: 统信 UOS 基本开发环境搭建之 java
-date: &id001 2022-06-08 01:27:20
-updated: *id001
+date: '2022-06-08 01:27:20'
+updated: '2022-06-08 01:27:20'
 excerpt: 统信 UOS 基本开发环境搭建之 java。
 tags:
   - uos

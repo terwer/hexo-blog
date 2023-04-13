@@ -1,7 +1,7 @@
 ---
 title: 第一个LaTeX文档——Hello world！
-date: &id001 2022-06-01 00:00:45
-updated: *id001
+date: '2022-06-01 00:00:45'
+updated: '2022-06-01 00:00:45'
 excerpt: 第一个LaTeX文档——Hello world！。
 tags:
   - latex

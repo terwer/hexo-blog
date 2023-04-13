@@ -1,7 +1,7 @@
 ---
 title: 自定义持久层框架的代码实现二
-date: &id001 2022-08-29 22:26:48
-updated: *id001
+date: '2022-08-29 22:26:48'
+updated: '2022-08-29 22:26:48'
 excerpt: 代码实现续核心执行引擎executor的实现执行器的实现@name_simpleexecutor@author_terwer@date__classsimpleexecutor_executor{@throws(exception__class)overridefunquery(configuration_configurationmappedstatement_mappedstatementvarargparams_any)_list{注册驱动获取链接valconnection=configuratio
 tags:
   - custom

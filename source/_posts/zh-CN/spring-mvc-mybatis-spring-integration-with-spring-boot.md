@@ -1,7 +1,7 @@
 ---
 title: 基于SpringBoot整合Spring、Spring-MVC和Mybatis
-date: &id001 2022-05-28 14:59:53
-updated: *id001
+date: '2022-05-28 14:59:53'
+updated: '2022-05-28 14:59:53'
 excerpt: 基于SpringBoot整合Spring、Spring-MVC和Mybatis。IDEA->new->Project，创建一个Maven的webapp项目，选择
   org.apache.maven的webapp骨架。
 tags:

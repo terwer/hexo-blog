@@ -1,7 +1,7 @@
 ---
 title: 配置入门视频
-date: &id001 2022-09-28 11:46:22
-updated: *id001
+date: '2022-09-28 11:46:22'
+updated: '2022-09-28 11:46:22'
 excerpt: 哔哩哔哩推荐bilibilihttps_wwwbilibilicomvideobvydcf?zw百度网盘下载链接链接_https_panbaiducomsgvjjkoijzpfgiifeoy_a?pwd=vo提取码_vo​‍
 tags:
   - 配置

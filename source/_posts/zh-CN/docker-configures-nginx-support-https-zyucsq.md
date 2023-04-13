@@ -1,7 +1,7 @@
 ---
 title: docker部署思源笔记并配置nginx支持https
-date: &id001 2022-07-16 19:25:33
-updated: *id001
+date: '2022-07-16 19:25:33'
+updated: '2022-07-16 19:25:33'
 excerpt: dockercompsoe的完整配置dockercomposeyml#构建dockercompose项目#dockercomposeloglevelinfoupbuild#dockercomposeloglevelinfoupdbuildversion_services_terwernginx_image_terwernginx_container_name_terwernginxbuild_context_terwernginxdockerfile_dockerfileports_volumes_ter
 tags:
   - 配置

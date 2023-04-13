@@ -1,7 +1,7 @@
 ---
 title: Jekyll平台配置指南
-date: &id001 2022-09-27 10:00:37
-updated: *id001
+date: '2022-09-27 10:00:37'
+updated: '2022-09-27 10:00:37'
 excerpt: 安装jekyllgeminstalljekyllwithcppflags=i(brewprefixopenssl)include查看jekyll版本jekyllv站点初始化##gitcheckoutorphanghpagesgitrmrf创建新站点jekyllnewskipbundle替换依赖##注释掉##gem##添加gem安装依赖bundleinstall解决依赖问题bundleaddwebrick本地运行bundleexecjekyllserve准备工作https_docsgithubcomenpa
 tags:
   - 安装
@@ -10,9 +10,9 @@ tags:
   - 站点
   - 初始化
 categories:
+  - 平台配置
   - sy-post-publisher
   - 作品展示
-  - 平台配置
 permalink: /post/jekyll-1hynv2.html
 comments: true
 toc: true

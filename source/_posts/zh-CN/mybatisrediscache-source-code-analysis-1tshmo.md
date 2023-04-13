@@ -1,7 +1,7 @@
 ---
 title: MyBatis-RedisCache源码分析
-date: &id001 2023-02-20 19:35:10
-updated: *id001
+date: '2023-02-20 19:35:10'
+updated: '2023-02-20 19:35:10'
 excerpt: 回顾在前面我们通过redis​集成了mybatis​的二级缓存mybatis的二级缓存整合redis接下来我们来分析一下rediscache​的源码。源码分析rediscache主要是通过实现cache接口来做的。数据存储和获取主要是通过操作jedis来实现。publicfinalclassrediscacheimplementscache{privatefinalreadwritelockreadwritelock=newdummyreadwritelock()_privatestringid_priv
 tags:
   - 通过

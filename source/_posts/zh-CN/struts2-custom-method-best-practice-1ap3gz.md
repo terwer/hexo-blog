@@ -1,7 +1,7 @@
 ---
 title: Struts2自定义方法最佳实践
-date: &id001 2022-11-02 20:49:49
-updated: *id001
+date: '2022-11-02 20:49:49'
+updated: '2022-11-02 20:49:49'
 excerpt: 自定义方法实现在strutsxml配置method并且在对应的action实现对应方法即可。strutsxmlactionpublicstringmyexecute()throwsexception{systemoutprintln(returnsuccess_}效果​自定义方法的缺点参数耦合逻辑混乱。自定义方法的优点一个action可以处理多种不同的逻辑。最佳实现struts支持自定义方法即在strutsxml的action元素内定义method属性属性值即为待执行的方法。其中该方法的声明要与execu
 tags:
   - 方法
@@ -14,8 +14,8 @@ tags:
   - custom
   - method
 categories:
-  - 后端开发
   - Struts2
+  - 后端开发
 permalink: /post/struts2-custom-method-best-practice-1ap3gz.html
 comments: true
 toc: true

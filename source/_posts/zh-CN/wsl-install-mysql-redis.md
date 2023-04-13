@@ -1,16 +1,16 @@
 ---
 title: WSL2安装MySQL8.0和redis
-date: &id001 2022-05-15 16:36:07
-updated: *id001
+date: '2022-05-15 16:36:07'
+updated: '2022-05-15 16:36:07'
 excerpt: WSL2安装MySQL8.0和redis。
 tags:
   - wsl
   - mysql
   - redis
 categories:
-  - 开发流程
   - 过程改进
   - 开发效率
+  - 开发流程
 permalink: /post/wsl-install-mysql-redis.html
 comments: true
 toc: true

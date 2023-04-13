@@ -1,7 +1,7 @@
 ---
 title: Deepin配置Typora和PicGo实现GitHub图床
-date: &id001 2022-06-01 01:30:19
-updated: *id001
+date: '2022-06-01 01:30:19'
+updated: '2022-06-01 01:30:19'
 excerpt: Deepin配置Typora和PicGo实现GitHub图床。
 tags:
   - deepin

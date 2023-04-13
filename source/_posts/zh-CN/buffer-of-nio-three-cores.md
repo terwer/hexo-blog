@@ -1,7 +1,7 @@
 ---
 title: NIO三大核心之缓冲区（Buffer）
-date: &id001 2022-05-04 14:39:23
-updated: *id001
+date: '2022-05-04 14:39:23'
+updated: '2022-05-04 14:39:23'
 excerpt: 缓冲区（Buffer）：缓冲区本质上是一个可读可写的内存块。
 tags:
   - nio

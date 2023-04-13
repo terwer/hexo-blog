@@ -1,7 +1,7 @@
 ---
 title: 常用的Java开发IDE
-date: &id001 2022-10-21 21:52:31
-updated: *id001
+date: '2022-10-21 21:52:31'
+updated: '2022-10-21 21:52:31'
 excerpt: ide（integrateddevelopmentenvironment）集成开发环境。netbeans。https_netbeansorgjbuilder。intellijideahttps_wwwjetbrainscomideaeclipse中科大eclipse镜像使用帮助_http_mirrorsustceducnhelpeclipsehtml#ideclipsehelios下载_https_wwweclipseorgdownloadspackagesreleaseheliosr百度网盘下载链接_h
 tags:
   - 集成

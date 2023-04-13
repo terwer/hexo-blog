@@ -1,11 +1,11 @@
 ---
 title: 从零开始Jira配合Bitbucket和Github打造流水线式的开发流程
-date: &id001 2022-06-21 12:30:54
-updated: *id001
+date: '2022-06-21 12:30:54'
+updated: '2022-06-21 12:30:54'
 tags: []
 categories:
-  - 开发流程
   - 知识管理
+  - 开发流程
 permalink: /pages/b33fba/
 comments: true
 toc: true
