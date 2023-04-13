@@ -25,7 +25,7 @@ toc: true
 
 1. 解析配置文件
 
-   * 数据库配置信息
+   * 数据库配置信息1
    * sql 的封装
 2. 构建 SqlSessionFactory，注意这里的 openSession 方法
 3. 拿到 SqlSesion
