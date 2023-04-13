@@ -1,6 +1,7 @@
 ---
 title: JDK之JavaBean内省机制
-updated: 2022-10-05 21:29:02
+date: &id001 2022-10-05 21:29:02
+updated: *id001
 excerpt: jdk规范目录javabean是一种特殊的java类主要用于传递数据信息这种java类中的方法主要用于访问私有的字段且方法名符合某种命名规则。一javabeanjavabean命名规则一个javabean类中的方法去掉set或get前缀剩余部分就是属性名如果剩余部分的第二个字母是小写的则把剩余部分的首字母改成小的。getagesetageagegettimesettimetime如果去掉前缀剩余部分的第二个字母为大写则全部大写getcpugetcpu完整示例publicclasstestbean{priv
 tags:
   - 方法

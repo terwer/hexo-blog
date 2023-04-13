@@ -1,6 +1,7 @@
 ---
 title: 数据结构与算法总览
-updated: 2022-05-05 22:27:36
+date: &id001 2022-05-05 22:27:36
+updated: *id001
 excerpt: 数据结构与算法总览。
 tags: []
 categories:

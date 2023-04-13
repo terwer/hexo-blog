@@ -1,11 +1,12 @@
 ---
 title: JavaSE之单例模式
-updated: 2022-05-05 22:21:08
+date: &id001 2022-05-05 22:21:08
+updated: *id001
 excerpt: Java SE Lesson 3：单例模式
 tags: []
 categories:
-  - TODO
   - JavaSE-TODO
+  - TODO
 permalink: /post/singleton-mode-of-java-se.html
 comments: true
 toc: true

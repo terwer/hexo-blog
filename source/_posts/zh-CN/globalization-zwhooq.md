@@ -1,6 +1,7 @@
 ---
 title: 国际化
-updated: 2022-07-23 10:04:58
+date: &id001 2022-07-23 10:04:58
+updated: *id001
 excerpt: 国际化安装vuecli使用下面命令vueaddin然后可能会报错typeerror__ctxtisnotafunction解决办法在创建国际化组件时加上一个属性globalinjection_true默认位于srcinjs本地国际化最新版本还支持本地文件国际化使用方法如下_import{definecomponent}fromvueimport{usein}fromvueinexportdefaultdefinecomponent({name_helloinsetup(){const{t}=usein({
 tags:
   - 国际化

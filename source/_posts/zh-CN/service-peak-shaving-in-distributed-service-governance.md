@@ -1,6 +1,7 @@
 ---
 title: 分布式服务治理之服务削峰
-updated: 2022-05-04 17:31:20
+date: &id001 2022-05-04 17:31:20
+updated: *id001
 excerpt: 为了应对瞬间高并发的流量。
 tags:
   - rpc

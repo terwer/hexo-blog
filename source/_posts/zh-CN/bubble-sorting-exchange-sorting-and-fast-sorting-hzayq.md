@@ -1,6 +1,7 @@
 ---
 title: 冒泡排序、交换排序与快速排序
-updated: 2022-10-18 22:25:06
+date: &id001 2022-10-18 22:25:06
+updated: *id001
 excerpt: 冒泡排序思路_比如_结果_publicclassbubblesort{publicstaticvoidmain(string[]args){int[]a=newint[]{}_for(inti=_ii){systemoutprint(a[i]}systemoutprintln()_bubblesort(a)_systemoutprintln()_systemoutprintln(for(intj=_jj){systemoutprint(a[j]}}publicstaticvoidbubblesort(in
 tags:
   - 序列

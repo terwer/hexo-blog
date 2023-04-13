@@ -1,6 +1,7 @@
 ---
 title: 并发编程之多线程与并发设计原理
-updated: 2022-05-05 20:48:04
+date: &id001 2022-05-05 20:48:04
+updated: *id001
 excerpt: 并发编程之多线程与并发设计原理
 tags: []
 categories:

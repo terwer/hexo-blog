@@ -1,6 +1,7 @@
 ---
 title: Java_8-LTS
-updated: 2022-10-07 20:21:18
+date: &id001 2022-10-07 20:21:18
+updated: *id001
 excerpt: java于年月日发布[][]包含了一些原本被项目在java却延迟的功能。[]这些功能改进在jdkenhancementproposals(jeps)的指导下得到了集成。[]主要特性jsrjep_lambda项目[]中提供的语言级匿名函数支持（官方称为lambda表达式非官方亦称闭包)）_添加默认方法（虚拟扩展组件方法）[][][]以允许在不破坏兼容性的情况下向现有接口中新增方法。java社群中曾经有过针对是否要加入lambda表达式支持的辩论。稍后sun公司宣布lambda表达式将会包含在java中并请社
 tags:
   - 方法
@@ -14,8 +15,8 @@ tags:
   - javase
   - 项目
 categories:
-  - JavaSE
   - Java语言新特性
+  - JavaSE
   - 后端开发
 permalink: /post/java_8-z23halb.html
 comments: true

@@ -1,6 +1,7 @@
 ---
 title: MyBatis常用注解及基本增删改查的注解实现
-updated: 2022-08-30 17:12:42
+date: &id001 2022-08-30 17:12:42
+updated: *id001
 excerpt: mybatis的常用注解注解可以减少mapper文件的编写常用注解如下_@insert_实现新增@update_实现更新@delete_实现删除@select_实现查询@result_实现结果集封装@results_可以和@result一起使用封装多个结果集@one_实现一对一结果集封装@many_实现多对多结果集封装mybatis的增删改查数据库配置依旧保存不变jdbcproperties#新版驱动名称发生了改变#jdbcdriver=commysqljdbcdriverjdbcdriver=commy
 tags:
   - mybatis
@@ -8,8 +9,8 @@ tags:
   - framework
   - mybatis-13
 categories:
-  - 开源框架
   - MyBatis
+  - 开源框架
   - 后端开发
 permalink: /post/mybatis-annotation-develop.html
 comments: true

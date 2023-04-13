@@ -1,6 +1,7 @@
 ---
 title: WSL2在WSLG下面GUI应用程序的DPI分辨率模糊的问题
-updated: 2022-05-18 14:50:53
+date: &id001 2022-05-18 14:50:53
+updated: *id001
 excerpt: WSL2在WSLG下面GUI应用程序的DPI分辨率模糊的问题。
 tags:
   - wsl
@@ -8,9 +9,9 @@ tags:
   - wslg
   - dpi
 categories:
-  - 开发效率
   - 开发流程
   - 过程改进
+  - 开发效率
 permalink: /post/wsl2-dpi-resolution-is-blurred-for-gui-applications-under-wslg.html
 comments: true
 toc: true

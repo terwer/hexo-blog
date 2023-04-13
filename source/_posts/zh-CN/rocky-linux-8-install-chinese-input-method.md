@@ -1,6 +1,7 @@
 ---
 title: Rocky Linux 8.6安装中文输入法
-updated: 2022-05-26 02:40:11
+date: &id001 2022-05-26 02:40:11
+updated: *id001
 excerpt: 不知道为什么rocky8连中文输入法都没有，目前来看，就两条路，自己编译，继续使用ibus。
 tags:
   - rocky
@@ -8,9 +9,9 @@ tags:
   - input
   - ibus
 categories:
-  - 开发效率
   - 开发流程
   - 过程改进
+  - 开发效率
 permalink: /post/rocky-linux-8-install-chinese-input-method.html
 comments: true
 toc: true

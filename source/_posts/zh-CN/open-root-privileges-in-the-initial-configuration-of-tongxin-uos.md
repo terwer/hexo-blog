@@ -1,6 +1,7 @@
 ---
 title: 统信 UOS 初始配置之打开 root 权限
-updated: 2022-06-08 00:22:44
+date: &id001 2022-06-08 00:22:44
+updated: *id001
 excerpt: 作为开发者，安装完统信 UOS 家庭版之后，做的第一件事应该是，打开 root 权限，或者说是开发者权限。因为我们要安装一些需要root权限的软件，还有更新某些软件，或者做开发，基本上都要用到root权限。
 tags:
   - uos
@@ -8,8 +9,8 @@ tags:
   - deepin
   - root
 categories:
-  - UOS专区
   - 统信UOS专区
+  - UOS专区
 permalink: /post/open-root-privileges-in-the-initial-configuration-of-tongxin-uos.html
 comments: true
 toc: true

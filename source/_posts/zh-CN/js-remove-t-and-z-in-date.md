@@ -1,6 +1,7 @@
 ---
 title: JS去除日期date格式化中的T和Z
-updated: 2022-06-15 02:18:51
+date: &id001 2022-06-15 02:18:51
+updated: *id001
 excerpt: 在JS中，创建的时间有时候会默认带有T和Z，不利于显示，可以使用这个方法去除。
 tags:
   - js

@@ -1,6 +1,7 @@
 ---
 title: Java_13
-updated: 2022-10-07 23:45:51
+date: &id001 2022-10-07 23:45:51
+updated: *id001
 excerpt: jdk于年月日发布。主要特性该版本包含以下新特性以及很多的强化和很多的漏洞修补。[]jep_动态cds归档[]jep_zgc_取消提交未使用存储器[]jep_重新实现旧版socketapi[]jep_switch表达式（预览阶段）[]jep_文本框（预览阶段）[]java更新版本发布日期重点javase[]初始版本javase[]安全性修补和漏洞修补javase[]安全性修补和漏洞修补java下载https_wwworaclecomjavatechnologiesjavasejdkarchivedownl
 tags:
   - 修补
@@ -14,8 +15,8 @@ tags:
   - jdk13
   - javase
 categories:
-  - JavaSE
   - Java语言新特性
+  - JavaSE
   - 后端开发
 permalink: /post/java_13-z1fbp8i.html
 comments: true

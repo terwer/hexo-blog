@@ -1,6 +1,7 @@
 ---
 title: 从零开始使用react写一个随机变色的标签组件
-updated: 2022-08-05 17:50:29
+date: &id001 2022-08-05 17:50:29
+updated: *id001
 excerpt: 从零开始使用react写一个随机变色的标签组件标签定义及引用color_设置标签颜色visible_标签是否显示trueclosable_标签是否可以关闭（点击默认关闭）falseonclose_关闭会调icon_iconimportreact{usestate}fromreact_importclassnamesfromclassnames_interfaceipropstag{color?_string_visbile?_boolean_closable?_boolean_onclose?_()=ic
 tags:
   - 标签

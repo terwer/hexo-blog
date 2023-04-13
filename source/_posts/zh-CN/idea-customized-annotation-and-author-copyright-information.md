@@ -1,6 +1,7 @@
 ---
 title: IDEA自定义生成注释与作者版权信息
-updated: 2022-07-05 21:47:39
+date: &id001 2022-07-05 21:47:39
+updated: *id001
 excerpt: 生成类注释打开preferenceseditorclass在此添加的话你每次创建类的时候会弹两次框第二次是让你输入description的内容了代码如下{description}@name_{name}@author_{user}@date_{year}{month}{day}{hour}_{minute}接口(interface)枚举(enum)注解(annotation)的注释同理。生成效果idea中其他类的查看效果备注_为什么不用下面的格式_因为下面的格式在另一个类无法查看注释。@name_{nam
 tags:
   - author

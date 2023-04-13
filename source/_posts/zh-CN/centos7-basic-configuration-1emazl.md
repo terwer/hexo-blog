@@ -1,6 +1,7 @@
 ---
 title: CentOS7基本配置
-updated: 2022-09-30 01:04:27
+date: &id001 2022-09-30 01:04:27
+updated: *id001
 excerpt: 设置中科大源注意_需要先切换root用户su#===================================#镜像源设置开始#===================================#添加中科大centos镜像源cpetcyumreposdcentosbaserepoetcyumreposdcentosbaserepobaksedes_^mirrorlist=_#mirrorlist=_ges_^#baseurl=http_mirrorcentosorgcentos_baseurl=
 tags:
   - 中科大

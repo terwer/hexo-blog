@@ -1,6 +1,7 @@
 ---
 title: MyBatis的一级缓存
-updated: 2022-09-06 22:33:15
+date: &id001 2022-09-06 22:33:15
+updated: *id001
 excerpt: 在mybatis中一级缓存是默认开启的。在一个sqlsession中对user表进行两次根据id的查询查看发出sql语句的情况。根据id查询用户@paramid@return@select()userfinduserbyid(integerid)_@beforepublicvoidbefore()throwsexception{systemoutprintln(inputstreamresourceasstream=resourcesgetresourceasstream(sqlsessionfactor
 tags:
   - 查询
@@ -8,8 +9,8 @@ tags:
   - mybatis
   - 一级缓存
 categories:
-  - 开源框架
   - MyBatis
+  - 开源框架
   - 后端开发
 permalink: /post/mybatis-s-first-level-cache-zzbwpu.html
 comments: true

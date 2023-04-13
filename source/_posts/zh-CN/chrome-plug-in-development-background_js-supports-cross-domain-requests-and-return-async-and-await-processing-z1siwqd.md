@@ -1,6 +1,7 @@
 ---
 title: Chrome插件开发background_js支持跨域请求与返回async和await的处理
-updated: 2022-09-25 16:00:07
+date: &id001 2022-09-25 16:00:07
+updated: *id001
 excerpt: backgroundjs的配置chromeruntimeonmessageaddlistener((requestsendersendresponse)={switch(requesttype){casefetchchromexmlrpc_(async()={constresponse=awaitfetch(requestapiurlrequestfetchcorsparams)_constrestext=awaitresponsetext()consolelog(restext)sendresponse
 tags:
   - 请求

@@ -1,6 +1,7 @@
 ---
 title: Struts1.3.10,Hibernate5.6.8.Final,Spring5.3.19整合
-updated: 2022-05-06 01:39:39
+date: &id001 2022-05-06 01:39:39
+updated: *id001
 excerpt: Struts1.3.10,Hibernate5.6.8.Final,Spring5.3.19整合。IDEA->new->Project，创建一个Maven的webapp项目，选择
   org.apache.maven的webapp骨架。
 tags:

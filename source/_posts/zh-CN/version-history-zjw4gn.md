@@ -1,6 +1,7 @@
 ---
 title: 版本历史
-updated: 2022-09-30 22:29:36
+date: &id001 2022-09-30 22:29:36
+updated: *id001
 excerpt: jdk从年发布起至今已历经多年从jdk升级到jdk（october）本节先一起回顾一下jdk的版本变迁和各版本的新特性。版本变迁年月日java语言诞生_年月第一个jdkjdk诞生_年月个最主要的操作系统供应商申明将在其产品中嵌入java技术_年月约万个网页应用了java技术来制作_年月日jdk发布_年月日javaone会议召开参与者逾一万人创当时全球同类会议纪录javadeveloperconnection社区成员超过十万_年月jdk被下载超过次_年月日java企业平台jee发布_年月sun公司发布
 tags:
   - 版本
@@ -9,8 +10,8 @@ tags:
   - java
   - jdk
 categories:
-  - JavaSE
   - Java语言新特性
+  - JavaSE
   - 后端开发
 permalink: /post/version-history-zjw4gn.html
 comments: true

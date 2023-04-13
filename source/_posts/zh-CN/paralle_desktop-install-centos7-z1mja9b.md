@@ -1,6 +1,7 @@
 ---
 title: Paralle_Desktop安装CentOS7
-updated: 2022-09-29 23:16:42
+date: &id001 2022-09-29 23:16:42
+updated: *id001
 excerpt: 下载centos最小化isohttp_isomirrorsustceducncentosisosx_centosx_minimaliso完全版isohttps_isomirrorsustceducncentosisosx_centosx_everythingisoparalledesktop新建虚拟机注意一下_paralle安装centos有两个坑要选择自动安装勾选安装前设定安装前设定要设置虚拟机监控程序为paralle默认是apple第二点非常重要要不然启动会失败。正常情况下是下面的页面一直跑日志_​最
 tags:
   - 虚拟机

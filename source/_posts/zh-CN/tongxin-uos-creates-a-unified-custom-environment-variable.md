@@ -1,6 +1,7 @@
 ---
 title: 统信 UOS 创建统一的自定义环境变量
-updated: 2022-06-08 00:03:30
+date: &id001 2022-06-08 00:03:30
+updated: *id001
 excerpt: 统信 UOS 创建统一的自定义环境变量。
 tags:
   - uos
@@ -8,8 +9,8 @@ tags:
   - deepin
   - env
 categories:
-  - UOS专区
   - 统信UOS专区
+  - UOS专区
 permalink: /post/tongxin-uos-creates-a-unified-custom-environment-variable.html
 comments: true
 toc: true

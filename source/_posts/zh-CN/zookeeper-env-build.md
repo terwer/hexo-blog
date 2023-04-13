@@ -1,6 +1,7 @@
 ---
 title: Zookeeper 的环境搭建
-updated: 2022-05-25 15:22:22
+date: &id001 2022-05-25 15:22:22
+updated: *id001
 excerpt: Zookeeper 的环境搭建。
 tags:
   - zookeeper

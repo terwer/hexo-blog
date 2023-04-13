@@ -1,13 +1,14 @@
 ---
 title: Node宏观介绍与应用场景分析
-updated: 2022-05-05 20:12:25
+date: &id001 2022-05-05 20:12:25
+updated: *id001
 excerpt: Node的学习路线
 tags:
   - node
   - js
 categories:
-  - Node新思路
   - 新笔记
+  - Node新思路
 permalink: /post/node-learn-road.html
 comments: true
 toc: true

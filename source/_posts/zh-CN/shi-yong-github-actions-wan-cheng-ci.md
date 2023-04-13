@@ -1,6 +1,7 @@
 ---
 title: 使用GitHub Actions完成ci自动化部署
-updated: 2022-04-17 11:34:15
+date: &id001 2022-04-17 11:34:15
+updated: *id001
 tags:
   - github
   - ci

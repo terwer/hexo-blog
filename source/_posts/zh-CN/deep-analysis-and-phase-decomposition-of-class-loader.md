@@ -1,6 +1,7 @@
 ---
 title: 深入详解JVM之类加载器深度剖析
-updated: 2022-05-05 22:15:55
+date: &id001 2022-05-05 22:15:55
+updated: *id001
 excerpt: 类加载器深入解析与阶段分解。
 tags:
   - jvm

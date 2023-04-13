@@ -1,6 +1,7 @@
 ---
 title: Mac使用iTerm2代替默认终端
-updated: 2022-10-21 18:36:48
+date: &id001 2022-10-21 18:36:48
+updated: *id001
 excerpt: 默认的mac终端是不支持多个远程链接的也不支持多个tab通过配置使用iterm替换默认终端可以很方便的解决这些需求。下载地址https_itermcomdownloadsstableiterm__zip安装解压后直接拖进应用程序即可。配置管理多个远程链接并支持自动登录自动登录安装sshpass下载_http_sourceforgenetprojectssshpassfiles如果嫌慢可以使用我的阿里云osshttps_staticrsterwerosscnbeijingaliyuncscomlibsshp
 tags:
   - mac

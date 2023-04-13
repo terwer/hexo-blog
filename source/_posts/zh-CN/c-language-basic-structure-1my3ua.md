@@ -1,6 +1,7 @@
 ---
 title: C语言基本结构
-updated: 2022-10-13 11:20:25
+date: &id001 2022-10-13 11:20:25
+updated: *id001
 excerpt: 第一个c语言程序#includemain(){printf(}保存文件为helloc编译cchelloc运行aout如下➜clangcodecchellochelloc___warning_typespecifiermissingdefaultstoint[wimplicitint]main(){^warninggenerated➜clangcodeaouthelloworld!分析#include包含有关标准库的信息main(){定义main函数不接受参数main函数的语句包含在花括号中printf(m
 tags:
   - 第一个
@@ -9,8 +10,8 @@ tags:
   - c
   - cpp
 categories:
-  - C程序设计语言
   - 读书笔记
+  - C程序设计语言
 permalink: /post/c-language-basic-structure-1my3ua.html
 comments: true
 toc: true

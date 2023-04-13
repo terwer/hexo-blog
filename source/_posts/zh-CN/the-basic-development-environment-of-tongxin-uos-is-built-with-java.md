@@ -1,6 +1,7 @@
 ---
 title: 统信 UOS 基本开发环境搭建之 java
-updated: 2022-06-08 01:27:20
+date: &id001 2022-06-08 01:27:20
+updated: *id001
 excerpt: 统信 UOS 基本开发环境搭建之 java。
 tags:
   - uos
@@ -10,8 +11,8 @@ tags:
   - jdk
   - env
 categories:
-  - UOS专区
   - 统信UOS专区
+  - UOS专区
 permalink: /post/the-basic-development-environment-of-tongxin-uos-is-built-with-java.html
 comments: true
 toc: true

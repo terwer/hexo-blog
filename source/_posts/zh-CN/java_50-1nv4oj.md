@@ -1,6 +1,7 @@
 ---
 title: J2SE_5-0
-updated: 2022-10-06 21:19:42
+date: &id001 2022-10-06 21:19:42
+updated: *id001
 excerpt: java从版本开始加入许多新特性是java历史中修改最大的版本java​。代号为tiger。这个在年月日发布的版本原本以编号也就是仍然使用内部版本编号。这个数字辈改变是为了“更好地反映成熟度稳定性可扩展性和jse的安全水准”。这个版本是在jsr底下被开发。jse在年月日进入其即将停止公开更新的期间_年月日正式不公开开放更新。oracle客户直到年月都能透过付费的方式获取更新。[]tiger增加了若干个重要的新语言功能。[][]泛型（generics）_为集合提供编译期间（静态）类型安全且不须为大多数类型转
 tags:
   - 版本
@@ -11,8 +12,8 @@ tags:
   - java
   - javase
 categories:
-  - JavaSE
   - Java语言新特性
+  - JavaSE
   - 后端开发
 permalink: /post/java_50-1nv4oj.html
 comments: true

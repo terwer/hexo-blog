@@ -1,6 +1,7 @@
 ---
 title: Java多线程与并发阅读目录
-updated: 2022-04-16 18:50:28
+date: &id001 2022-04-16 18:50:28
+updated: *id001
 tags:
   - menu
   - concurrent

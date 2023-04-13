@@ -1,6 +1,7 @@
 ---
 title: Netty核心API介绍
-updated: 2022-04-21 22:09:35
+date: &id001 2022-04-21 22:09:35
+updated: *id001
 excerpt: 本文介绍了Netty的核心API以及他们的使用。
 tags:
   - netty

@@ -1,6 +1,7 @@
 ---
 title: 解决css部分border被圆角切掉之后圆角的边框消失问题
-updated: 2023-03-18 12:58:37
+date: &id001 2023-03-18 12:58:37
+updated: *id001
 excerpt: 解决css部分border被圆角切掉之后圆角的边框消失问题问题症状大概是这个样子_​​解决办法给当前设置border​和borderradius​属性的元素加_overflow_auto_‍
 tags:
   - 圆角

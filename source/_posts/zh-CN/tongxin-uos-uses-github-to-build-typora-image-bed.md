@@ -1,6 +1,7 @@
 ---
 title: 统信 UOS 利用 Github 打造 Typora 图床
-updated: 2022-06-08 01:32:07
+date: &id001 2022-06-08 01:32:07
+updated: *id001
 excerpt: 统信 UOS 利用 Github 打造 Typora 图床。
 tags:
   - uos
@@ -10,8 +11,8 @@ tags:
   - github
   - img
 categories:
-  - UOS专区
   - 统信UOS专区
+  - UOS专区
 permalink: /post/tongxin-uos-uses-github-to-build-typora-image-bed.html
 comments: true
 toc: true

@@ -1,6 +1,7 @@
 ---
 title: JDK_Alpha和Beta
-updated: 2022-09-30 21:17:45
+date: &id001 2022-09-30 21:17:45
+updated: *id001
 excerpt: 第一个年发布的alpha和betajava公开版本api和abi非常不稳定。支持javaweb浏览器被取名为webrunner。‍
 tags:
   - 第一个
@@ -11,8 +12,8 @@ tags:
   - jdk
   - version
 categories:
-  - JavaSE
   - Java语言新特性
+  - JavaSE
   - 后端开发
 permalink: /post/jdk_alpha-and-beta-zfusva.html
 comments: true

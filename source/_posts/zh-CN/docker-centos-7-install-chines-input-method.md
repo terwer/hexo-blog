@@ -1,6 +1,7 @@
 ---
 title: docker中的centos7安装中文输入法
-updated: 2022-05-24 14:49:54
+date: &id001 2022-05-24 14:49:54
+updated: *id001
 excerpt: docker中的centos7安装中文输入法。
 tags:
   - docker

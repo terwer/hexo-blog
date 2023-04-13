@@ -1,6 +1,7 @@
 ---
 title: 自定义类加载器与JVM内置加载器交互详析
-updated: 2022-07-10 21:42:32
+date: &id001 2022-07-10 21:42:32
+updated: *id001
 excerpt: 自定义类加载器与JVM内置加载器交互详析
 tags:
   - jvm

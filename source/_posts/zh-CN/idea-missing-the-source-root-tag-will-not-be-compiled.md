@@ -1,6 +1,7 @@
 ---
 title: IDEA的大坑：src目录丢失Source Root标记就不会编译
-updated: 2022-05-11 23:50:42
+date: &id001 2022-05-11 23:50:42
+updated: *id001
 excerpt: IDEA的大坑：src目录丢失Source Root标记就不会编译。如果由于某些原因，IDEA 源代码的 src 目录没有被标上 Source Root
   标记，那么编译的时候是不会生成 class 文件的。
 tags:

@@ -1,10 +1,11 @@
 ---
 title: 机器学习入门
-updated: 2022-05-05 20:35:43
+date: &id001 2022-05-05 20:35:43
+updated: *id001
 tags: []
 categories:
-  - 人工智能
   - 机器学习
+  - 人工智能
 permalink: /post/introduction-to-machine-learning.html
 comments: true
 toc: true

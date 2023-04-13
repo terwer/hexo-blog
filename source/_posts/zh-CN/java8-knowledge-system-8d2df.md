@@ -1,6 +1,7 @@
 ---
 title: Java8知识体系
-updated: 2022-10-16 21:26:50
+date: &id001 2022-10-16 21:26:50
+updated: *id001
 excerpt: java知识体系java新特性介绍lambda表达式介绍使用lambda表达式代替内部类lambda表达式的作用外部迭代与内部迭代javalambda表达式语法详解函数式接口详解传递值与传递行为stream深度解析sreamapi详解串行流与并行流stream构成stream源生成方式stream操作类型stream转换optional详解默认方法详解方法与构造方法引用predicate接口详解function接口详解consumer接口剖析filter介绍mapreduce详解中间操作与终止操作新的da
 tags:
   - 详解

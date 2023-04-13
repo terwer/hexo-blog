@@ -1,6 +1,7 @@
 ---
 title: 用户自定义类加载器探秘
-updated: 2022-07-07 21:28:38
+date: &id001 2022-07-07 21:28:38
+updated: *id001
 excerpt: 用户自定义类加载器探秘
 tags:
   - jvm

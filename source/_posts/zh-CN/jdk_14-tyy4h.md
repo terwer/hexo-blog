@@ -1,6 +1,7 @@
 ---
 title: J2SE_1-4
-updated: 2022-10-06 19:25:49
+date: &id001 2022-10-06 19:25:49
+updated: *id001
 excerpt: 代号为merlin。年月日发布了jsr（点击查看归档页面）是第一个在jcp下开发的java平台。主要的变化包括︰[][]主要特性语言上的改变assert)关键字(在jsr中被指定)参考java中的断言assert程序库的改善仿照perl的正则表达式正则表达式详解参考博文_正则表达式基础语法与javajs使用实例异常链链式异常处理允许一个异常来封装原先处于较低级别的异常支持internetprotocolversion(ipv)非阻塞io（取名为nonblockinginputoutputnio）（在jsr
 tags:
   - 版本
@@ -9,8 +10,8 @@ tags:
   - jdk1.4
   - java1.4
 categories:
-  - JavaSE
   - Java语言新特性
+  - JavaSE
   - 后端开发
 permalink: /post/jdk_14-tyy4h.html
 comments: true

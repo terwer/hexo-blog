@@ -1,6 +1,7 @@
 ---
 title: 解决jenkins使用sodo出现的Authentication error in jenkins on using sudo错误
-updated: 2022-04-28 21:38:15
+date: &id001 2022-04-28 21:38:15
+updated: *id001
 tags:
   - jenkisn
   - sudo

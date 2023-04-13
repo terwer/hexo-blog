@@ -1,6 +1,7 @@
 ---
 title: 编程技巧
-updated: 2022-05-12 17:46:19
+date: &id001 2022-05-12 17:46:19
+updated: *id001
 excerpt: 编程技巧。
 tags:
   - leetcode

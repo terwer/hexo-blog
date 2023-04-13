@@ -1,6 +1,7 @@
 ---
 title: plantuml配合graphviz
-updated: 2022-08-30 14:33:28
+date: &id001 2022-08-30 14:33:28
+updated: *id001
 excerpt: idea安装插件直接idea搜索plantuml即可mac安装brewinstallgraphvizps_收藏一个写的很好的homebrew脚本binzshcplantuml编解码https_githubcommarkushedvallplantumlencoder编码varplantumlencoder=require(plantumlencoder)varencoded=plantumlencoderencode(ab_hello)consolelog(encoded)srjgjldmibbmicto
 tags:
   - 安装

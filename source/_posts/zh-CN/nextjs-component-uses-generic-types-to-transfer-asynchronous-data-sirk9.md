@@ -1,6 +1,7 @@
 ---
 title: Next-js组件使用泛型类型传递异步数据
-updated: 2022-08-01 23:44:27
+date: &id001 2022-08-01 23:44:27
+updated: *id001
 excerpt: nextjs组件使用泛型类型传递异步数据定义类型typepageprops={hello_stringpage_anyrandom_any}返回属性https_githubcomvercelnextjsblobcanaryexamplescmswordpresspagesindexjsexportconstgetstaticprops_getstaticprops{constpageid=vtfmdmletpage=awaitgetpage(pageid)if(!page){page={}}return{
 tags:
   - 使用

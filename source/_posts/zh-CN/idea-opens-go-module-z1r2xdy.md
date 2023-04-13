@@ -1,6 +1,7 @@
 ---
 title: IDEA开启GO模块
-updated: 2022-07-13 23:24:10
+date: &id001 2022-07-13 23:24:10
+updated: *id001
 excerpt: ideagoland类似配置goproxy=https_goproxycn
 tags:
   - idea

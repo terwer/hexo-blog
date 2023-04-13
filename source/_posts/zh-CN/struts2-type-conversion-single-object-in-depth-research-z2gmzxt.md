@@ -1,6 +1,7 @@
 ---
 title: Struts2类型转换之单个对象深入研究
-updated: 2022-10-30 20:43:11
+date: &id001 2022-10-30 20:43:11
+updated: *id001
 excerpt: 重要特性总结struts的类型转换对于个原生数据类型以及datestring等常见类型struts可以使内建的类型转换器实现自动的转换_但对于自定义的对象类型来说需要我们自己指定类型转换的方式即自定义类型转换器。对于自定义类型的转换器来说需要提供三个信息_action的名字action中待转换的属性名以及该属性对应的类型转换器。其中action的名字是通过属性文件的文件名​​来获得的action中待转换的属性名是通过属性文件中的key​​来获得的该属性对应的类型转换器是通过该key​​对应的value​​
 tags:
   - 类型
@@ -14,8 +15,8 @@ tags:
   - type-converter
   - converter
 categories:
-  - Struts2
   - 后端开发
+  - Struts2
 permalink: /post/struts2-type-conversion-single-object-in-depth-research-z2gmzxt.html
 comments: true
 toc: true

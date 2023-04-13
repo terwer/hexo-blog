@@ -1,6 +1,7 @@
 ---
 title: Java_18
-updated: 2022-10-08 01:26:14
+date: &id001 2022-10-08 01:26:14
+updated: *id001
 excerpt: java在年月日正式发布java不是一个长期支持版本这次更新共带来个新功能。主要特性openjdkjava文档_https_openjdkjavanetprojectsjdkjep描述jep默认为utfjep简单的网络服务器jepjavaapi文档中的代码片段jep使用方法句柄重新实现核心反射jepvectorapi（三次孵化）jep互联网地址解析spijepforeignfunctionmemoryapi(二次孵化)jepswitch模式匹配（二次预览）jep弃用完成删除参考https_wwwwdbyt
 tags:
   - 下载
@@ -13,8 +14,8 @@ tags:
   - java18
   - 年月日
 categories:
-  - JavaSE
   - Java语言新特性
+  - JavaSE
   - 后端开发
 permalink: /post/java_18-lvotn.html
 comments: true

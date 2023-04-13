@@ -1,6 +1,7 @@
 ---
 title: npm切换为阿里云国内源码
-updated: 2022-07-11 03:07:00
+date: &id001 2022-07-11 03:07:00
+updated: *id001
 excerpt: npm切换为阿里云国内源码npmnpmconfigsetregistryhttps//registrynpmmirrorcom/pnpmnpminstallgpnpmpnpmconfigsetregistryhttps//registrynpmmirrorcom/pnpmconfigsetelectron_mirrorhttps//npmmirrorcom/mirrors/electron/yarnnpminstallgyarn
 tags:
   - npm

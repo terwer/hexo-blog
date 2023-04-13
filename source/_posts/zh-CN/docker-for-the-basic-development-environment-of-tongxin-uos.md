@@ -1,6 +1,7 @@
 ---
 title: 统信 UOS 基本开发环境搭建之 docker
-updated: 2022-06-08 02:11:43
+date: &id001 2022-06-08 02:11:43
+updated: *id001
 excerpt: 统信 UOS 基本开发环境搭建之 docker。
 tags:
   - uos
@@ -8,8 +9,8 @@ tags:
   - deepin
   - docker
 categories:
-  - UOS专区
   - 统信UOS专区
+  - UOS专区
 permalink: /post/docker-for-the-basic-development-environment-of-tongxin-uos.html
 comments: true
 toc: true

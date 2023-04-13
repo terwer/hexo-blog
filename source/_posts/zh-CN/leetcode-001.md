@@ -1,6 +1,7 @@
 ---
 title: 判定字符是否唯一
-updated: 2022-05-05 20:53:53
+date: &id001 2022-05-05 20:53:53
+updated: *id001
 excerpt: 【面试题库】001判定字符是否唯一。
 tags:
   - leetcode

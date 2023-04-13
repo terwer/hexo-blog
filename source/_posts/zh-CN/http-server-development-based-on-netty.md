@@ -1,6 +1,7 @@
 ---
 title: Netty高级进阶之基于Netty的HTTP服务器开发
-updated: 2022-04-27 02:10:49
+date: &id001 2022-04-27 02:10:49
+updated: *id001
 excerpt: 本通过实战演练，学习了如何基于Netty开发一个HTTP服务器。
 tags:
   - netty

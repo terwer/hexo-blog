@@ -1,6 +1,7 @@
 ---
 title: Java字节码文件结构剖析
-updated: 2022-06-05 21:18:45
+date: &id001 2022-06-05 21:18:45
+updated: *id001
 excerpt: Java字节码文件结构剖析。
 tags:
   - jvm

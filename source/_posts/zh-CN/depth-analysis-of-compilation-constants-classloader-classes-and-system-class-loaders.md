@@ -1,6 +1,7 @@
 ---
 title: 编译常量、ClassLoader类、系统类加载器深度探析
-updated: 2022-07-05 21:15:38
+date: &id001 2022-07-05 21:15:38
+updated: *id001
 excerpt: 编译常量、ClassLoader类、系统类加载器深度探析
 tags:
   - jvm

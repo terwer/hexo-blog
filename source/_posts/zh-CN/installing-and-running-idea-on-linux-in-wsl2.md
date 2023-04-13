@@ -1,6 +1,7 @@
 ---
 title: 在WSL2的Linux中安装和运行IntelliJ IDEA
-updated: 2022-05-14 21:15:59
+date: &id001 2022-05-14 21:15:59
+updated: *id001
 excerpt: 确保Windows的版本在Windows 10 Version 1607之后。我本地的版本是 Windows 11 22000。使用 Win+R
   然后输入 Cmd 即可查看。
 tags:
@@ -11,9 +12,9 @@ tags:
   - gui
   - wwsl2
 categories:
-  - 开发效率
   - 开发流程
   - 实用技巧
+  - 开发效率
 permalink: /post/installing-and-running-idea-on-linux-in-wsl2.html
 comments: true
 toc: true

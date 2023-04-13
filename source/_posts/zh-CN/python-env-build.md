@@ -1,6 +1,7 @@
 ---
 title: Python环境搭建
-updated: 2022-05-31 22:48:14
+date: &id001 2022-05-31 22:48:14
+updated: *id001
 excerpt: Python环境搭建。
 tags:
   - python

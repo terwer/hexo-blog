@@ -1,6 +1,7 @@
 ---
 title: 向google提交sitemap.xml总是报时间错误解决
-updated: 2022-07-03 16:30:39
+date: &id001 2022-07-03 16:30:39
+updated: *id001
 excerpt: xml提交到google search console后总是提示：日期无效，发现无效日期。请修正日期或格式，然后重新提交。
 tags:
   - google

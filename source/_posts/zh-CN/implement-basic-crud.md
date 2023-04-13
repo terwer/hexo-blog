@@ -1,6 +1,7 @@
 ---
 title: SSH框架整合续之实现基本的增删改查
-updated: 2022-05-28 15:40:55
+date: &id001 2022-05-28 15:40:55
+updated: *id001
 excerpt: SSH框架整合续之实现基本的增删改查。IDEA->new->Project，创建一个Maven的webapp项目，选择 org.apache.maven的webapp骨架。
 tags:
   - spring

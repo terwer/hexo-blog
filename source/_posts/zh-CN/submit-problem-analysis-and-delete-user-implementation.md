@@ -1,6 +1,7 @@
 ---
 title: SSH 框架整合续3之提交问题分析与删除用户的实现
-updated: 2022-06-05 19:45:20
+date: &id001 2022-06-05 19:45:20
+updated: *id001
 excerpt: SSH 框架整合续3之提交问题分析与删除用户的实现。
 tags:
   - spring

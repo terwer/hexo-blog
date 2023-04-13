@@ -1,6 +1,7 @@
 ---
 title: Win10导入Deepin到WSL
-updated: 2022-08-09 22:33:59
+date: &id001 2022-08-09 22:33:59
+updated: *id001
 excerpt: 准备工作首先要确保开启了hyperv注意_virtulbox与这个冲突。方法_控制面板打开或者关闭windows功能打开虚拟化bootcamp可以尝试下面的命令bcdeditsethypervisorlaunchtypeautostart导入deepin下载导入包https_panbaiducomsmxupflkrvalfcrxmfsv_w?pwd=导入deepinexeinstallbackupextvhdxgz验证c_softwarewsldistrosdeepinwsllist适用于linux的wi
 tags:
   - 导入

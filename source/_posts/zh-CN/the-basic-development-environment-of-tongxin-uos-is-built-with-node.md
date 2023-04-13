@@ -1,6 +1,7 @@
 ---
 title: 统信 UOS 基本开发环境搭建之 node
-updated: 2022-06-08 01:24:41
+date: &id001 2022-06-08 01:24:41
+updated: *id001
 excerpt: 注意，此方法已经不推荐。建议使用系统方式安装。
 tags:
   - uos
@@ -8,8 +9,8 @@ tags:
   - deepin
   - node
 categories:
-  - UOS专区
   - 统信UOS专区
+  - UOS专区
 permalink: /post/the-basic-development-environment-of-tongxin-uos-is-built-with-node.html
 comments: true
 toc: true

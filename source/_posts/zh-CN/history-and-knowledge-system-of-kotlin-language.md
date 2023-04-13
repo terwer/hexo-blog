@@ -1,14 +1,15 @@
 ---
 title: Kotlin语言的历史与知识体系
-updated: 2022-05-07 22:20:22
+date: &id001 2022-05-07 22:20:22
+updated: *id001
 excerpt: Kotlin语言的历史与知识体系。
 tags:
   - kotlin
   - jvm
   - lang
 categories:
-  - Kotlin语言深度解析
   - 新笔记
+  - Kotlin语言深度解析
 permalink: /post/history-and-knowledge-system-of-kotlin-language.html
 comments: true
 toc: true

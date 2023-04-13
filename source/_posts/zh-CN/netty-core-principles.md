@@ -1,6 +1,7 @@
 ---
 title: Netty核心原理
-updated: 2022-04-18 22:24:15
+date: &id001 2022-04-18 22:24:15
+updated: *id001
 excerpt: Netty提供异步的、基于事件驱动的网络应用程序框架，用于快速开发高性能、高可靠性的网络IO程序。
 tags:
   - netty

@@ -1,6 +1,7 @@
 ---
 title: MyBatis的基本使用
-updated: 2022-08-30 00:29:58
+date: &id001 2022-08-30 00:29:58
+updated: *id001
 excerpt: 快速入门mybatis的官网_https_mybatisorgmybatismybatis的开发步骤添加mybatis的坐标创建user数据表createtable`user`(`id`int()notnullauto_increment`username`varchar()defaultnull`password`varchar()defaultnullprimarykey(`id`))engine=innodbauto_increment=defaultcharset=utfmb_insertinto
 tags:
   - mybatis
@@ -9,8 +10,8 @@ tags:
   - framework
   - mybatis-8
 categories:
-  - 开源框架
   - MyBatis
+  - 开源框架
   - 后端开发
 permalink: /post/basic-use-of-mybatis.html
 comments: true

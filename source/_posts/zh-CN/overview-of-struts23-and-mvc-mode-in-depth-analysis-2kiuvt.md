@@ -1,6 +1,7 @@
 ---
 title: Struts2-3概述与MVC模式深度剖析
-updated: 2022-10-20 00:49:45
+date: &id001 2022-10-20 00:49:45
+updated: *id001
 excerpt: struts深入浅出​​​struts框架的优势​​​mvc的概念​mvc结构图mvc处理过程​mvc的优点​mvc的适用范围​jsp是一个独立的自主完成所有任务的模块​jspmodel​jspmodel​​​​
 tags:
   - 深入浅出
@@ -12,8 +13,8 @@ tags:
   - struts2
   - mvc
 categories:
-  - Struts2
   - 后端开发
+  - Struts2
 permalink: /post/overview-of-struts23-and-mvc-mode-in-depth-analysis-2kiuvt.html
 comments: true
 toc: true

@@ -1,6 +1,7 @@
 ---
 title: Netty入门与异步模型
-updated: 2022-04-21 21:21:40
+date: &id001 2022-04-21 21:21:40
+updated: *id001
 excerpt: 本文通过一个Netty入门案例来阐述Netty的异步模型。
 tags:
   - netty

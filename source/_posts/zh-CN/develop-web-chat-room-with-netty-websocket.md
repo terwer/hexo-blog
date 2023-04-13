@@ -1,6 +1,7 @@
 ---
 title: Netty高级进阶之基于Netty的Websocket开发网页聊天室
-updated: 2022-04-27 02:12:26
+date: &id001 2022-04-27 02:12:26
+updated: *id001
 excerpt: 本通过实战演练，学习了如何基于Netty的websocket开发一个网页聊天室。
 tags:
   - netty

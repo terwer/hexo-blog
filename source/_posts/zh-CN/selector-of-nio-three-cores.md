@@ -1,6 +1,7 @@
 ---
 title: NIO三大核心之选择器（Selector）
-updated: 2022-05-04 14:39:42
+date: &id001 2022-05-04 14:39:42
+updated: *id001
 excerpt: 用一个线程，处理多个客户端连接，就会用到NIO的Selector（选择器）。
 tags:
   - nio

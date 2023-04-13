@@ -1,12 +1,13 @@
 ---
 title: 第一个LaTeX文档——Hello world！
-updated: 2022-06-01 00:00:45
+date: &id001 2022-06-01 00:00:45
+updated: *id001
 excerpt: 第一个LaTeX文档——Hello world！。
 tags:
   - latex
 categories:
-  - 文本排版Latex新思路
   - 新笔记
+  - 文本排版Latex新思路
 permalink: /post/a-first-latex-document-hello-world.html
 comments: true
 toc: true

@@ -1,6 +1,7 @@
 ---
 title: 把npm依赖转换为本地依赖
-updated: 2022-11-26 19:35:50
+date: &id001 2022-11-26 19:35:50
+updated: *id001
 excerpt: 概述有的时候当我们要使用额第三方库停止维护之后我们想自己修改代码才能达到某个需求。但是npm默认是只读的下次运行依赖管理会覆盖代码。缘由要在上面陈述的情况我们可以把npm依赖库转换为本地依赖这样就不再受包管理器约束我们就可以自定义修改代码了方案先删除npm中依赖yarnremovevuepressplugincomment使用require​​传入相对路径例如_require(pluginsvuepresspluginvdoingcomment)如果是vuepress插件可能需要下面的方式_[使用本地插件
 tags:
   - 依赖

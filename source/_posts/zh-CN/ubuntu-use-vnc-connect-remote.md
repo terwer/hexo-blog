@@ -1,14 +1,15 @@
 ---
 title: 使用vnc远程ubuntu.md
-updated: 2022-05-19 00:11:11
+date: &id001 2022-05-19 00:11:11
+updated: *id001
 excerpt: 使用vnc远程ubuntu
 tags:
   - ubuntu
   - vnc
 categories:
-  - 开发效率
   - 开发流程
   - 过程改进
+  - 开发效率
 permalink: /post/ubuntu-use-vnc-connect-remote.html
 comments: true
 toc: true

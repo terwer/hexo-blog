@@ -1,6 +1,7 @@
 ---
 title: 分布式架构理论阅读目录
-updated: 2022-04-16 18:17:37
+date: &id001 2022-04-16 18:17:37
+updated: *id001
 tags:
   - menu
   - rpc

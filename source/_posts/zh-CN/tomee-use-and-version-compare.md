@@ -1,6 +1,7 @@
 ---
 title: TomEE的使用与版本对比
-updated: 2022-05-07 11:22:19
+date: &id001 2022-05-07 11:22:19
+updated: *id001
 excerpt: TomEE的使用与版本对比。
 tags:
   - tomee

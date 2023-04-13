@@ -1,6 +1,7 @@
 ---
 title: 算法与数据结构知识体系
-updated: 2022-06-05 21:43:26
+date: &id001 2022-06-05 21:43:26
+updated: *id001
 excerpt: 算法与数据结构知识体系。
 tags:
   - data-structure

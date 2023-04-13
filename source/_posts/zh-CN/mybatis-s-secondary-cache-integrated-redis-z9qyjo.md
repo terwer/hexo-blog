@@ -1,6 +1,7 @@
 ---
 title: MyBatis的二级缓存整合redis
-updated: 2023-02-13 21:12:10
+date: &id001 2023-02-13 21:12:10
+updated: *id001
 excerpt: mybatis的二级缓存整合redismybatis自带的二级缓存存在的问题在前面我们使用at_cachenamespace​实现了mybatis的二级缓存这个底层使用hashmap​来实现。在单机环境下没有问题但是在分布式环境下就不行了。​​mybatis二级缓存在分布式环境下的问题解决为了解决这个问题可以使用分布式缓存保存mybatis二级缓存的数据。​​怎么自定义mybatis的二级缓存可以在at_cachenamespace​上面加上implementation例如默认的缓存可以写成_at_cac
 tags:
   - 二级缓存
@@ -9,8 +10,8 @@ tags:
   - 加上
   - 环境
 categories:
-  - 开源框架
   - MyBatis
+  - 开源框架
   - 后端开发
 permalink: /post/mybatis-s-secondary-cache-integrated-redis-z9qyjo.html
 comments: true

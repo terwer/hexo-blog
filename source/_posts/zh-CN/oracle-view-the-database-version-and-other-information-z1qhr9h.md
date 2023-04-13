@@ -1,6 +1,7 @@
 ---
 title: Oracle查看数据库版本等信息
-updated: 2022-10-17 14:52:24
+date: &id001 2022-10-17 14:52:24
+updated: *id001
 excerpt: 查看数据库版本查看oracle版本selectfromproduct_component_version_查看数据库列表查看数据库列表selectusernameasschema_namefromsysall_usersorderbyusername_删除用户及对应数据删除用户以及下面的objectsdropuserhrcascade_查询当前数据库名selectsys_context(userenvcon_name)fromdual_
 tags:
   - 查看
@@ -12,8 +13,8 @@ tags:
   - info
   - 删除
 categories:
-  - 数据库
   - Oracle
+  - 数据库
 permalink: /post/oracle-view-the-database-version-and-other-information-z1qhr9h.html
 comments: true
 toc: true

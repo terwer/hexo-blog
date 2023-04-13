@@ -1,6 +1,7 @@
 ---
 title: Java_SE_第八讲：理解面向对象程序设计
-updated: 2022-10-10 20:52:21
+date: &id001 2022-10-10 20:52:21
+updated: *id001
 excerpt: break语句_经常用在循环语句中用于跳出整个循环执行循环后面的代码。continue语句_经常用在循环语句中用于跳出当前的这个循环（或者是跳出本次循环）开始下一次循环的执行。break与continue可以搭配标签使用在实际开发中根本没有人会将break与continue搭配标签来使用。面向对象程序设计（objectorientedprogrammingoop_objectorienteddesignood）。什么是面向对象？在面向对象程序设计中有两个重要的概念_类（class）与对象（object）。
 tags:
   - 循环

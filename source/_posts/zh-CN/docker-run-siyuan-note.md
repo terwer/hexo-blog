@@ -1,6 +1,7 @@
 ---
 title: docker运行思源笔记
-updated: 2022-06-21 19:00:31
+date: &id001 2022-06-21 19:00:31
+updated: *id001
 tags: []
 categories:
   - 经验分享

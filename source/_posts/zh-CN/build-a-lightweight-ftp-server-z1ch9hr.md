@@ -1,6 +1,7 @@
 ---
 title: 搭建一个轻量级的ftp服务器
-updated: 2022-10-31 18:38:17
+date: &id001 2022-10-31 18:38:17
+updated: *id001
 excerpt: 搭建直接使用我写好的dockercompose​脚本即可。​dockerfile​#依赖的镜像fromdelferalpineftpserver_latest#镜像创建者的信息maintainerterwer#设置编码envlangcutf#设置时区envtzasiashanghai#dockerinspectportableftpserver_grepipaddres​dockercomposeyml​#dockercomposeloglevelinfoupbuildportableminaftpser
 tags:
   - 搭建

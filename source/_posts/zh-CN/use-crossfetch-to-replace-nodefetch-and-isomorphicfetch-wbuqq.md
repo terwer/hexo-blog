@@ -1,6 +1,7 @@
 ---
 title: 使用cross-fetch替换node-fetch和isomorphic-fetch
-updated: 2022-08-20 22:48:47
+date: &id001 2022-08-20 22:48:47
+updated: *id001
 excerpt: 安装yarnaddcrossfetch使用importfetchfromcrossfetch_polyfill的使用方式importcrossfetchpolyfill_
 tags:
   - 使用

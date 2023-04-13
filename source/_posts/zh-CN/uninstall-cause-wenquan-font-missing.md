@@ -1,6 +1,7 @@
 ---
 title: 卸载Wine版本的微信导致文泉字体被删掉解决
-updated: 2022-06-15 02:15:26
+date: &id001 2022-06-15 02:15:26
+updated: *id001
 excerpt: 今天，IDEA用的好好的，重启之后却发现，字体被重置了。这不能忍。然后我就想着去改字体，然后一直找，就是找不到我原来的字体了，就是Wenquanyi
   Micro Hei 和 Wenquanyi Micro Hei Mono。
 tags:

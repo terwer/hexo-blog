@@ -1,6 +1,7 @@
 ---
 title: 在Docker中部署confluence和jira
-updated: 2022-06-01 14:48:24
+date: &id001 2022-06-01 14:48:24
+updated: *id001
 excerpt: 在Docker中部署confluence和jira。
 tags:
   - docker

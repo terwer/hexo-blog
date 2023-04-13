@@ -1,6 +1,7 @@
 ---
 title: Struts2类型转换之全局类型转换
-updated: 2022-11-02 20:34:50
+date: &id001 2022-11-02 20:34:50
+updated: *id001
 excerpt: 概述全局类型转换。在src​目录下新建xworkconversionproperties​该文件的内容是待转换的类=转换器名字即_spaceterwerbeanuser=spaceterwerconverteruserconverter实例在src​目录新建一个xworkconversionproperties​文件spaceterwerbeanuser=spaceterwerconverteruserconverter其他配置保持不变。‍
 tags:
   - 目录
@@ -13,8 +14,8 @@ tags:
   - converter
   - global
 categories:
-  - Struts2
   - 后端开发
+  - Struts2
 permalink: /post/struts2-type-conversion-global-type-conversion-z1ujjff.html
 comments: true
 toc: true

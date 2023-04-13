@@ -1,6 +1,7 @@
 ---
 title: JavaSE阅读目录
-updated: 2022-05-08 23:06:12
+date: &id001 2022-05-08 23:06:12
+updated: *id001
 tags:
   - javase
   - menu

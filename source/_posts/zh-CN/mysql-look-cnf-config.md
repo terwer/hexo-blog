@@ -1,6 +1,7 @@
 ---
 title: mysql查看my_cnf位置
-updated: 2022-05-24 14:49:54
+date: &id001 2022-05-24 14:49:54
+updated: *id001
 excerpt: mysql查看my.cnf位置。
 tags:
   - mysql

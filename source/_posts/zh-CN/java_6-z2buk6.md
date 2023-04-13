@@ -1,6 +1,7 @@
 ---
 title: Java_6
-updated: 2022-10-07 19:24:10
+date: &id001 2022-10-07 19:24:10
+updated: *id001
 excerpt: 代号为mustang。版本发布于年月日sun把原本的名称“jse”改为“javase”然后再从版本号中去掉“”[]而开发者内部编号仍然是。[]这个版本是根据jsr（点击查看归档页面）开发的。在发展阶段新版本大约每一周都会发布一些功能增强和漏洞的修复。beta版本在年月和月发布也就是为什么年月日变成最终的版本。主要特性本版本包含的主要更改_[][]支持旧的winx版本下降_非正式地javaupdate是java的最后一个显示为在这些版本的windows上工作的版本。这被认为是因为在update版本中的主要更
 tags:
   - 版本
@@ -14,8 +15,8 @@ tags:
   - java
   - javase
 categories:
-  - JavaSE
   - Java语言新特性
+  - JavaSE
   - 后端开发
 permalink: /post/java_6-z2buk6.html
 comments: true

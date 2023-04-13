@@ -1,6 +1,7 @@
 ---
 title: MySQL57查看与修改数据库编码为utf8
-updated: 2022-05-28 01:27:20
+date: &id001 2022-05-28 01:27:20
+updated: *id001
 excerpt: MySQL57查看与修改数据库编码为utf8。
 tags:
   - mysql

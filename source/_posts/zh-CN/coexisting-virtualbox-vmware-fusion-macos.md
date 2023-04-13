@@ -1,6 +1,7 @@
 ---
 title: 在 macOS 上共存 VirtualBox 和 VMWare Fusion
-updated: 2022-05-09 12:05:29
+date: &id001 2022-05-09 12:05:29
+updated: *id001
 excerpt: VirtualBox 和 VMWare Fusion 都是简洁的虚拟化工具。我在大多数日常工作中都使用 Fusion——它为我服务了很长时间，而且我在其中有大量有用的机器。但有时我也需要使用
   VirtualBox，通常用于与 Vagrant 一起工作。
 tags:

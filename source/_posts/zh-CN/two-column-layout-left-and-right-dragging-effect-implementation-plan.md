@@ -1,6 +1,7 @@
 ---
 title: 两栏布局左右拖拽效果实现方案
-updated: 2022-07-18 14:25:48
+date: &id001 2022-07-18 14:25:48
+updated: *id001
 excerpt: css方式实现第一种利用的css的方式实现利用浏览器非overflow_auto元素设置resize可以拉伸的特性实现无javascript的分栏宽度控制。webkit浏览器下滚动条可以自定义其中resize区域大小就是scrollbar的大小于是我们可以将整个拉伸区域变成和容器一样高红色的就是扩大后的区域不推荐使用css的方式实现毕竟兼容性并不好。在火狐上表现不佳。{padding__margin__}flcontainer{width_%_height_vh_overflow_hidden_}flre
 tags:
   - 拖拽

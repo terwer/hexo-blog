@@ -1,6 +1,7 @@
 ---
 title: Reactor模型
-updated: 2022-05-04 15:25:48
+date: &id001 2022-05-04 15:25:48
+updated: *id001
 excerpt: 通过一个或者多个输入传递给服务器的模式，服务端程序处理传入的多个请求，并将他们同步分派到处理线程，Reactor模式也叫Dispatch模式。
 tags:
   - io

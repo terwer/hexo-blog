@@ -1,6 +1,7 @@
 ---
 title: 统信 UOS 家庭版系统盘扩容
-updated: 2022-06-07 23:34:55
+date: &id001 2022-06-07 23:34:55
+updated: *id001
 excerpt: 统信 UOS 家庭版默认安装完成之后系统盘是15G，这样的话如果我们做开发，稍微安装一些类库，系统盘就会爆满。
 tags:
   - uos
@@ -9,8 +10,8 @@ tags:
   - disk
   - partion
 categories:
-  - UOS专区
   - 统信UOS专区
+  - UOS专区
 permalink: /post/tongxin-uos-home-edition-system-disk-expansion.html
 comments: true
 toc: true

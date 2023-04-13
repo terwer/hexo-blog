@@ -1,6 +1,7 @@
 ---
 title: Mac Big Sur 安装CocoaPods
-updated: 2022-05-05 21:19:01
+date: &id001 2022-05-05 21:19:01
+updated: *id001
 excerpt: Mac Big Sur 安装CocoaPods。
 tags:
   - mac

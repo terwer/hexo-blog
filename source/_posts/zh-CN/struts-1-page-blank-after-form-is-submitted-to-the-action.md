@@ -1,6 +1,7 @@
 ---
 title: Struts1页面表单提交给action后页面一片空白解决
-updated: 2022-05-07 20:56:31
+date: &id001 2022-05-07 20:56:31
+updated: *id001
 excerpt: Struts1页面表单提交给action后页面一片空白解决。使用struts1很容易遇到一个问题：页面表单提交之后，地址栏变为处理的action的地址，即以xxx.do结尾。然后页面一片空白，无错无异常。
 tags:
   - struts1

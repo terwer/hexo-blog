@@ -1,6 +1,7 @@
 ---
 title: CentOS_7-6_安装Oracle_12c
-updated: 2022-10-17 14:25:49
+date: &id001 2022-10-17 14:25:49
+updated: *id001
 excerpt: 下载地址_http_wwworaclecomtechnetworkdatabaseenterpriseeditiondownloadsindexhtmlhttps_wwworaclecomtechnetworkdatabaseenterpriseeditiondownloadsoracleclinuxhtml整个过程下载可能会比较慢最好是抓取下载链接然后使用wget下载例如​[root@terwergreenopt]#wgethttps_downloadoraclecomotnlinuxoraclecli
 tags:
   - 下载
@@ -13,8 +14,8 @@ tags:
   - 过程
   - 可能
 categories:
-  - 数据库
   - Oracle
+  - 数据库
 permalink: /post/centos76-install-oracle12c-11dy4t.html
 comments: true
 toc: true

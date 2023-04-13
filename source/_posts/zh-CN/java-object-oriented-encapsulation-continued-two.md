@@ -1,6 +1,7 @@
 ---
 title: Java_SE_第十一讲：面向对象之封装续二
-updated: 2022-10-10 21:53:44
+date: &id001 2022-10-10 21:53:44
+updated: *id001
 excerpt: 如果一个类包含了属性与方法那么该类的每一个对象都具有自己的属性但无论一个类有多少个对象这些对象共享同一个方法。关于方法参数传递的总结_对于java中的方法参数传递无论传递的是原生数据类型还是引用类型统一是传值（passbyvalue​）。什么类型的引用就能指向什么类型的对象比如people类型的引用就能指向people类型的对象但不能指向student类型的对象。比如_valpeople=people()正确valpeople=student()错误peoplepeople=newpeople()_正确p
 tags:
   - 构造方法

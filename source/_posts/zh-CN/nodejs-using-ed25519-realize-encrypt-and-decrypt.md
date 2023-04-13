@@ -1,6 +1,7 @@
 ---
 title: 使用nodejs实现ed25519的公钥加密和私钥解密
-updated: 2022-11-26 21:36:28
+date: &id001 2022-11-26 21:36:28
+updated: *id001
 excerpt: 主要使用了ed库加解密和验证代码commonjsandecmascriptmodules(esm)importasedfrom@nobleed_ifyoureusingsinglefileuseglobalvariableinstead_`windownobleed`constverifyed=asyncfunction(prikeypubkey){consolelog(prikey)consolelog(pubkey)====================新私钥开始==================
 tags:
   - ed25519

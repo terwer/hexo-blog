@@ -1,6 +1,7 @@
 ---
 title: Web字体简介_TTF_OTF_WOFF_EOT以及SVG
-updated: 2022-08-30 21:37:06
+date: &id001 2022-08-30 21:37:06
+updated: *id001
 excerpt: 字体格式有太多选择不幸的是始终没有一个能在所有的浏览器上通用。这意味着你必须使用多种字体的方案来保持用户跨平台的一致性体验。本文内容如题会依次介绍一下ttfotfwoffeot和svg几种字体目前在web上的情况。浏览器支持情况@fontface目前浏览器的兼容性_webkitsafari()_truetypeopentypett(ttf)opentypeps(otf)_opera()_truetypeopentypett(ttf)opentypeps(otf)svg(svg)_internetexplo
 tags:
   - 字体

@@ -1,6 +1,7 @@
 ---
 title: MyBatis的注解实现复杂映射开发
-updated: 2022-08-31 00:12:54
+date: &id001 2022-08-31 00:12:54
+updated: *id001
 excerpt: xml配置方式实现复杂映射回顾​实现复杂映射我们之前可以在映射文件中通过配置来实现使用注解开发后我们可以通过@results注解@result注解@one注解和@many注解组合完成复杂关系的配置。注解说明@results代替的是标签该注解中可以使用单个的@result注解也可以使用@result集合。使用方式_@results({@result()@result()})或者@results(@result())@result代替了标签和标签@result中的属性介绍column_数据库中的列名prope
 tags:
   - 注解
@@ -10,8 +11,8 @@ tags:
   - mybatis-14
   - mapping
 categories:
-  - 开源框架
   - MyBatis
+  - 开源框架
   - 后端开发
 permalink: /post/mybatis-s-annotation-achieves-complex-mapping-development-z1l39xe.html
 comments: true

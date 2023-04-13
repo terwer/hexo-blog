@@ -1,6 +1,7 @@
 ---
 title: 分布式理论之CAP定理
-updated: 2022-04-28 23:29:39
+date: &id001 2022-04-28 23:29:39
+updated: *id001
 excerpt: CAP定理（CAP Theorem），又称布鲁尔定理（Brewer's throrem）。它指出，对一个分布式系统来说，不可能同时满足以下三点：一致性（Consistency）、可用性（Availability）、分区容错性（Partition
   tolarence）。
 tags:

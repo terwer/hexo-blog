@@ -1,6 +1,7 @@
 ---
 title: Struts2输入校验剖析之编码方式校验
-updated: 2022-11-02 21:17:29
+date: &id001 2022-11-02 21:17:29
+updated: *id001
 excerpt: struts提供了两种校验方式。使用编码方式进行校验新建registerjsp页面pageencoding=%username_password_repassword_age_birthday_geaduation_%username_password_repassword_age_birthday_geaduation_%%流程处理的actionpackagespaceterwerstruts_importjavautilcalendar_importjavautildate_importcomopen
 tags:
   - 方法
@@ -13,8 +14,8 @@ tags:
   - code
   - validate
 categories:
-  - Struts2
   - 后端开发
+  - Struts2
 permalink: /post/struts2-input-verification-analysis-encoding-method-verification-jhxef.html
 comments: true
 toc: true

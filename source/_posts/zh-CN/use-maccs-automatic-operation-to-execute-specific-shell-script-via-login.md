@@ -1,6 +1,7 @@
 ---
 title: 利用macOS的自动操作实现登录执行特定shell脚本
-updated: 2022-06-15 10:06:27
+date: &id001 2022-06-15 10:06:27
+updated: *id001
 excerpt: 利用macOS的自动操作可以大大的提升我们的工作效率。
 tags:
   - mac

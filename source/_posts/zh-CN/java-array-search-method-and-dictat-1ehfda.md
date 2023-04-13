@@ -1,6 +1,7 @@
 ---
 title: Java数组的查找方式及二分查找
-updated: 2022-10-18 22:26:59
+date: &id001 2022-10-18 22:26:59
+updated: *id001
 excerpt: 数组查找publicclassarraysearchtest{publicstaticvoidmain(string[]args){int[]a=newint[]{}_intvalue=_intresult=search(a)_if(result){systemoutprintln(}else{systemoutprintln(}}publicstaticintsearch(int[]arrayintvalue){intindex=_for(inti=_ii){if(array[i]==value){in
 tags:
   - 查找

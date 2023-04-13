@@ -1,6 +1,7 @@
 ---
 title: SpringBoot中https的配置
-updated: 2022-07-16 22:13:14
+date: &id001 2022-07-16 22:13:14
+updated: *id001
 excerpt: 配置#https_helpaliyuncomdocument_detailhtml#https协议默认端口号为需要使用其他端口时您可以在此处自定义。serverport=#https_docsoraclecomenjavajavasedocsspecssecuritystandardnameshtml#keystoretypes#您需要使用实际的证书名称替换domain_namepfx。serversslkeystore=classpath_vpfx#填写pfxpasswordtxt文件内的密码。serv
 tags:
   - spring

@@ -1,6 +1,7 @@
 ---
 title: 脚本编程与交互式编程
-updated: 2022-06-05 22:18:57
+date: &id001 2022-06-05 22:18:57
+updated: *id001
 excerpt: 脚本编程与交互式编程。
 tags:
   - python

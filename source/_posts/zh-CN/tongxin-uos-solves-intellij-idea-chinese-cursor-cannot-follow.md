@@ -1,6 +1,7 @@
 ---
 title: 统信 UOS 解决 Intellij IDEA 中文光标不能跟随
-updated: 2022-06-08 02:15:08
+date: &id001 2022-06-08 02:15:08
+updated: *id001
 excerpt: 统信 UOS 解决 Intellij IDEA 中文光标不能跟随。
 tags:
   - uos
@@ -8,8 +9,8 @@ tags:
   - deepin
   - cursor
 categories:
-  - UOS专区
   - 统信UOS专区
+  - UOS专区
 permalink: /post/tongxin-uos-solves-intellij-idea-chinese-cursor-cannot-follow.html
 comments: true
 toc: true

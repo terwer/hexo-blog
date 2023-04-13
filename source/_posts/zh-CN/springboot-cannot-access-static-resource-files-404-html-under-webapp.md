@@ -1,6 +1,7 @@
 ---
 title: SpringBoot访问webapp下面的html等静态资源文件出现404解决方案
-updated: 2022-05-06 15:28:53
+date: &id001 2022-05-06 15:28:53
+updated: *id001
 excerpt: 在做SpringBoot集成页面的时候，发现不能直接访问页面或者静态资源，都是报404，可以试试在pom.xml的build里面加入代码（不想用jsp，只想用html或者其他的可以采用这种方式）。
 tags:
   - springboot

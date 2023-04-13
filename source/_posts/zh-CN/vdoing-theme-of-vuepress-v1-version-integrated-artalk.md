@@ -1,6 +1,7 @@
 ---
 title: vdoing主题vuepress的v1版本集成Artalk
-updated: 2022-07-07 00:35:48
+date: &id001 2022-07-07 00:35:48
+updated: *id001
 excerpt: vdoing主题vuepress的v1版本集成Artalk，再也不用担心评论服务问题了。
 tags:
   - comment

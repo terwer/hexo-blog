@@ -1,6 +1,7 @@
 ---
 title: Java_SE_第四讲：运算符
-updated: 2022-10-10 20:16:31
+date: &id001 2022-10-10 20:16:31
+updated: *id001
 excerpt: 当有若干个变量参与运算时结果类型取决于这些变量中表示范围最大的那个变量类型。比如参与运算的变量中有整型int有双精度浮点型double有短整型short那么最后的结果类型就是double。inta=_intb=_doublec=(double)ab_上面的代码中a与b都是整型但是通过(double)a这种转换将a转换为一个匿名的变量该变量的类型是double但是要注意_a本身依旧是int类型而不是double类型这样(double)ab就是double类型除以int类型结果自然是double类型。取模运算
 tags:
   - 类型

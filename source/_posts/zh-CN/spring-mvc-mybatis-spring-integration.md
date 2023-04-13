@@ -1,6 +1,7 @@
 ---
 title: Spring-MVC-5-3-19,MyBatis3-5-9,Spring5-3-19整合
-updated: 2022-05-28 14:21:31
+date: &id001 2022-05-28 14:21:31
+updated: *id001
 excerpt: Spring-MVC-5-3-19,MyBatis3-5-9,Spring5-3-19整合。IDEA->new->Project，创建一个Maven的webapp项目，选择
   org.apache.maven的webapp骨架。
 tags:

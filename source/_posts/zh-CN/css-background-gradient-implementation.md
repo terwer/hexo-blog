@@ -1,6 +1,7 @@
 ---
 title: css背景上下渐变的实现
-updated: 2022-07-09 15:37:00
+date: &id001 2022-07-09 15:37:00
+updated: *id001
 excerpt: css背景上下渐变的实现backgroundwebkitlineargradienttop#eefaef#ffffff/*关于渐变色的兼容*/backgroundmslineargradienttop#eefaef#ffffff/*ie10*/backgroundmozlineargradienttop#eefaef#ffffff/*火狐*/backgroundwebkitgradientlinear0%0%0%100%from#eefaefto#ffffff/*safari45chrome19*/bac
 tags:
   - css

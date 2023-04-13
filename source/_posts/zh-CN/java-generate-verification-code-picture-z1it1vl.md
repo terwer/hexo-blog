@@ -1,6 +1,7 @@
 ---
 title: Java生成验证码图片
-updated: 2022-07-16 23:14:41
+date: &id001 2022-07-16 23:14:41
+updated: *id001
 excerpt: 生成验证码验证码工具类@name_verificationcode@author_terwer@date__publicclassverificationcode{privatestaticfinalstring[]randomstr={随机生成验证码@returnpublicstaticmapgetverificationcode(){returngetverificationcodewithstr(null)_}利用给定的字符串生成验证码@paramstr指定的字符串@returnpublicstat
 tags:
   - 验证码

@@ -1,6 +1,7 @@
 ---
 title: JVM阅读目录
-updated: 2022-04-16 18:51:42
+date: &id001 2022-04-16 18:51:42
+updated: *id001
 tags:
   - menu
   - jvm

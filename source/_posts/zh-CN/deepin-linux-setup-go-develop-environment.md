@@ -1,6 +1,7 @@
 ---
 title: Deepin搭建GO开发环境
-updated: 2022-07-02 00:33:01
+date: &id001 2022-07-02 00:33:01
+updated: *id001
 excerpt: Deepin搭建GO开发环境。
 tags:
   - go

@@ -1,15 +1,16 @@
 ---
 title: Vagrant搭建可移植的CentOS7环境
-updated: 2022-05-12 20:49:32
+date: &id001 2022-05-12 20:49:32
+updated: *id001
 excerpt: Vagrant搭建可移植的CentOS7环境。
 tags:
   - vagrant
   - centos
   - centos7
 categories:
-  - 开发效率
   - 开发流程
   - 实用技巧
+  - 开发效率
 permalink: /post/vegrant-builds-a-portable-centos7-environment.html
 comments: true
 toc: true

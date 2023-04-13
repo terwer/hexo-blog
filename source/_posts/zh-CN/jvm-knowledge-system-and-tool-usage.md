@@ -1,6 +1,7 @@
 ---
 title: JVM知识体系与工具使用
-updated: 2022-06-05 21:09:06
+date: &id001 2022-06-05 21:09:06
+updated: *id001
 excerpt: JVM知识体系与工具使用。
 tags:
   - jvm

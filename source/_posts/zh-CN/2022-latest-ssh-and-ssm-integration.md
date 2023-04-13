@@ -1,6 +1,7 @@
 ---
 title: 2022最新SSH与SSM整合
-updated: 2022-05-06 01:39:39
+date: &id001 2022-05-06 01:39:39
+updated: *id001
 excerpt: 2022最新SSH与SSM整合。IDEA->new->Project，创建一个Maven的webapp项目，选择 org.apache.maven的webapp骨架。
 tags:
   - struts2

@@ -1,6 +1,7 @@
 ---
 title: Java中HTML与Textarea换行符的相互转换
-updated: 2022-04-25 17:03:40
+date: &id001 2022-04-25 17:03:40
+updated: *id001
 tags:
   - java
   - code-snapshot

@@ -1,6 +1,7 @@
 ---
 title: ArrayList深入分析
-updated: 2022-10-21 22:28:48
+date: &id001 2022-10-21 22:28:48
+updated: *id001
 excerpt: 基本方法使用由tostring()​方法提供的默认的转换显示类集的内容tostring()​方法是从abstractcollection()​继承下来的。对于例子来说足够但是通常情况下会重写此方法。publicclassarraylisttest{publicstaticvoidmain(string[]args){arraylistarraylist=newarraylist()_arraylistadd(arraylistadd(arraylistadd(arraylistadd(​strings=(
 tags:
   - 结果

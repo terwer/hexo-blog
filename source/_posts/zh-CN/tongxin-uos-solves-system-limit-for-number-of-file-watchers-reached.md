@@ -1,6 +1,7 @@
 ---
 title: 统信 UOS 解决 System limit for number of file watchers reached
-updated: 2022-06-08 01:08:53
+date: &id001 2022-06-08 01:08:53
+updated: *id001
 excerpt: 原因：文件监视程序的系统产生了限制，达到了默认的上限，需要增加限额。
 tags:
   - uos
@@ -9,8 +10,8 @@ tags:
   - vue
   - vuepress
 categories:
-  - UOS专区
   - 统信UOS专区
+  - UOS专区
 permalink: /post/tongxin-uos-solves-system-limit-for-number-of-file-watchers-reached.html
 comments: true
 toc: true

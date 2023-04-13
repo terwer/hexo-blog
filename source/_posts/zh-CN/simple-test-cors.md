@@ -1,6 +1,7 @@
 ---
 title: 简单测试CORS
-updated: 2022-06-16 02:05:19
+date: &id001 2022-06-16 02:05:19
+updated: *id001
 excerpt: CORS的简单测试方法。
 tags:
   - cors

@@ -1,6 +1,7 @@
 ---
 title: JDK_1-1
-updated: 2022-09-30 21:22:36
+date: &id001 2022-09-30 21:22:36
+updated: *id001
 excerpt: 主要改进年月日发布。新增功能主要包括_[]awt事件模型大规模重新编制基于listener加入了内部类javabeans官方文档_https_docsoraclecomjavasedocstechnotesguidesbeansreferencehtml关于内省参考_jdk之javabean内省机制jdbc(javadatabaseconnectivity)rmi(remotemethodinvocation)能够支持自理的反射能力在运行时不可能有修改。反射参考博文_一文读懂反射那些事针对microsof
 tags:
   - 功能
@@ -12,8 +13,8 @@ tags:
   - 新特性
   - feature
 categories:
-  - JavaSE
   - Java语言新特性
+  - JavaSE
   - 后端开发
 permalink: /post/jdk_11-1dwmi7.html
 comments: true

@@ -1,6 +1,7 @@
 ---
 title: LinkedList源代码深入剖析
-updated: 2022-10-23 20:05:20
+date: &id001 2022-10-23 20:05:20
+updated: *id001
 excerpt: 集合框架中的接口除了类集接口之外类集也是用comparatoriterator和listiterator接口。简单地说comparator接口定义了两个对象如何比较_iterator和listiterator接口枚举类集中的对象。为了在他们的使用中提供最大的灵活性类集接口允许对一些方法进行选择。可选择的方法使得使用者可以更改类集中的内容。支持这些方法额类集被称为可修改的（modifiable）。不允许修改其内容的类集被称为不可修改的（unmodifiable）。如果对一个不可修改发类集使用这些方法将引发一
 tags:
   - 方法

@@ -1,6 +1,7 @@
 ---
 title: Struts1与Struts2的区别和对比
-updated: 2022-05-07 14:42:44
+date: &id001 2022-05-07 14:42:44
+updated: *id001
 excerpt: 本文介绍了Struts2的起源，详细对比了Struts2和Struts1.x的差异，并穿插概述了Struts2框架和请求流程。本文介绍了两者在Action方面、对
   Servlet 的依赖方面、输入捕获方面和表达式语言等十几个方面的差别，同时指出Struts2对拦截器与IoC的支持，而在Struts1.x中这些特性是很难想象的。
 tags:

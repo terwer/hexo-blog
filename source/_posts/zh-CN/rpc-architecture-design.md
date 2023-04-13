@@ -1,6 +1,7 @@
 ---
 title: RPC架构设计及IO模型
-updated: 2022-04-16 19:03:55
+date: &id001 2022-04-16 19:03:55
+updated: *id001
 excerpt: 本文阐述了socket编程、IO网络模型，以及各种IO模型的适用场景。
 tags:
   - rpc

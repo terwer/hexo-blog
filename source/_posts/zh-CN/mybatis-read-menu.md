@@ -1,6 +1,7 @@
 ---
 title: Mybatis阅读目录
-updated: 2022-05-04 23:46:03
+date: &id001 2022-05-04 23:46:03
+updated: *id001
 tags:
   - mybatis
   - mrnu

@@ -1,6 +1,7 @@
 ---
 title: 自定义RPC框架之基于Netty实现RPC框架
-updated: 2022-05-04 16:21:46
+date: &id001 2022-05-04 16:21:46
+updated: *id001
 excerpt: Dubbo底层使用Netty作为网络通讯框架，要求使用Netty实现一个简单的RPC框架，消费者和提供者约定协议和接口，消费者远程调用提供者的服务。
 tags:
   - rpc

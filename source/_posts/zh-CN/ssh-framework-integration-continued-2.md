@@ -1,6 +1,7 @@
 ---
 title: SSH 框架整合续2之校验框架
-updated: 2022-05-28 16:56:23
+date: &id001 2022-05-28 16:56:23
+updated: *id001
 excerpt: SSH 框架整合续2之校验框架。IDEA->new->Project，创建一个 Maven 的 webapp 项目，选择 org.apache.maven
   的 webapp 骨架。
 tags:

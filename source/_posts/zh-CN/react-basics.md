@@ -1,6 +1,7 @@
 ---
 title: React基础知识
-updated: 2022-05-07 23:41:32
+date: &id001 2022-05-07 23:41:32
+updated: *id001
 excerpt: React是一个用于构建用户界面的JavaScript库，它只负责用户的视图层，帮助开发人员构建快速且交互式的Web应用程序。React使用组件的方式构建用户界面。
 tags:
   - react

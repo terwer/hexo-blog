@@ -1,6 +1,7 @@
 ---
 title: 史上最强大的笔记软件-思源笔记，正式开源了！
-updated: 2022-05-28 13:10:22
+date: &id001 2022-05-28 13:10:22
+updated: *id001
 tags:
   - siyuan
   - open

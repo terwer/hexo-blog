@@ -1,6 +1,7 @@
 ---
 title: 利用Nginx的map实现301重定向
-updated: 2022-04-28 15:53:54
+date: &id001 2022-04-28 15:53:54
+updated: *id001
 tags:
   - nginx
   - seo

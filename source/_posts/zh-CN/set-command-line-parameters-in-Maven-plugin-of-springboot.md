@@ -1,6 +1,7 @@
 ---
 title: 在SpringBoot的maven插件中设置命令行参数
-updated: 2022-05-04 22:59:17
+date: &id001 2022-05-04 22:59:17
+updated: *id001
 excerpt: 怎么在SpringBoot的maven插件中设置命令行参数呢?
 tags:
   - spring

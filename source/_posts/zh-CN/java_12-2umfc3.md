@@ -1,6 +1,7 @@
 ---
 title: Java_12
-updated: 2022-10-07 23:39:35
+date: &id001 2022-10-07 23:39:35
+updated: *id001
 excerpt: jdk于年月日发布。主要特性该版本包含较多新特性例如_jep_shenandoah_一个实验性的低延迟垃圾收集器[]jep_细粒度性能评审包[]jep_switch表达式（预览阶段）[]jep_jvmconstantsapi[]jep_仅保留一个aarch平台的移植[]jep_默认类数据共享归档[]jep_针对g提供可中止的混合垃圾收集[]jep_针对g及时释放已申请但未使用的内存[]java更新版本发布日期重点javase[]初始版本javase[]日本新年号名称和安全性修补javase[]移除功能和设
 tags:
   - 版本
@@ -14,8 +15,8 @@ tags:
   - javase
   - 一个
 categories:
-  - JavaSE
   - Java语言新特性
+  - JavaSE
   - 后端开发
 permalink: /post/java_12-2umfc3.html
 comments: true

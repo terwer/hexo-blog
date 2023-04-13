@@ -1,6 +1,7 @@
 ---
 title: Java_16
-updated: 2022-10-08 00:49:28
+date: &id001 2022-10-08 00:49:28
+updated: *id001
 excerpt: java在年月日正式发布不是长久支持版本这次更新没有带来很多语法上的改动但是也带来了不少新的实用功能。主要特性java随附的个jep分为六个不同类别_新语言特性jep适用于instanceof的模式匹配模式匹配（patternmatching）最早在java中作为预览特性引入在java中还是预览特性。模式匹配通过对instacneof运算符进行模式匹配来增强java编程语言。模式匹配使程序中的通用逻辑（即从对象中有条件地提取组件）得以更简洁更安全地表示。jep记录记录（records）在java和java
 tags:
   - 特性
@@ -14,8 +15,8 @@ tags:
   - javase
   - 可以
 categories:
-  - JavaSE
   - Java语言新特性
+  - JavaSE
   - 后端开发
 permalink: /post/java_16-17isgf.html
 comments: true

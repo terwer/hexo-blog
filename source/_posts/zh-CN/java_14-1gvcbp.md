@@ -1,6 +1,7 @@
 ---
 title: Java_14
-updated: 2022-10-08 00:28:34
+date: &id001 2022-10-08 00:28:34
+updated: *id001
 excerpt: jdk发布于年月日。主要特性java包含了下方列出的新功能以及“数百个小改进和数千个漏洞修复”[]。jep_使用instanceof的模式匹配（预览）jep_打包工具（孵化中）jep_在g中对不均匀的内存访问（numa）情况下的内存申请优化jep_jfreventstreamingjep_使字节缓冲区能够映射到非易失性存储器上jep_有帮助的nullpointerexceptionsjep_记录类（预览）jep_switch表达式（标准）jep_弃用solaris和sparc平台上的移植版本jep_移除c
 tags:
   - 版本
@@ -14,8 +15,8 @@ tags:
   - java14
   - javase
 categories:
-  - JavaSE
   - Java语言新特性
+  - JavaSE
   - 后端开发
 permalink: /post/java_14-1gvcbp.html
 comments: true
