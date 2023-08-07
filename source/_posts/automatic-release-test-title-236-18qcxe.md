@@ -1,3 +1,12 @@
+---
+title: 自动发布的测试标题236
+updated: '2023-08-07'
+excerpt: '1111'
+permalink: /post/automatic-release-test-title-236-18qcxe.html
+comments: true
+toc: true
+---
+
 # 自动发布的测试标题236
 
 呵呵哈哈哈4567
