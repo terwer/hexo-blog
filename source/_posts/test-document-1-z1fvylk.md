@@ -1,72 +1,21 @@
 ---
 title: 测试文档1
 date: '2023-07-22 21:22:37'
-updated: '2023-08-20 12:50:29'
+updated: '2023-08-20 13:01:40'
 excerpt: 图片测试，远程图片4。图片测试，本地图片。这是一篇测试文章，等会会删除。
 tags:
   - 测试
   - 标签1
 categories:
-  - 分类1
   - 分类2
   - 哈哈哈
   - dfdrrt
+  - 测试4
 permalink: /post/test-document-1-z1fvylk.html
 comments: true
 toc: true
 ---
 
----
-title: 测试文档1
-date: '2023-07-22 21:22:37'
-updated: '2023-08-20 12:50:29'
-excerpt: 图片测试，远程图片4。图片测试，本地图片。这是一篇测试文章，等会会删除。
-tags:
-  - 测试
-  - 标签1
-categories:
-  - 分类1
-  - 分类2
-  - 哈哈哈
-  - dfdrrt
-permalink: /post/test-document-1-z1fvylk.html
-comments: true
-toc: true
----
----
-title: 测试文档1
-date: '2023-07-22 21:22:37'
-updated: '2023-08-20 12:50:29'
-excerpt: 图片测试，远程图片4。图片测试，本地图片。这是一篇测试文章，等会会删除。
-tags:
-  - 测试
-  - 标签1
-categories:
-  - 分类1
-  - 分类2
-  - 哈哈哈
-  - dfdrr
-permalink: /post/test-document-1-z1fvylk.html
-comments: true
-toc: true
----
----
-title: 测试文档1
-date: '2023-07-22 21:22:37'
-updated: '2023-08-20 12:50:29'
-excerpt: 图片测试，远程图片4。图片测试，本地图片。这是一篇测试文章，等会会删除。
-tags:
-  - 测试
-  - 标签1
-categories:
-  - 分类1
-  - 分类2
-  - 哈哈哈
-  - dfdr
-permalink: /post/test-document-1-z1fvylk.html
-comments: true
-toc: true
----
 
 
 ## 标题测试
