@@ -1,11 +1,15 @@
 ---
 title: 测试文档1
 date: '2023-07-22 21:22:37'
-updated: '2023-08-20 11:40:43'
+updated: '2023-08-20 11:44:14'
 excerpt: 图片测试，远程图片4。图片测试，本地图片。这是一篇测试文章，等会会删除。
 tags:
   - 测试
   - 标签1
+categories:
+  - 分类1
+  - 分类2
+  - 哈哈哈
 permalink: /post/test-document-1-z1fvylk.html
 comments: true
 toc: true
