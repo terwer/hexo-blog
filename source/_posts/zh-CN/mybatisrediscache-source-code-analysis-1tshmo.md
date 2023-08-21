@@ -1,16 +1,18 @@
 ---
+created: '2023-02-22 20:29:49'
+updated: '2023-08-22 00:26:24'
 title: MyBatis机制介绍与原理
-date: '2023-02-22 20:29:49'
-updated: '2023-08-22 00:15:59'
-tags:
-  - 插件
+slug: introduction-and-principle-of-mybatis-mechanism-2x4q8s
+permalink: siyuan://blocks/20230222202949-0rsf48i
+desc: >-
+  该博客介绍了插件的概念及其在 MyBatis 中的应用。MyBatis 插件通过拦截和增强核心组件，如
+  Executor、StatementHandler、ParameterHandler 和
+  ResultSetHandler，实现了灵活且可扩展的持久层操作方式。插件的机制利用动态代理技术，使得开发人员能够根据需求选择适合的数据库操作方式，并轻松扩展
+  MyBatis 的功能。
+tags: 插件,MyBatis,扩展,拦截,动态代理
+categories:
+  - 后端开发
   - MyBatis
-  - 扩展
-  - 拦截
-  - 动态代理
-permalink: /post/introduction-and-principle-of-mybatis-mechanism-2x4q8s.html
-comments: true
-toc: true
 ---
 
 
