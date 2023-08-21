@@ -26,9 +26,11 @@ tags:
   - 测试
   - 标签1
   - 标签3
+  - hexo
 categories:
   - 分类1
   - 分类2
+  - hexo分类
 permalink: /post/test-document-1-z1fvylk.html
 comments: true
 toc: true
@@ -37,7 +39,7 @@ toc: true
 
 ## 标题测试
 
-* 列表
+* 列表2
 * 列表2
 
 1. 有序列表
