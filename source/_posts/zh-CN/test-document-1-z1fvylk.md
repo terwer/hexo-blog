@@ -9,7 +9,8 @@ tags:
   - 标签3
   - hexo
 categories:
-  - 分类1
+  - 分类14
+permalink: /post/test-document-1-z1fvylk.html
 comments: true
 toc: true
 ---
