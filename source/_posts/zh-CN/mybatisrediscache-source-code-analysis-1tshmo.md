@@ -1,170 +1,48 @@
 ---
-title: MyBatis-RedisCache源码分析
-date: '2023-02-20 19:35:10'
-updated: '2023-02-20 19:35:10'
-excerpt: 回顾在前面我们通过redis​集成了mybatis​的二级缓存mybatis的二级缓存整合redis接下来我们来分析一下rediscache​的源码。源码分析rediscache主要是通过实现cache接口来做的。数据存储和获取主要是通过操作jedis来实现。publicfinalclassrediscacheimplementscache{privatefinalreadwritelockreadwritelock=newdummyreadwritelock()_privatestringid_priv
+title: MyBatis机制介绍与原理
+date: '2023-02-22 20:29:49'
+updated: '2023-08-22 00:15:59'
 tags:
-  - 通过
-  - 方法
-  - 分析
-  - 实现
-  - 读取
-categories:
+  - 插件
   - MyBatis
-  - 开源框架
-  - 后端开发
-permalink: /post/mybatisrediscache-source-code-analysis-1tshmo.html
+  - 扩展
+  - 拦截
+  - 动态代理
+permalink: /post/introduction-and-principle-of-mybatis-mechanism-2x4q8s.html
 comments: true
 toc: true
 ---
-## 回顾
 
-在前面，我们通过 `redis`​ 集成了 `MyBatis`​ 的二级缓存，[440.MyBatis的二级缓存整合redis](siyuan://blocks/20230213211210-bl7c6m0) ，接下来，我们来分析一下 `RedisCache`​ 的源码。
 
-## 源码分析
+## 插件简介
 
-RedisCache 主要是通过实现 Cache 接口来做的。数据存储和获取主要是通过操作 jedis 来实现。
+什么是插件  
+插件是一种软件组件，可以在另一个软件程序中添加功能或特性。插件通常被设计成可以==随时添加或删除==的，而不影响==主程序==的功能。插件可以==扩展==软件程序的功能，这让用户可以根据自己的需求定制软件，提高工作效率。常见的插件包括浏览器插件、音频和视频编辑软件的特效插件、图形处理软件的滤镜插件等。
 
-```java
-public final class RedisCache implements Cache {
-    private final ReadWriteLock readWriteLock = new DummyReadWriteLock();
-    private String id;
-    private static JedisPool pool;
+## MyBatis 插件介绍
 
-    public RedisCache(String id) {
-        if (id == null) {
-            throw new IllegalArgumentException("Cache instances require an ID");
-        } else {
-            this.id = id;
-            RedisConfig redisConfig = RedisConfigurationBuilder.getInstance().parseConfiguration();
-            pool = new JedisPool(redisConfig, redisConfig.getHost(), redisConfig.getPort(), redisConfig.getConnectionTimeout(), redisConfig.getSoTimeout(), redisConfig.getPassword(), redisConfig.getDatabase(), redisConfig.getClientName());
-        }
-    }
-}
-```
+MyBatis 作为一个通用的 DAO 层框架，也提供了插件的机制，例如：我们可以用插件实现分页、分表、监控等功能。
 
-RedisCache 在 MyBatis 启动的时候由 MyBatis 的 `CacheBuilder`​ 构建，构建的方式就是调用 `Cache`​ 实现类的带 `id`​ 参数的构造方法。
+MyBatis 在四大组件（==Exector==、==StatmentHandler==、==ParameterHandler==、==ResultSetHandler==）处提供了强大的==插件扩展==机制。
 
-```java
-// CacheBuilder.java
+MyBatis 对持久层的操作依赖于这四大核心组件对象。MyBatis 支持通过插件对四大核心组件进行拦截，对 MyBatis 来说，插件就是拦截器，用来增强和信息对象的功能。增强功能底层是借助于 ==JDK 的动态代理==来实现的，也就是说， MyBatis 的四大核心组件本质上都是代理对象。
 
-public Cache build() {
-    setDefaultImplementations();
-    Cache cache = newBaseCacheInstance(implementation, id);
-    setCacheProperties(cache);
-}
+总之，MyBatis 的四大核心组件和扩展点提供了灵活和可扩展的持久层操作方式，使得开发人员可以根据具体的应用场景来选择适合的方式来操作数据库。同时，插件机制也提供了一种简单、方便的方式来增强 MyBatis 的功能，扩展 MyBatis 的能力。
 
-private Cache newBaseCacheInstance(Class<? extends Cache> cacheClass, String id) {
-    Constructor<? extends Cache> cacheConstructor = getBaseCacheConstructor(cacheClass);
-    try {
-        return cacheConstructor.newInstance(id);
-    } catch (Exception e) {
-        throw new CacheException("Could not instantiate cache implementation (" + cacheClass + "). Cause: " + e, e);
-    }
-}
-```
+​![](https://img1.terwer.space/api/public/202303232307565.png)​
 
-在 `RedisCache`​ 的构造方法中，调用了 `RedisConfigurationBuilder`​ 来常见 `RedisConfig`​ 对象，并通过 `RedisConfig`​ 对象来创建 `Jedis`​ 。
+## MyBatis 允许拦截的方法
 
-​`RedisConfig`​ 继承了 `JedisPoolConfig`​ ，并定义了一些属性来读取配置。
+MyBatis允许拦截哪些方法？  
+Sql 语法构造器 StatementHandler（==prepare==、==parameterize==、==batch==、==updates==、==query== 等方法）  
+执行器 Executor （==update==、==query==、==commit==、==rollback== 等方法）  
+参数处理器 ParameterHandler（==getParameterObject==、==setParameters== 方法）  
+结果集处理器 ResultSetHandler（==handlerResultSets==、==handleOutputParameters== 方法）
 
-```java
-public class RedisConfig extends JedisPoolConfig {
-    private String host = "localhost";
-    private int port = 6379;
-    private int connectionTimeout = 2000;
-    private int soTimeout = 2000;
-    private String password;
-    private int database = 0;
-    private String clientName;
-}
-```
+## MyBatis 插件的原理
 
-​`RedisConfig`​ 是由 `RedisConfigurationBuilder`​​ 构建的，这个类的主要方法是 `parseConfiguration`​
+参考 [Mybatis基本流程](siyuan://blocks/20220830105327-gafnm5o)
 
-```java
-public RedisConfig parseConfiguration(ClassLoader classLoader) {
-    Properties config = new Properties();
-    InputStream input = classLoader.getResourceAsStream(this.redisPropertiesFilename);
-    if (input != null) {
-        try {
-            config.load(input);
-        } catch (IOException var12) {
-            throw new RuntimeException("An error occurred while reading classpath property '" + this.redisPropertiesFilename + "', see nested exceptions", var12);
-        } finally {
-            try {
-                input.close();
-            } catch (IOException var11) {
-            }
-
-        }
-    }
-
-    RedisConfig jedisConfig = new RedisConfig();
-    this.setConfigProperties(config, jedisConfig);
-    return jedisConfig;
-}
-```
-
-该方法从 `Resource`​ 读取一个 `redis.properties`​ 文件，其结构如下：
-
-```properties
-host=localhost
-port=6379
-password=123456
-database=0
-```
-
-读取完成之后将内容设置到 RedisConfig 对象中。
-
-接下来，RedisCache 使用 RedisCo 创建 Jedis。在 RedisCache 中，实现了一个简单的模板方法来操作 redis：
-
-```java
-private Object execute(RedisCallback callback) {
-    Jedis jedis = pool.getResource();
-
-    Object var3;
-    try {
-        var3 = callback.doWithRedis(jedis);
-    } finally {
-        jedis.close();
-    }
-
-    return var3;
-}
-```
-
-目标接口为 RedisCallback，该接口定义了一个简单的 doWithRedis 方法用来进行 redis 相关操作：
-
-```java
-public interface RedisCallback {
-    Object doWithRedis(Jedis var1);
-}
-```
-
-接下来，我们分析一下 Cache 中的两个重要方法 putObject()和 getObject()
-
-```java
-public void putObject(final Object key, final Object value) {
-    this.execute(new RedisCallback() {
-        public Object doWithRedis(Jedis jedis) {
-            jedis.hset(RedisCache.this.id.toString().getBytes(), key.toString().getBytes(), SerializeUtil.serialize(value));
-            return null;
-        }
-    });
-}
-```
-
-```java
-public Object getObject(final Object key) {
-    return this.execute(new RedisCallback() {
-        public Object doWithRedis(Jedis jedis) {
-            return SerializeUtil.unserialize(jedis.hget(RedisCache.this.id.toString().getBytes(), key.toString().getBytes()));
-        }
-    });
-}
-```
-
-可以看出来，MyBatis-RedisCache 采用的是 redis 的 `hash`​ 结构来存储数据，把 Cache 的 `id`​ 作为 hash 的 `key`​（Cache 的 id 在 Mapper 中是 namspace），缓存和读取之前通过 SerializeUtil 进行==序列化==或者==反序列化==。
+‍
 
 ‍
