@@ -10,8 +10,6 @@ tags:
   - hexo
 categories:
   - 分类1
-  - 分类2
-  - hexo分类
 comments: true
 toc: true
 ---
