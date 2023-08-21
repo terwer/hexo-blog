@@ -1,7 +1,7 @@
 ---
 title: 测试文档1
 date: '2023-07-22 21:22:37'
-updated: '2023-08-21 20:30:35'
+updated: '2023-08-21 20:32:03'
 excerpt: 摘要6
 tags:
   - 测试
@@ -10,7 +10,6 @@ tags:
 categories:
   - 分类1
   - 分类2
-  - '[Markdown]'
 permalink: /post/test-document-1-z1fvylk.html
 comments: true
 toc: true
