@@ -11,6 +11,7 @@ tags:
   - hexo
 categories:
   - 测试
+permalink: /post/test-document-1-tgbfd.html
 comments: true
 toc: true
 ---
