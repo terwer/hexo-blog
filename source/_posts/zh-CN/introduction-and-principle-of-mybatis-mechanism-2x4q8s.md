@@ -1,7 +1,7 @@
 ---
 title: MyBatis机制介绍与原理
 date: '2023-02-22 20:29:49'
-updated: '2023-08-22 00:37:14'
+updated: '2023-08-24 23:30:18'
 excerpt: >-
   该博客介绍了插件的概念及其在 MyBatis 中的应用。MyBatis 插件通过拦截和增强核心组件，如
   Executor、StatementHandler、ParameterHandler 和
@@ -16,16 +16,14 @@ tags:
 categories:
   - 后端开发
   - MyBatis
-permalink: /post/introduction-and-principle-of-mybatis-mechanism-2x4q8s.html
 comments: true
 toc: true
 ---
 
 
-
 ## 插件简介
 
-什么是插件  
+什么是插件
 插件是一种软件组件，可以在另一个软件程序中添加功能或特性。插件通常被设计成可以==随时添加或删除==的，而不影响==主程序==的功能。插件可以==扩展==软件程序的功能，这让用户可以根据自己的需求定制软件，提高工作效率。常见的插件包括浏览器插件、音频和视频编辑软件的特效插件、图形处理软件的滤镜插件等。
 
 ## MyBatis 插件介绍
@@ -42,16 +40,14 @@ MyBatis 对持久层的操作依赖于这四大核心组件对象。MyBatis 支�
 
 ## MyBatis 允许拦截的方法
 
-MyBatis允许拦截哪些方法？  
-Sql 语法构造器 StatementHandler（==prepare==、==parameterize==、==batch==、==updates==、==query== 等方法）  
-执行器 Executor （==update==、==query==、==commit==、==rollback== 等方法）  
-参数处理器 ParameterHandler（==getParameterObject==、==setParameters== 方法）  
+MyBatis 允许拦截哪些方法？
+Sql 语法构造器 StatementHandler（==prepare==、==parameterize==、==batch==、==updates==、==query== 等方法）
+执行器 Executor （==update==、==query==、==commit==、==rollback== 等方法）
+参数处理器 ParameterHandler（==getParameterObject==、==setParameters== 方法）
 结果集处理器 ResultSetHandler（==handlerResultSets==、==handleOutputParameters== 方法）
 
 ## MyBatis 插件的原理
 
-参考 [Mybatis基本流程](siyuan://blocks/20220830105327-gafnm5o)
-
-‍
+参考 Mybatis基本流程
 
 ‍
