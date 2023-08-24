@@ -1,9 +1,7 @@
 ---
-created: '2023-07-22 21:22:37'
-updated: '2023-08-24 11:10:41'
 title: 001.测试文档1
-slug: test-document-1-tgbfd
-permalink: siyuan://blocks/20230722212237-oc9s0y8
+date: '2023-07-22 21:22:37'
+updated: '2023-08-24 11:10:41'
 tags:
   - 测试
   - 标题
@@ -13,6 +11,8 @@ tags:
   - hexo
 categories:
   - 测试
+comments: true
+toc: true
 ---
 
 
