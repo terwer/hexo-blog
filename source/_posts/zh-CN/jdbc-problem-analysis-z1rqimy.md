@@ -1,8 +1,9 @@
 ---
 title: JDBC的问题分析
 date: '2022-08-27 16:16:11'
-updated: '2022-08-27 16:16:11'
-excerpt: jdbc的问题分析核心实现packagetest_importjavasqlconnection_importjavasqldrivermanager_importjavasqlpreparedstatement_importjavasqlresultset_at_authorterwerat_descriptionat_create_publicclassmain{publicstaticvoidmain(string[]args){connectionconnection=null_prepareds
+updated: '2023-08-25 19:26:25'
+excerpt: >-
+  jdbc的问题分析核心实现packagetest_importjavasqlconnection_importjavasqldrivermanager_importjavasqlpreparedstatement_importjavasqlresultset_at_authorterwerat_descriptionat_create_publicclassmain{publicstaticvoidmain(string[]args){connectionconnection=null_prepareds
 tags:
   - 数据库
   - mybatis
@@ -19,6 +20,8 @@ permalink: /post/jdbc-problem-analysis-z1rqimy.html
 comments: true
 toc: true
 ---
+
+
 ## 核心实现
 
 ```java
@@ -82,7 +85,6 @@ public class Main {
         }
     }
 }
-
 ```
 
 ## 问题分析
@@ -91,21 +93,21 @@ public class Main {
 
 原生 jdbc 开发存在的问题如下:
 
-1、 数据库连接创建、释放频繁造成 **系统资源浪费** ，从而影响系统性能
+1、 数据库连接创建、释放频繁造成 **==系统资源浪费==** ，从而影响系统性能；
 
-2、 Sql 语句在代码中 **硬编码** ，造成代码不易维护，实际应用中 sql 变化的可能较大，sql 变动需要改变 java 代码
+2、 Sql 语句在代码中 **硬编码** ，造成代码不易维护，实际应用中 sql 变化的可能较大，sql 变动需要改变 java 代码；
 
-3、 使用 preparedStatement **向占有位符号传参数存在硬编码 ​**，因为 sql 语句的 where 条件不一定，可能多也可能少，修改 sql 还要修改代码，系统不易维护
+3、 使用 preparedStatement **向占有位符号传参数存在硬编码 ​**，因为 sql 语句的 where 条件不一定，可能多也可能少，修改 sql 还要修改代码，系统不易维护；
 
-4、 **对结果集解析存在硬编码 ​**(查询列名)，sql 变化导致解析代码变化，系统不易维护，如果能将数据库记录封装成 pojo 对象来解析比较方便
+4、 **==对结果集解析存在硬编码==**​**​ ​**(查询列名)，sql 变化导致解析代码变化，系统不易维护，如果能将数据库记录封装成 pojo 对象来解析比较方便。
 
 ### 问题解决思路
 
-1、使用 **数据库连接池** 来初始化连接资源
+1、使用 **==数据库连接池==** 来初始化连接资源；
 
-2、将 sql 语句抽取到 **xml 配置文件 ​**中去
+2、将 sql 语句抽取到 **xml 配置文件 ​**中去；
 
-3、使用 **反射** 、 **内省** 等底层技术，自动将实体与数据库表进行属性与字段的自动映射
+3、使用 **反射** 、 **内省** 等底层技术，==自动将实体与数据库表进行属性与字段的自动映射==。
 
 ## mysql 驱动链接
 
@@ -122,3 +124,5 @@ public class Main {
 > 2022/03/16 校对完成
 >
 > 2022/03/06 初稿
+
+‍
