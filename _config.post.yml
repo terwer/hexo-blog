@@ -1,7 +1,7 @@
 widgets:
   # Table of contents widget configurations
   - # Where should the widget be placed, left sidebar or right sidebar
-    position: left
+    position: right
     type: toc
     # Whether to show the index of each heading
     index: true
@@ -9,15 +9,15 @@ widgets:
     collapsed: true
     # Maximum level of headings to show (1-6)
     depth: 4
-  -
-    type: tags
-    position: left
-    order_by: -length
-    amount: 32
-    show_count: true
+#  -
+#    type: tags
+#    position: left
+#    order_by: -length
+#    amount: 32
+#    show_count: true
   -
     type: recent_posts
-    position: left
+    position: right
 #  -
 #    type: categories
 #    position: left

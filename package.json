@@ -4,12 +4,16 @@
   "private": true,
   "scripts": {
     "dev": "hexo server",
+    "devStyle": "stylus source/custom/custom.styl -w",
     "build": "hexo generate",
     "clean": "hexo clean",
     "deploy": "hexo deploy"
   },
   "hexo": {
     "version": "6.3.0"
+  },
+  "devDependencies": {
+    "stylus": "^0.59.0"
   },
   "dependencies": {
     "hexo": "^6.3.0",

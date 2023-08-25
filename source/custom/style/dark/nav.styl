@@ -1,0 +1,10 @@
+_list_hover_dark = rgba(153,153,153,0.15)
+
+html[data-theme-mode="dark"]
+  .navbar-main
+    background #000
+    .navbar-item, .navbar-link
+      color #9b9baa
+    a.navbar-item:focus, .navbar-link:focus, a.navbar-item:focus-within, .navbar-link:focus-within, a.navbar-item:hover, .navbar-link:hover, a.navbar-item.is-active, .navbar-link.is-active
+      background-color _list_hover_dark
+      color #3273dc

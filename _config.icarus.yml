@@ -187,22 +187,22 @@ donates:
     -
         type: wechat
         # Wechat qrcode image URL
-        qrcode: ''
+        qrcode: 'https://static-rs-terwer.oss-cn-beijing.aliyuncs.com/donate/wechat.jpg'
     # Alipay donate button configurations
     -
         type: alipay
         # Alipay qrcode image URL
-        qrcode: ''
+        qrcode: 'https://static-rs-terwer.oss-cn-beijing.aliyuncs.com/donate/alipay.jpg'
     # "Afdian.net" donate button configurations
     -
         type: afdian
         # URL to the "Afdian.net" personal page
-        url: ''
-    # "Buy me a coffee" donate button configurations
-    -
-        type: buymeacoffee
-        # URL to the "Buy me a coffee" page
-        url: ''
+        url: 'https://afdian.net/a/terwer'
+#    # "Buy me a coffee" donate button configurations
+#    -
+#        type: buymeacoffee
+#        # URL to the "Buy me a coffee" page
+#        url: ''
     # Patreon donate button configurations
 #    -
 #        type: patreon
@@ -239,7 +239,7 @@ widgets:
     # Profile widget configurations
     -
         # Where should the widget be placed, left sidebar or right sidebar
-        position: left
+        position: right
         type: profile
         # Author name
         author: Terwer
@@ -274,7 +274,7 @@ widgets:
     # Table of contents widget configurations
     -
         # Where should the widget be placed, left sidebar or right sidebar
-        position: left
+        position: right
         type: toc
         # Whether to show the index of each heading
         index: true
@@ -293,7 +293,7 @@ widgets:
     # Categories widget configurations
     -
         # Where should the widget be placed, left sidebar or right sidebar
-        position: right
+        position: left
         type: categories
     # Recent posts widget configurations
 #    -
@@ -303,7 +303,7 @@ widgets:
     # Tags widget configurations
     -
         # Where should the widget be placed, left sidebar or right sidebar
-        position: left
+        position: right
         type: tags
         # How to order tags. For example 'name' to order by name in ascending order, and '-length' to order by number of posts in each tags in descending order
         order_by: -length
