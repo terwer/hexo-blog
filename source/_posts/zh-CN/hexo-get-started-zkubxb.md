@@ -1,24 +1,20 @@
 ---
 title: hexo入门
-date: '2012-05-05 14:45:46'
-updated: '2023-03-26 23:33:20'
-excerpt: 这是一篇hexo入门指南，详细描述了怎么从零开始搭建一个hexo博客。
+date: '2023-03-26 20:27:20'
+updated: '2023-08-27 13:08:29'
+excerpt: >-
+  这篇文章介绍了如何使用Hexo创建和管理博客文章，包括快速开始、写作、运行服务器、生成静态文件以及部署到远程站点的基本步骤。Hexo是一个方便的静态博客生成工具，适用于个人和团体的博客写作。
 tags:
   - 入门
   - hexo
 categories:
   - 博客搭建
   - Hexo
-permalink: /post/hexo-get-started-zkubxb.html
+permalink: /post/hexo-get-started-8f8oc.html
 comments: true
 toc: true
 ---
 
-<article class="message message-immersive is-primary">
-<div class="message-body">
-<i class="fas fa-globe-americas mr-2"></i>本文同时提供以下语言的翻译：<a href="{% post_path en/hexo-get-started-zkubxb %}">English</a>。
-</div>
-</article>
 
 欢迎来到 [Hexo](https://hexo.io/)！这是您的第一篇文章。您可以在[文档](https://hexo.io/docs/)中查看更多信息。如果在使用 Hexo 时遇到问题，您可以查看[调试](https://hexo.io/docs/troubleshooting.html)或在 GitHub 上问我。
 
@@ -55,5 +51,3 @@ hexo deploy
 ```
 
 更多信息：[部署](https://hexo.io/docs/one-command-deployment.html)
-
-
