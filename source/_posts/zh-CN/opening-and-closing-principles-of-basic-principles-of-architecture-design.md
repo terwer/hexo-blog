@@ -1,34 +1,27 @@
 ---
 title: 架构设计基本原则之开闭原则（OCP）
-date: '2022-04-17 01:20:03'
-updated: '2022-04-17 01:20:03'
-excerpt: 开闭原则：软件实体应该对扩展开放，对修改关闭
+date: '2022-04-17 01:20:00'
+updated: '2023-08-27 16:57:00'
+excerpt: >-
+  开闭原则（OCP）是架构设计的基本原则之一，其核心思想是软件实体应该对扩展开放，对修改关闭。通过抽象约束封装变化，通过接口或抽象类定义稳定的抽象层，将可变因素封装在具体实现中。开闭原则的作用在于提高代码的可复用性和可维护性，使软件实体具备适应性、灵活性、稳定性和延续性。实例中以学校课程为例，通过接口和实现类的组织，应对了促销活动的变化，展示了开闭原则的实际应用。
 tags:
   - arch
   - desgin
   - ocp
 categories:
   - 分布式
-  - 后端开发
-permalink: /post/opening-and-closing-principles-of-basic-principles-of-architecture-design.html
+permalink: >-
+  /post/opening-and-closing-principles-of-basic-principles-of-architecture-design.html
 comments: true
 toc: true
 ---
-本文介绍了一个良好的可扩展性的架构需要遵守的原则。
 
-<!-- more -->
 
-# 架构设计基本原则
-
-> 2022/04/16 校对完成
->
-> 文章更新历史
->
-> 2022/04/16 初稿。
+## 架构设计基本原则
 
 ## 开闭原则（OCP）
 
-> **`OCP`** , `Open Close Principle` 开闭原则
+> ​**`OCP`**​ , `Open Close Principle`​ 开闭原则
 
 ### 开闭原则的定义
 
@@ -58,24 +51,27 @@ toc: true
 
 实例：
 
-1. 学校有很多课程，课程有一门是Java，需要打印课程ID、名称以及售价。
+1. 学校有很多课程，课程有一门是 Java，需要打印课程 ID、名称以及售价。
 
-   新建一个接口类 `ICourse` 和 Java课程类 `JavaCourse` ，`JavaCourse` 实现 `ICourse` 的接口。
+   新建一个接口类 `ICourse`​ 和 Java 课程类 `JavaCourse`​ ，`JavaCourse`​ 实现 `ICourse`​ 的接口。
 
-   ![image-20220414195036258](https://img1.terwer.space/image-20220414195036258.png) 
+   ​![image-20220414195036258](https://img1.terwer.space/image-20220414195036258.png)​
+2. 赶上促销活动，Java 课程打六折，有几种处理方案
 
-2. 赶上促销活动，Java课程打六折，有几种处理方案
+    * 第一种
 
-   - 第一种
+      ​`ICourse`​ 接口新增方法 `getDiscountPrice()`​ ，但是，这样的话，所有实现 `ICourse`​ 接口的方法都要增加一个方法。
+    * 第二种
 
-     `ICourse` 接口新增方法 `getDiscountPrice()` ，但是，这样的话，所有实现 `ICourse` 接口的方法都要增加一个方法。
+      需修改 `JavaCourse`​ 类， 但是，这样会破坏 `JavaCourse`​ 原本稳定的代码，不合理。
+    * 第三种
 
-   - 第二种
+      新建一个 `JavaDiscountCourse`​ 类，继承 `JavaCourse`​ ，并增加一个打折方法。
 
-     需修改 `JavaCourse` 类， 但是，这样会破坏 `JavaCourse` 原本稳定的代码，不合理。
+      ​![image-20220414224432172](https://img1.terwer.space/image-20220414224432172.png)​
 
-   - 第三种
-
-     新建一个 `JavaDiscountCourse` 类，继承 `JavaCourse` ，并增加一个打折方法。
-
-     ![image-20220414224432172](https://img1.terwer.space/image-20220414224432172.png)
+> 文章更新历史
+>
+> 2022/04/16 校对完成
+>
+> 2022/04/16 初稿

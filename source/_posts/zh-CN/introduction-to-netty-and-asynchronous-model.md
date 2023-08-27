@@ -1,25 +1,31 @@
 ---
 title: Netty入门与异步模型
-date: '2022-04-21 21:21:40'
-updated: '2022-04-21 21:21:40'
-excerpt: 本文通过一个Netty入门案例来阐述Netty的异步模型。
+date: '2022-04-21 10:12:40'
+updated: '2023-08-27 17:58:09'
+excerpt: >-
+  本文介绍了使用Netty框架编写异步网络服务器的入门案例。文章通过创建BossGroup和WorkerGroup线程组，设置服务端通道实现为NIO，添加自定义业务处理Handler等步骤，实现了一个简单的Netty服务端。同时，文章还提及了关闭通道和连接池的操作。自定义的Netty服务端Handler处理通道读取、读取完成、异常等事件。
 tags:
   - netty
   - async
+  - netty入门案例
+  - 网络编程
+  - Java框架
+  - NIO
+  - 异步模型
 categories:
   - 分布式
-  - 后端开发
+  - Netty
 permalink: /post/introduction-to-netty-and-asynchronous-model.html
 comments: true
 toc: true
 ---
-本文通过一个Netty入门案例来阐述Netty的异步模型。
 
-<!-- more -->
 
-### netty入门案例
+本文通过一个 Netty 入门案例来阐述 Netty 的异步模型。
 
-Netty是由JBOSS提供的一个开源框架，它的Maven坐标如下：
+### netty 入门案例
+
+Netty 是由 JBOSS 提供的一个开源框架，它的 Maven 坐标如下：
 
 ```xml
 <dependency>
@@ -29,22 +35,22 @@ Netty是由JBOSS提供的一个开源框架，它的Maven坐标如下：
 </dependency>
 ```
 
-#### Netty服务端编写
+#### Netty 服务端编写
 
-- 服务端实现步骤
+* Netty 服务端实现步骤是什么？
 
-1. 创建bossGroup线程组: 处理网络事件--连接事件
-2. 创建workerGroup线程组: 处理网络事件--读写事件 
-3. 创建服务端启动助手
-4. 设置bossGroup线程组和workerGroup线程组
-5. 设置服务端通道实现为NIO
-6. 参数设置
-7. 创建一个通道初始化对象
-8. 向pipeline中添加自定义业务处理handler
-9. 启动服务端并绑定端口,同时将异步改为同步
-10. 关闭通道和关闭连接池
+    1. 创建 bossGroup 线程组: 处理网络事件--连接事件
+    2. 创建 workerGroup 线程组: 处理网络事件--读写事件
+    3. 创建服务端启动助手
+    4. 设置 bossGroup 线程组和 workerGroup 线程组
+    5. 设置服务端通道实现为 NIO
+    6. 参数设置
+    7. 创建一个通道初始化对象
+    8. 向 pipeline 中添加自定义业务处理 handler
+    9. 启动服务端并绑定端口,同时将异步改为同步
+    10. 关闭通道和关闭连接池
 
-- 代码实现
+* 代码实现
 
   ```java
   /**
@@ -77,7 +83,7 @@ Netty是由JBOSS提供的一个开源框架，它的Maven坐标如下：
           // 9. 启动服务端并绑定端口,同时将异步改为同步
           ChannelFuture channelFuture = serverBootstrap.bind(9999).sync();
           System.out.println("服务器启动成功");
-  
+
           // 10. 关闭通道和关闭连接池(不是真正关闭，只是设置为关闭状态)
           channelFuture.channel().closeFuture().sync();
           bossGroup.shutdownGracefully();
@@ -86,7 +92,7 @@ Netty是由JBOSS提供的一个开源框架，它的Maven坐标如下：
   }
   ```
 
-#### 自定义服务端Handler
+#### 自定义服务端 Handler
 
 ```java
 /**
@@ -180,20 +186,19 @@ public class NettyServerHandler implements ChannelInboundHandler {
 }
 ```
 
-#### Netty客户端编写
+#### Netty 客户端编写
 
-- 客户端实现步骤
+* 客户端实现步骤是什么？
 
-  1. 创建线程组
-  2. 创建客户端启动助手
-  3. 设置线程组
-  4. 设置客户端通道实现为NIO
-  5. 创建一个通道初始化对象
-  6. 向pipeline中添加自定义业务处理handler
-  7. 启动客户端,等待连接服务端,同时将异步改为同步 
-  8. 关闭通道和关闭连接池
-
-- 代码实现
+    1. 创建线程组
+    2. 创建客户端启动助手
+    3. 设置线程组
+    4. 设置客户端通道实现为 NIO
+    5. 创建一个通道初始化对象
+    6. 向 pipeline 中添加自定义业务处理 handler
+    7. 启动客户端,等待连接服务端,同时将异步改为同步
+    8. 关闭通道和关闭连接池
+* 代码实现
 
   ```java
   /**
@@ -223,13 +228,13 @@ public class NettyServerHandler implements ChannelInboundHandler {
           ChannelFuture channelFuture = bootstrap.connect(new InetSocketAddress("127.0.0.1", 9999)).sync();
           // 8. 关闭通道和关闭连接池
           channelFuture.channel().closeFuture().sync();
-  
+
           group.shutdownGracefully();
       }
   }
   ```
 
-**自定义客户端Handler**
+**自定义客户端 Handler**
 
 ```java
 /**
@@ -323,60 +328,54 @@ public class NettyClientHandler implements ChannelInboundHandler {
 }
 ```
 
-### netty异步模型
+### netty 异步模型
 
 #### 基本介绍
 
 当一个异步过程调用发出后，调用者不能立刻得到结果。实际处理这个调用的组件在调用完成后，通过状态、通知和回调来通知调用者。
 
-![image-20220421205936962](https://img1.terwer.space/image-20220421205936962.png)
+​![image-20220421205936962](https://img1.terwer.space/image-20220421205936962.png)​
 
-![image-20220421210005980](https://img1.terwer.space/image-20220421210005980.png)
+​![image-20220421210005980](https://img1.terwer.space/image-20220421210005980.png)​
 
-NIO中的I/O操作都是异步的，包括Bind、Write、Connect等操作都会简单的返回一个ChannelFuture。
+NIO 中的 I/O 操作都是异步的，包括 Bind、Write、Connect 等操作都会简单的返回一个 ChannelFuture。
 
-调用者不能立即获得结果，而是通过Future-Listener机制，用户可以方便的主动获取或者通过通知机制获得IO操作结果。
+调用者不能立即获得结果，而是通过 Future-Listener 机制，用户可以方便的主动获取或者通过通知机制获得 IO 操作结果。
 
-Netty的异步模型建立在future和callback之上。callback就是回调。
+Netty 的异步模型建立在 future 和 callback 之上。callback 就是回调。
 
-future的核心思想是：
+future 的核心思想是：
 
-假设一个方法fun，计算过程可能非常耗时，等待fun返回显然是不合适的。可以在调用fun的时候，立马返回一个future，后续可以通过future去监控方法fun的处理过程，就是Future-Listener机制。
+假设一个方法 fun，计算过程可能非常耗时，等待 fun 返回显然是不合适的。可以在调用 fun 的时候，立马返回一个 future，后续可以通过 future 去监控方法 fun 的处理过程，就是 Future-Listener 机制。
 
-#### Future和Future-Listener机制
+#### Future 和 Future-Listener 机制
 
 1. Future
 
-   表示异步的执行结果，可以通过它提供的方法检测任务是否完成。ChannelFuture是它的一个子接口，可以添加监听器，当监听事件发生时，就会通知到监听器。
+   表示异步的执行结果，可以通过它提供的方法检测任务是否完成。ChannelFuture 是它的一个子接口，可以添加监听器，当监听事件发生时，就会通知到监听器。
 
-   当Future对象刚刚创建时，处于非完成状态，调用者可以通过返回的ChannelFuture来获取操作执行的状态，注册监听函数来执行完成后的操作。
+   当 Future 对象刚刚创建时，处于非完成状态，调用者可以通过返回的 ChannelFuture 来获取操作执行的状态，注册监听函数来执行完成后的操作。
 
    常用方法有：
 
-   - sync()：阻塞等待程序结果返回
+    * sync()：阻塞等待程序结果返回
+    * isDone()：判断当前操作是否完成
+    * isSuccess()：判断已完成操作是否成功
+    * getCause()：获取操作失败原因
+    * isCanceled()：判断当前操作是否取消
+    * addListener()：注册监听器，当操作已完成时（isDone 方法返回完成），会通知指定监听器。
 
-   - isDone()：判断当前操作是否完成
+      如果 Future 对象已完成，则通知指定监听器。
+2. Future-Listener 机制
 
-   - isSuccess()：判断已完成操作是否成功
-
-   - getCause()：获取操作失败原因
-
-   - isCanceled()：判断当前操作是否取消
-
-   - addListener()：注册监听器，当操作已完成时（isDone方法返回完成），会通知指定监听器。
-
-     如果Future对象已完成，则通知指定监听器。
-
-2. Future-Listener机制
-
-   给Future添加监听器，监听操作结果：
+   给 Future 添加监听器，监听操作结果：
 
    代码实现：
 
    ```java
    ChannelFuture channelFuture = serverBootstrap.bind(9999).sync();
    System.out.println("服务器启动成功");
-   
+
    channelFuture.addListener(new ChannelFutureListener() {
        @Override
        public void operationComplete(ChannelFuture future) throws Exception {
@@ -388,7 +387,6 @@ future的核心思想是：
        }
    });
    ```
-
    ```java
    ChannelFuture channelFuture = ctx.writeAndFlush(Unpooled.copiedBuffer("你好,我是Netty客户端", CharsetUtil.UTF_8));
    channelFuture.addListener(new ChannelFutureListener() {
