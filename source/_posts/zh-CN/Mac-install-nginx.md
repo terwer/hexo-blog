@@ -1,18 +1,22 @@
 ---
 title: Mac安装Nginx
 date: '2022-04-29 16:48:36'
-updated: '2022-04-29 16:48:36'
+updated: '2023-08-27 22:24:07'
+excerpt: >-
+  本文介绍了通过Homebrew安装Nginx的过程。安装完成后，Nginx的默认文档根目录为/usr/local/var/www，默认端口设置为80。Nginx可以通过brew
+  services启动，并可以使用usr/local/opt/nginx/bin/nginx -g 'daemon
+  off;'命令非后台启动。停止Nginx可使用brew services stop nginx命令。
 tags:
   - mac
   - nginx
 categories:
-  - 经验分享
-  - 实用技巧
+  - 技术分享
+  - Nginx
 permalink: /post/Mac-install-nginx.html
 comments: true
 toc: true
 ---
-# Mac安装Nginx
+
 
 ## 安装
 
@@ -72,21 +76,21 @@ Or, if you don't want/need a background service you can just run:
 /usr/local/etc/nginx/nginx.conf
 ```
 
-默认端口设置成了 `8080` ，这样是为了不用sudo来启动
+默认端口设置成了 `8080`​ ，这样是为了不用 sudo 来启动
 
-nginx的安装路径：
+nginx 的安装路径：
 
 ```
 /usr/local/Cellar/nginx/1.21.6**
 ```
 
-### 启动Nginx
+### 启动 Nginx
 
 ```bash
 brew services start nginx
 ```
 
-### 重启Nginx
+### 重启 Nginx
 
 ```bash
 brew services restart nginx
@@ -98,7 +102,7 @@ brew services restart nginx
 /usr/local/opt/nginx/bin/nginx -g daemon off
 ```
 
-### 停止Nginx
+### 停止 Nginx
 
 ```bash
 brew services stop nginx
