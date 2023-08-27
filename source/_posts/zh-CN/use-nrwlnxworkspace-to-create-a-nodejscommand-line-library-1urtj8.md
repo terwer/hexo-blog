@@ -1,5 +1,6 @@
 ---
 title: 使用NRWL-NX-workspace创建一个Node-js-命令行库
+date: '2022-10-25 14:45:46'
 updated: '2023-03-30 11:12:38'
 excerpt: >-
   在这篇文章中，我会分享我在思源笔记 zhi
