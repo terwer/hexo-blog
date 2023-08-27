@@ -9,7 +9,7 @@ tags:
 categories:
   - 经验分享
   - 实用技巧
-permalink: /pages/2b4838/
+permalink: /post/release-the-maven-project-to-the-central-warehouse-through-sonatype-zeyopj.html
 comments: true
 toc: true
 ---

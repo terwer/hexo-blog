@@ -1,67 +1,65 @@
 ---
 title: Netty高级进阶之基于Netty的Websocket开发网页聊天室
 date: '2022-04-27 02:12:26'
-updated: '2022-04-27 02:12:26'
-excerpt: 本通过实战演练，学习了如何基于Netty的websocket开发一个网页聊天室。
+updated: '2023-08-27 21:02:13'
+excerpt: >-
+  本文介绍了基于Netty的WebSocket开发网页聊天室。WebSocket是一种全双工通信协议，允许服务器主动推送数据给客户端。与HTTP相比，WebSocket实现了持久连接和实时双向通信。文章涵盖了Netty配置、WebSocket服务器开发以及相关代码实现，旨在帮助读者理解和应用WebSocket技术。
 tags:
   - netty
   - websocket
   - chat
   - web
+  - springboot
+  - 实战演练
 categories:
   - 分布式
-  - 后端开发
+  - Netty
 permalink: /post/develop-web-chat-room-with-netty-websocket.html
 comments: true
 toc: true
 ---
-本通过实战演练，学习了如何基于Netty的websocket开发一个网页聊天室。
 
-<!-- more -->
 
-# Netty高级进阶之基于Netty的Websocket开发网页聊天室
+本通过实战演练，学习了如何基于 Netty 的 websocket 开发一个网页聊天室。
 
-## Webdocket简介
+## Webdocket 简介
 
-Websockt是一种在单个TCP连接上进行全双工通信的协议。
+Websockt 是一种在单个 TCP 连接上进行全双工通信的协议。
 
-Websocket使客户端和服务端的数据交互变得简单，**允许服务器主动向客户端推送数据**。
+Websocket 使客户端和服务端的数据交互变得简单，**允许服务器主动向客户端推送数据**。
 
-在Websocket API中，客户端只需要与服务器完成一次握手，两者之间就可以创建持久性的连接，并进行双向数据传输。
+在 Websocket API 中，客户端只需要与服务器完成一次握手，两者之间就可以创建持久性的连接，并进行双向数据传输。
 
 他的应用场景如下：
 
-- 社交订阅
-- 协同编辑/编程
-- 股票基金报价
-- 体育实况更新
-- 多媒体聊天
-- 在线教育
+* 社交订阅
+* 协同编辑/编程
+* 股票基金报价
+* 体育实况更新
+* 多媒体聊天
+* 在线教育
 
-## Websocket和HTTP的区别
+## Websocket 和 HTTP 的区别
 
-HTTP协议是应用层的协议，是基于TCP协议的。
+HTTP 协议是应用层的协议，是基于 TCP 协议的。
 
-HTTP协议必须经过三次握手才能发送消息。
+HTTP 协议必须经过三次握手才能发送消息。
 
-HTTP连接分为短连接和长链接。短连接是每次都要经过三次握手才能发送消息。就是说每一个request对应一个response。长连接在一定期限内保持TCP连接不断开。
+HTTP 连接分为短连接和长链接。短连接是每次都要经过三次握手才能发送消息。就是说每一个 request 对应一个 response。长连接在一定期限内保持 TCP 连接不断开。
 
 客户端与服务器通信，必须由客户端先发起，然后服务端返回结果。客户端是主动的，服务端是被动的。
 
 客户端想要实时获取服务端的消息，就要不断发送长连接到服务端。
 
+Websocket 实现了多路复用，它是全双工通信。在 Websocket 协议下，服务端和客户端可以同时发送消息。
 
-
-Websocket实现了多路复用，它是全双工通信。在Websocket协议下，服务端和客户端可以同时发送消息。
-
-建立了Websocket连接之后，服务端可以主动给客户端发送消息。信息中不必带有header的部分信息，与HTTP长连接通信对比，**这种方式降低了服务器的压力，信息当中也减少了多余的信息**。
+建立了 Websocket 连接之后，服务端可以主动给客户端发送消息。信息中不必带有 header 的部分信息，与 HTTP 长连接通信对比，**这种方式降低了服务器的压力，信息当中也减少了多余的信息**。
 
 ## 导入基础环境
 
-1. 新建netty-springboot项目
+1. 新建 netty-springboot 项目
 
-   ![image-20220430225632849](https://img1.terwer.space/image-20220430225632849.png)
-
+   ​![image-20220430225632849](https://img1.terwer.space/image-20220430225632849.png)​
 2. 导入依赖模块
 
    ```xml
@@ -76,7 +74,7 @@ Websocket实现了多路复用，它是全双工通信。在Websocket协议下�
            <groupId>org.springframework.boot</groupId>
            <artifactId>spring-boot-starter-web</artifactId>
        </dependency>
-   
+
        <dependency>
            <groupId>org.projectlombok</groupId>
            <artifactId>lombok</artifactId>
@@ -89,12 +87,10 @@ Websocket实现了多路复用，它是全双工通信。在Websocket协议下�
        </dependency>
    </dependencies>
    ```
-
 3. 导入静态资源
 
-   ![image-20220430230249496](https://img1.terwer.space/image-20220430230249496.png)
-
-4. 配置yaml
+   ​![image-20220430230249496](https://img1.terwer.space/image-20220430230249496.png)​
+4. 配置 yaml
 
    ```yaml
    server:
@@ -113,7 +109,7 @@ Websocket实现了多路复用，它是全双工通信。在Websocket协议下�
        suffix: .html
    ```
 
-关于Springboot整合thymeleaf的404问题，参考：
+关于 Springboot 整合 thymeleaf 的 404 问题，参考：
 
 [/post/404-problem-with-springboot-configuration-thymeleaf.html](/post/404-problem-with-springboot-configuration-thymeleaf.html)
 
@@ -121,7 +117,7 @@ Websocket实现了多路复用，它是全双工通信。在Websocket协议下�
 
 ### 服务端开发
 
-1. 添加Netty相关依赖
+1. 添加 Netty 相关依赖
 
    ```xml
    <!--引入netty依赖 -->
@@ -130,8 +126,7 @@ Websocket实现了多路复用，它是全双工通信。在Websocket协议下�
        <artifactId>netty-all</artifactId>
    </dependency>
    ```
-
-2. Netty相关配置
+2. Netty 相关配置
 
    ```yaml
    netty:
@@ -139,8 +134,7 @@ Websocket实现了多路复用，它是全双工通信。在Websocket协议下�
      ip: 127.0.0.1
      path: /chat
    ```
-
-3. Netty配置类
+3. Netty 配置类
 
    ```java
    /**
@@ -160,8 +154,7 @@ Websocket实现了多路复用，它是全双工通信。在Websocket协议下�
        private String path;
    }
    ```
-
-4. Netty的WebsocketServer开发
+4. Netty 的 WebsocketServer 开发
 
    ```java
    /**
@@ -177,10 +170,10 @@ Websocket实现了多路复用，它是全双工通信。在Websocket协议下�
        private NettyConfig nettyConfig;
        @Autowired
        private WebsocketChannelInit websocketChannelInit;
-   
+
        private NioEventLoopGroup bossGroup = new NioEventLoopGroup(1);
        private NioEventLoopGroup workerGroup = new NioEventLoopGroup();
-   
+
        @Override
        public void run() {
            try {
@@ -206,7 +199,7 @@ Websocket实现了多路复用，它是全双工通信。在Websocket协议下�
                workerGroup.shutdownGracefully();
            }
        }
-   
+
        /**
         * 关闭资源-容器销毁时候关闭
         */
@@ -217,10 +210,9 @@ Websocket实现了多路复用，它是全双工通信。在Websocket协议下�
        }
    }
    ```
-
 5. 通道初始化对象
 
-   ````java
+   ```java
    /**
     * 通道初始化对象
     *
@@ -230,37 +222,36 @@ Websocket实现了多路复用，它是全双工通信。在Websocket协议下�
     **/
    @Component
    public class WebsocketChannelInit extends ChannelInitializer {
-   
+
        @Autowired
        private NettyConfig nettyConfig;
-   
+
        @Autowired
        private WebsocketHandler websocketHandler;
-   
+
        @Override
        protected void initChannel(Channel channel) throws Exception {
            ChannelPipeline pipeline = channel.pipeline();
-   
+
            // 对HTTP协议的支持
            pipeline.addLast(new HttpServerCodec());
-   
+
            // 对大数据流的支持
            pipeline.addLast(new ChunkedWriteHandler());
-   
+
            // post请求分为三个部分：request line/request header/message body
            // 对POST请求的支持，将多个信息转化成单一的request/response对象
            pipeline.addLast(new HttpObjectAggregator(8000));
-   
+
            // 对WebSocket协议的支持
            // 将http协议升级为ws协议
            pipeline.addLast(new WebSocketServerProtocolHandler(nettyConfig.getPath()));
-   
+
            // 自定义处理handler
            pipeline.addLast(websocketHandler);
        }
    }
-   ````
-
+   ```
 6. 处理对象
 
    ```java
@@ -277,7 +268,7 @@ Websocket实现了多路复用，它是全双工通信。在Websocket协议下�
    @ChannelHandler.Sharable
    public class WebsocketHandler extends SimpleChannelInboundHandler<TextWebSocketFrame> {
        public static List<Channel> channelList = new ArrayList<>();
-   
+
        /**
         * 通道就绪事件
         *
@@ -291,7 +282,7 @@ Websocket实现了多路复用，它是全双工通信。在Websocket协议下�
            channelList.add(channel);
            System.out.println("有新的链接");
        }
-   
+
        /**
         * 通道未就绪
         *
@@ -306,7 +297,7 @@ Websocket实现了多路复用，它是全双工通信。在Websocket协议下�
            channelList.remove(channel);
            System.out.println("连接断开");
        }
-   
+
        /**
         * 通道读取事件
         *
@@ -327,7 +318,7 @@ Websocket实现了多路复用，它是全双工通信。在Websocket协议下�
                }
            }
        }
-   
+
        /**
         * 异常处理事件
         *
@@ -347,20 +338,19 @@ Websocket实现了多路复用，它是全双工通信。在Websocket协议下�
    ```
 
    **注意：处理类需要设置成共享的**
-
 7. 启动类
 
    ```java
    @SpringBootApplication
    public class NettySpringbootApplication implements CommandLineRunner {
-   
+
        @Autowired
        private NettyWebsocketServer nettyWebsocketServer;
-   
+
        public static void main(String[] args) {
            SpringApplication.run(NettySpringbootApplication.class, args);
        }
-   
+
        @Override
        public void run(String... args) throws Exception {
            new Thread(nettyWebsocketServer).start();
@@ -368,82 +358,72 @@ Websocket实现了多路复用，它是全双工通信。在Websocket协议下�
    }
    ```
 
-### 前端js开发
+### 前端 js 开发
 
-   - 建立连接
+* 建立连接
 
-     ```javascript
-     var ws = new WebSocket("ws://localhost:8081/chat");
-     ws.onopen = function () {
-       console.log("连接成功")
-     }
-     ```
+  ```javascript
+  var ws = new WebSocket("ws://localhost:8081/chat");
+  ws.onopen = function () {
+    console.log("连接成功")
+  }
+  ```
+* 发送消息
 
-   - 发送消息
+  ```javascript
+  function sendMsg() {
+      var message = $("#my_test").val();
+      $("#msg_list").append(`<li class="active"}>
+                                <div class="main self">
+                                    <div class="text">` + message + `</div>
+                                </div>
+                            </li>`);
+      $("#my_test").val('');
 
-     ```javascript
-     function sendMsg() {
-         var message = $("#my_test").val();
-         $("#msg_list").append(`<li class="active"}>
-                                   <div class="main self">
-                                       <div class="text">` + message + `</div>
-                                   </div>
-                               </li>`);
-         $("#my_test").val('');
-     
-         //发送消息
-         message = username + ":" + message;
-         ws.send(message);
-         // 置底
-         setBottom();
-     }
-     ```
+      //发送消息
+      message = username + ":" + message;
+      ws.send(message);
+      // 置底
+      setBottom();
+  }
+  ```
+* 接收消息
 
-   - 接收消息
+  ```javascript
+  ws.onmessage = function (evt) {
+      showMessage(evt.data);
+  }
 
-     ```javascript
-     ws.onmessage = function (evt) {
-         showMessage(evt.data);
-     }
-     
-     function showMessage(message) {
-         // 张三:你好
-         var str = message.split(":");
-         $("#msg_list").append(`<li class="active"}>
-                                   <div class="main">
-                                     <img class="avatar" width="30" height="30" src="/img/user.png">
-                                     <div>
-                                         <div class="user_name">${str[0]}</div>
-                                         <div class="text">${str[1]}</div>
-                                     </div>                       
-                                    </div>
-                               </li>`);
-         // 置底
-         setBottom();
-     }
-     ```
+  function showMessage(message) {
+      // 张三:你好
+      var str = message.split(":");
+      $("#msg_list").append(`<li class="active"}>
+                                <div class="main">
+                                  <img class="avatar" width="30" height="30" src="/img/user.png">
+                                  <div>
+                                      <div class="user_name">${str[0]}</div>
+                                      <div class="text">${str[1]}</div>
+                                  </div>                   
+                                 </div>
+                            </li>`);
+      // 置底
+      setBottom();
+  }
+  ```
+* 关闭与错误处理
 
-   - 关闭与错误处理
+  ```javascript
+  ws.onclose = function (){
+      console.log("连接关闭")
+  }
 
-     ```javascript
-     ws.onclose = function (){
-         console.log("连接关闭")
-     }
-     
-     ws.onerror = function (){
-         console.log("连接异常")
-     }
-     ```
-
+  ws.onerror = function (){
+      console.log("连接异常")
+  }
+  ```
 
 ## 运行效果
 
-![image-20220502001145851](https://img1.terwer.space/image-20220502001145851.png)
+​![image-20220502001145851](https://img1.terwer.space/image-20220502001145851.png)​
 
-
-
-![image-20220502001159603](../../../../../../../Library/Application Support/typora-user-images/image-20220502001159603.png)
-
-
-
-![image-20220502001220081](https://img1.terwer.space/image-20220502001220081.png)
+​![image-20220502001220081](https://img1.terwer.space/image-20220502001220081.png)​

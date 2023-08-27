@@ -1,66 +1,66 @@
 ---
-title: Nety源码剖析
+title: Netty源码剖析
 date: '2022-04-21 23:11:38'
-updated: '2022-04-21 23:11:38'
-excerpt: 本文对Netty源码进行了深入剖析，透过Netty源码来理解Netty框架背后的原理。
+updated: '2023-08-27 18:52:59'
+excerpt: >-
+   本文介绍了如何通过导入Netty源码并使用Maven构建项目，创建基于EventLoop的线程组。NioEventLoopGroup是多个EventLoop的抽象，每个EventLoop维护一个Selector实例，实现了多线程利用和事件循环。文章主要解释了线程组的创建流程和NioEventLoop的内部实现，包括子线程的创建、选择策略、任务队列等。
 tags:
-  - netty
-  - source
+   - netty
+   - source
+   - 网络编程
+   - Java
+   - 事件循环
+   - 多线程
 categories:
-  - 分布式
-  - 后端开发
+   - 分布式
+   - Netty
 permalink: /post/nety-source-code-analysis.html
 comments: true
 toc: true
 ---
-本文对Netty源码进行了深入剖析，透过Netty源码来理解Netty框架背后的原理。
 
-<!-- more -->
+## 下载与导入源码
 
-## Nety源码剖析
-
-### 下载netty源码
+### 下载 netty 源码
 
 [https://github.com/netty/netty](https://github.com/netty/netty)
 
-### 导入netty源码
+### 导入 netty 源码
 
-直接IDEA导入Maven项目选择 `pom.xml` 即可。
+直接 IDEA 导入 Maven 项目选择 `pom.xml`​ 即可。
 
-## 新建demo项目 
+## 新建 demo 项目
 
-在example项目下面新建最简单的demo
+在 example 项目下面新建最简单的 demo
 
-![image-20220502223808503](https://img1.terwer.space/image-20220502223808503.png)
+​![image-20220502223808503](https://img1.terwer.space/image-20220502223808503.png)​
 
-## EventLoop事件循环组（线程组）源码
+## EventLoop 事件循环组（线程组）源码
 
-`EventLoopGroup` 是一组 EventLoop 的抽象，Netty 为了更好的利用多核 CPU 资源，一般会有多
+​`EventLoopGroup`​ 是一组 EventLoop 的抽象，Netty 为了更好的利用多核 CPU 资源，一般会有多
 
 个 EventLoop 同时工作，每个 EventLoop 维护着一个 Selector 实例。
 
 ### 线程组源码流程分析
 
-![image-20220502225316981](https://img1.terwer.space/image-20220502225316981.png)
+​![image-20220502225316981](https://img1.terwer.space/image-20220502225316981.png)​
 
-
-
-![image-20220502225836471](https://img1.terwer.space/image-20220502225836471.png)
+​![image-20220502225836471](https://img1.terwer.space/image-20220502225836471.png)​
 
 ### 线程组源码主要源码跟踪
 
-1. NioEventLoopGroup线程组的创建
+1. NioEventLoopGroup 线程组的创建
 
    ```java
    static {
      DEFAULT_EVENT_LOOP_THREADS = Math.max(1, SystemPropertyUtil.getInt(
        "io.netty.eventLoopThreads", NettyRuntime.availableProcessors() * 2));
-   
+
      if (logger.isDebugEnabled()) {
        logger.debug("-Dio.netty.eventLoopThreads: {}", DEFAULT_EVENT_LOOP_THREADS);
      }
    }
-   
+
    /**
     * @see MultithreadEventExecutorGroup#MultithreadEventExecutorGroup(int, Executor, Object...)
    */
@@ -68,20 +68,19 @@ toc: true
      super(nThreads == 0 ? DEFAULT_EVENT_LOOP_THREADS : nThreads, executor, args);
    }
    ```
-
-2. NioEventLoop的创建
+2. NioEventLoop 的创建
 
    ```java
     protected MultithreadEventExecutorGroup(int nThreads, Executor executor,
                                                EventExecutorChooserFactory chooserFactory, Object... args) {
            checkPositive(nThreads, "nThreads");
-   
+
            if (executor == null) {
                executor = new ThreadPerTaskExecutor(newDefaultThreadFactory());
            }
-   
+
            children = new EventExecutor[nThreads];
-   
+
            for (int i = 0; i < nThreads; i ++) {
                boolean success = false;
                try {
@@ -95,7 +94,7 @@ toc: true
                        for (int j = 0; j < i; j ++) {
                            children[j].shutdownGracefully();
                        }
-   
+
                        for (int j = 0; j < i; j ++) {
                            EventExecutor e = children[j];
                            try {
@@ -111,9 +110,9 @@ toc: true
                    }
                }
            }
-   
+
            chooser = chooserFactory.newChooser(children);
-   
+
            final FutureListener<Object> terminationListener = new FutureListener<Object>() {
                @Override
                public void operationComplete(Future<Object> future) throws Exception {
@@ -122,18 +121,18 @@ toc: true
                    }
                }
            };
-   
+
            for (EventExecutor e: children) {
                e.terminationFuture().addListener(terminationListener);
            }
-   
+
            Set<EventExecutor> childrenSet = new LinkedHashSet<EventExecutor>(children.length);
            Collections.addAll(childrenSet, children);
            readonlyChildren = Collections.unmodifiableSet(childrenSet);
     }
    ```
 
-   newChild方法
+   newChild 方法
 
    ```java
    @Override
@@ -143,7 +142,7 @@ toc: true
      RejectedExecutionHandler rejectedExecutionHandler = (RejectedExecutionHandler) args[2];
      EventLoopTaskQueueFactory taskQueueFactory = null;
      EventLoopTaskQueueFactory tailTaskQueueFactory = null;
-   
+
      int argsLength = args.length;
      if (argsLength > 3) {
        taskQueueFactory = (EventLoopTaskQueueFactory) args[3];
@@ -173,11 +172,11 @@ toc: true
    }
    ```
 
-## Netty启动源码
+## Netty 启动源码
 
 ### 启动流程分析
 
-![image-20220502234157772](https://img1.terwer.space/image-20220502234157772.png)
+​![image-20220502234157772](https://img1.terwer.space/image-20220502234157772.png)​
 
 ### 主要源码跟踪
 
@@ -199,7 +198,7 @@ toc: true
        // as the Channel is not registered yet we need to force the usage of the GlobalEventExecutor
        return new DefaultChannelPromise(new FailedChannel(), GlobalEventExecutor.INSTANCE).setFailure(t);
      }
-   
+
      ChannelFuture regFuture = config().group().register(channel);
      if (regFuture.cause() != null) {
        if (channel.isRegistered()) {
@@ -208,7 +207,7 @@ toc: true
          channel.unsafe().closeForcibly();
        }
      }
-   
+
      // If we are here and the promise is not failed, it's one of the following cases:
      // 1) If we attempted registration from the event loop, the registration has been completed at this point.
      //    i.e. It's safe to attempt bind() or connect() now because the channel has been registered.
@@ -217,26 +216,25 @@ toc: true
      //    i.e. It's safe to attempt bind() or connect() now:
      //         because bind() or connect() will be executed *after* the scheduled registration task is executed
      //         because register(), bind(), and connect() are all bound to the same thread.
-   
+
      return regFuture;
    }
    ```
-
-2. init方法
+2. init 方法
 
    ```java
    @Override
    void init(Channel channel) {
      setChannelOptions(channel, newOptionsArray(), logger);
      setAttributes(channel, newAttributesArray());
-   
+
      ChannelPipeline p = channel.pipeline();
-   
+
      final EventLoopGroup currentChildGroup = childGroup;
      final ChannelHandler currentChildHandler = childHandler;
      final Entry<ChannelOption<?>, Object>[] currentChildOptions = newOptionsArray(childOptions);
      final Entry<AttributeKey<?>, Object>[] currentChildAttrs = newAttributesArray(childAttrs);
-   
+
      p.addLast(new ChannelInitializer<Channel>() {
        @Override
        public void initChannel(final Channel ch) {
@@ -245,7 +243,7 @@ toc: true
          if (handler != null) {
            pipeline.addLast(handler);
          }
-   
+
          ch.eventLoop().execute(new Runnable() {
            @Override
            public void run() {
@@ -257,8 +255,7 @@ toc: true
      });
    }
    ```
-
-3. regidter方法
+3. regidter 方法
 
    ```java
    @Override
@@ -273,9 +270,9 @@ toc: true
          new IllegalStateException("incompatible event loop type: " + eventLoop.getClass().getName()));
        return;
      }
-   
+
      AbstractChannel.this.eventLoop = eventLoop;
-   
+
      if (eventLoop.inEventLoop()) {
        register0(promise);
      } else {
@@ -296,9 +293,8 @@ toc: true
        }
      }
    }
-   
-   ```
 
+   ```
 4. execute()方法
 
    ```java
@@ -323,14 +319,13 @@ toc: true
          }
        }
      }
-   
+
      if (!addTaskWakesUp && immediate) {
        wakeup(inEventLoop);
      }
    }
    ```
-
-5. startThread的run方法
+5. startThread 的 run 方法
 
    ```java
    for (;;) {
@@ -341,10 +336,10 @@ toc: true
          switch (strategy) {
            case SelectStrategy.CONTINUE:
              continue;
-   
+
            case SelectStrategy.BUSY_WAIT:
              // fall-through to SELECT since the busy-wait is not supported with NIO
-   
+
            case SelectStrategy.SELECT:
              long curDeadlineNanos = nextScheduledTaskDeadlineNanos();
              if (curDeadlineNanos == -1L) {
@@ -371,7 +366,7 @@ toc: true
          handleLoopException(e);
          continue;
        }
-   
+
        selectCnt++;
        cancelledKeys = 0;
        needsToSelectAgain = false;
@@ -398,7 +393,7 @@ toc: true
        } else {
          ranTasks = runAllTasks(0); // This will run the minimum number of tasks
        }
-   
+
        if (ranTasks || strategy > 0) {
          if (selectCnt > MIN_PREMATURE_SELECTOR_RETURNS && logger.isDebugEnabled()) {
            logger.debug("Selector.select() returned prematurely {} times in a row for Selector {}.",
@@ -436,8 +431,7 @@ toc: true
    }
    }
    ```
-
-6. runAllTasks方法
+6. runAllTasks 方法
 
    ```java
    protected boolean runAllTasks(long timeoutNanos) {
@@ -447,15 +441,15 @@ toc: true
        afterRunningAllTasks();
        return false;
      }
-   
+
      final long deadline = timeoutNanos > 0 ? ScheduledFutureTask.nanoTime() + timeoutNanos : 0;
      long runTasks = 0;
      long lastExecutionTime;
      for (;;) {
        safeExecute(task);
-   
+
        runTasks ++;
-   
+
        // Check timeout every 64 tasks because nanoTime() is relatively expensive.
        // XXX: Hard-coded value - will make it configurable if it is really a problem.
        if ((runTasks & 0x3F) == 0) {
@@ -464,21 +458,20 @@ toc: true
            break;
          }
        }
-   
+
        task = pollTask();
        if (task == null) {
          lastExecutionTime = ScheduledFutureTask.nanoTime();
          break;
        }
      }
-   
+
      afterRunningAllTasks();
      this.lastExecutionTime = lastExecutionTime;
      return true;
    }
    ```
-
-7. register0方法
+7. register0 方法
 
    ```java
    private void register0(ChannelPromise promise) {
@@ -492,11 +485,11 @@ toc: true
        doRegister();
        neverRegistered = false;
        registered = true;
-   
+
        // Ensure we call handlerAdded(...) before we actually notify the promise. This is needed as the
        // user may already fire events through the pipeline in the ChannelFutureListener.
        pipeline.invokeHandlerAddedIfNeeded();
-   
+
        safeSetSuccess(promise);
        pipeline.fireChannelRegistered();
        // Only fire a channelActive if the channel has never been registered. This prevents firing
@@ -520,7 +513,6 @@ toc: true
      }
    }
    ```
-
 8. doRegister()方法
 
    ```java
@@ -545,8 +537,7 @@ toc: true
        }
      }
    ```
-
-9. invokeHandlerIfNeeded方法，就是initChannel方法
+9. invokeHandlerIfNeeded 方法，就是 initChannel 方法
 
    ```java
    p.addLast(new ChannelInitializer<Channel>() {
@@ -557,7 +548,7 @@ toc: true
            if (handler != null) {
                pipeline.addLast(handler);
            }
-   
+
            ch.eventLoop().execute(new Runnable() {
                @Override
                public void run() {
@@ -571,13 +562,13 @@ toc: true
 
 ## BossGroup/WorkerGroup/消息入站源码
 
-BossGroup主要负责监听，WorkerGroup负责消息处理。
+BossGroup 主要负责监听，WorkerGroup 负责消息处理。
 
-入站就是BossGroup如何将通道交给WorkerGroup以及如何进行消息处理。
+入站就是 BossGroup 如何将通道交给 WorkerGroup 以及如何进行消息处理。
 
-### BossGroup/WorkerGroup源码分析
+### BossGroup/WorkerGroup 源码分析
 
-![image-20220503223437802](https://img1.terwer.space/image-20220503223437802.png)
+​![image-20220503223437802](https://img1.terwer.space/image-20220503223437802.png)​
 
 ### 主要源码流程
 
@@ -590,9 +581,9 @@ BossGroup主要负责监听，WorkerGroup负责消息处理。
            // null out entry in the array to allow to have it GC'ed once the Channel close
            // See https://github.com/netty/netty/issues/2363
            selectedKeys.keys[i] = null;
-   
+
            final Object a = k.attachment();
-   
+
            if (a instanceof AbstractNioChannel) {
                processSelectedKey(k, (AbstractNioChannel) a);
            } else {
@@ -600,19 +591,18 @@ BossGroup主要负责监听，WorkerGroup负责消息处理。
                NioTask<SelectableChannel> task = (NioTask<SelectableChannel>) a;
                processSelectedKey(k, task);
            }
-   
+
            if (needsToSelectAgain) {
                // null out entries in the array to allow to have it GC'ed once the Channel close
                // See https://github.com/netty/netty/issues/2363
                selectedKeys.reset(i + 1);
-   
+
                selectAgain();
                i = -1;
            }
        }
    }
    ```
-
 2. processSelectedKey
 
    ```java
@@ -638,7 +628,7 @@ BossGroup主要负责监听，WorkerGroup负责消息处理。
            }
            return;
        }
-   
+
        try {
            int readyOps = k.readyOps();
            // We first need to call finishConnect() before try to trigger a read(...) or write(...) as otherwise
@@ -649,16 +639,16 @@ BossGroup主要负责监听，WorkerGroup负责消息处理。
                int ops = k.interestOps();
                ops &= ~SelectionKey.OP_CONNECT;
                k.interestOps(ops);
-   
+
                unsafe.finishConnect();
            }
-   
+
            // Process OP_WRITE first as we may be able to write some queued buffers and so free memory.
            if ((readyOps & SelectionKey.OP_WRITE) != 0) {
                // Call forceFlush which will also take care of clear the OP_WRITE once there is nothing left to write
                ch.unsafe().forceFlush();
            }
-   
+
            // Also check for readOps of 0 to workaround possible JDK bug which may otherwise lead
            // to a spin loop
            if ((readyOps & (SelectionKey.OP_READ | SelectionKey.OP_ACCEPT)) != 0 || readyOps == 0) {
@@ -669,7 +659,6 @@ BossGroup主要负责监听，WorkerGroup负责消息处理。
        }
    }
    ```
-
 3. Unsafe.read()
 
    ```java
@@ -680,7 +669,7 @@ BossGroup主要负责监听，WorkerGroup负责消息处理。
        final ChannelPipeline pipeline = pipeline();
        final RecvByteBufAllocator.Handle allocHandle = unsafe().recvBufAllocHandle();
        allocHandle.reset(config);
-   
+
        boolean closed = false;
        Throwable exception = null;
        try {
@@ -694,13 +683,13 @@ BossGroup主要负责监听，WorkerGroup负责消息处理。
                        closed = true;
                        break;
                    }
-   
+
                    allocHandle.incMessagesRead(localRead);
                } while (continueReading(allocHandle));
            } catch (Throwable t) {
                exception = t;
            }
-   
+
            int size = readBuf.size();
            for (int i = 0; i < size; i ++) {
                readPending = false;
@@ -709,13 +698,13 @@ BossGroup主要负责监听，WorkerGroup负责消息处理。
            readBuf.clear();
            allocHandle.readComplete();
            pipeline.fireChannelReadComplete();
-   
+
            if (exception != null) {
                closed = closeOnReadError(exception);
-   
+
                pipeline.fireExceptionCaught(exception);
            }
-   
+
            if (closed) {
                inputShutdown = true;
                if (isOpen()) {

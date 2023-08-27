@@ -1,36 +1,39 @@
 ---
 title: Netty高级进阶之基于Netty的HTTP服务器开发
-date: '2022-04-27 02:10:49'
-updated: '2022-04-27 02:10:49'
-excerpt: 本通过实战演练，学习了如何基于Netty开发一个HTTP服务器。
+date: '2022-04-27 02:10:11'
+updated: '2023-08-27 19:58:02'
+excerpt: >-
+   本文介绍了如何基于Netty开发高性能HTTP服务器。Netty的HTTP协议栈可靠性强，性能优异，相比传统服务器如Tomcat、Jetty更轻量且灵活。实现的功能需求是在特定端口监听请求，回复消息并过滤特定资源。文章提供了Netty服务器的代码示例，展示了HTTP请求处理过程。
 tags:
-  - netty
-  - http
-  - server
+   - netty
+   - http
+   - server
+   - http服务器
+   - 性能优异
+   - 轻量级
+   - 定制型
 categories:
-  - 分布式
-  - 后端开发
+   - 分布式
+   - Netty
 permalink: /post/http-server-development-based-on-netty.html
 comments: true
 toc: true
 ---
-本通过实战演练，学习了如何基于Netty开发一个HTTP服务器。
 
-<!-- more -->
 
-# Netty高级进阶之基于Netty的HTTP服务器开发
+本通过实战演练，学习了如何基于 Netty 开发一个 HTTP 服务器。
 
 ## 介绍
 
-Netty的HTTP协议栈可靠性高，性能优异。相对于传统的Tomcat、Jetty等服务器，它更加轻量级和小巧，灵活性和定制型也更好。
+Netty 的 HTTP 协议栈可靠性高，性能优异。相对于传统的 Tomcat、Jetty 等服务器，它更加轻量级和小巧，灵活性和定制型也更好。
 
-![image-20220429004617744](https://img1.terwer.space/image-20220429004617744.png)
+​![image-20220429004617744](https://img1.terwer.space/image-20220429004617744.png)​
 
 ## 功能需求
 
-1. Netty服务器在8080端口监听
+1. Netty 服务器在 8080 端口监听
 2. 浏览器发出请求”http://localhost:8080“
-3. 服务器回复消息给客户端”你好，我是Netty服务器“，并对特定请求资源进行过滤
+3. 服务器回复消息给客户端”你好，我是 Netty 服务器“，并对特定请求资源进行过滤
 
 ## 服务端代码实现
 
@@ -46,11 +49,11 @@ Netty的HTTP协议栈可靠性高，性能优异。相对于传统的Tomcat、Je
     **/
    public class NettyHttpServer {
        private int port;
-   
+
        public NettyHttpServer(int port) {
            this.port = port;
        }
-   
+
        public void run() throws InterruptedException {
            NioEventLoopGroup bossGroup = null;
            NioEventLoopGroup workerGroup = null;
@@ -78,7 +81,7 @@ Netty的HTTP协议栈可靠性高，性能优异。相对于传统的Tomcat、Je
                // 9. 启动服务端并绑定端口,同时将异步改为同步
                ChannelFuture channelFuture = serverBootstrap.bind(port).sync();
                System.out.println("HTTP服务器启动成功");
-   
+
                channelFuture.addListener(new ChannelFutureListener() {
                    @Override
                    public void operationComplete(ChannelFuture future) throws Exception {
@@ -89,7 +92,7 @@ Netty的HTTP协议栈可靠性高，性能优异。相对于传统的Tomcat、Je
                        }
                    }
                });
-   
+
                // 10. 关闭通道和关闭连接池(不是真正关闭，只是设置为关闭状态)
                channelFuture.channel().closeFuture().sync();
            } finally {
@@ -97,14 +100,13 @@ Netty的HTTP协议栈可靠性高，性能优异。相对于传统的Tomcat、Je
                workerGroup.shutdownGracefully();
            }
        }
-   
+
        public static void main(String[] args) throws InterruptedException {
            new NettyHttpServer(8080).run();
        }
    }
    ```
-
-2. HTTP处理类
+2. HTTP 处理类
 
    ```java
    /**
@@ -115,7 +117,7 @@ Netty的HTTP协议栈可靠性高，性能优异。相对于传统的Tomcat、Je
     * @date: 2022-04-29 01:07
     **/
    public class NettyHttpServerHandler extends SimpleChannelInboundHandler<HttpObject> {
-   
+
        /**
         * 读取就绪事件
         *
@@ -129,27 +131,23 @@ Netty的HTTP协议栈可靠性高，性能优异。相对于传统的Tomcat、Je
            if (msg instanceof HttpRequest) {
                DefaultHttpRequest request = (DefaultHttpRequest) msg;
                System.out.println("浏览器请求路径：" + request.uri());
-   
+
                // 2.响应浏览器
                ByteBuf byteBuf = Unpooled.copiedBuffer("<h1>你好，我是Netty服务端</h1>", CharsetUtil.UTF_8);
                DefaultFullHttpResponse response = new DefaultFullHttpResponse(HttpVersion.HTTP_1_1, HttpResponseStatus.OK, byteBuf);
                response.headers().set(HttpHeaderNames.CONTENT_TYPE, "text/html;charset=utf-8");
                response.headers().set(HttpHeaderNames.CONTENT_LENGTH, byteBuf.readableBytes());
-   
+
                ctx.writeAndFlush(response);
            }
        }
    }
    ```
-
 3. 运行效果
 
-   ![image-20220429014229299](https://img1.terwer.space/image-20220429014229299.png)
+   ​![image-20220429014229299](https://img1.terwer.space/image-20220429014229299.png)​
 
-   
-
-   ![image-20220429012901268](https://img1.terwer.space/image-20220429012901268.png)
-
+   ​![image-20220429012901268](https://img1.terwer.space/image-20220429012901268.png)​
 4. 过滤掉图标
 
    ```java
@@ -159,5 +157,4 @@ Netty的HTTP协议栈可靠性高，性能优异。相对于传统的Tomcat、Je
        return;
    }
    ```
-
-   ![image-20220429013259492](https://img1.terwer.space/image-20220429013259492.png)
+   ​![image-20220429013259492](https://img1.terwer.space/image-20220429013259492.png)​
