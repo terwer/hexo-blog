@@ -13,7 +13,7 @@
     "version": "6.3.0"
   },
   "devDependencies": {
-    "stylus": "^0.59.0"
+    "stylus": "^0.60.0"
   },
   "dependencies": {
     "hexo": "^6.3.0",
