@@ -7,8 +7,6 @@ tags:
   - 测试
 categories:
   - 我的分类
-  - 技术研发
-  - 还是分类
 permalink: /post/test-csdn-formula-2-1euk24.html
 comments: true
 toc: true
