@@ -13,4 +13,4 @@ aaaaa
 
 ‍
 
-​![image](assets/image-20240401103619-5l9p7e3.png)​
+​![image](https://raw.githubusercontent.com/terwer/hexo-blog/test/images/image-20240401103901-g74t47v.png)​
