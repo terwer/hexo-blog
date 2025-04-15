@@ -11,6 +11,6 @@ toc: true
 
 
 
-![image](/source/images/image-20250415102554-8wfe13b.png)
+![image](assets/image-20250415102554-8wfe13b.png)
 
 ‍
