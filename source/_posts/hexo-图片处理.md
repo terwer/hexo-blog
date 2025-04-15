@@ -11,6 +11,6 @@ toc: true
 
 
 
-![image](https://raw.githubusercontent.com/terwer/hexo-blog/main/images/image-20250415102554-8wfe13b.png)
+![image](assets/image-20250415102554-8wfe13b.png)
 
 ‍
