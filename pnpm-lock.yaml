@@ -39,8 +39,8 @@ dependencies:
     specifier: ^3.0.0
     version: 3.0.0
   hexo-theme-icarus:
-    specifier: ^5.2.1
-    version: 5.2.1
+    specifier: ^5.3.0
+    version: 5.3.0
 
 devDependencies:
   stylus:
@@ -2193,8 +2193,8 @@ packages:
       - supports-color
     dev: false
 
-  /hexo-theme-icarus@5.2.1:
-    resolution: {integrity: sha512-B8YnfKGAUwKCOdZgh7jsU1iNwW5wYTQ+ZwXbPpEwo3cqQ936hL5CDiGJ2ZKCuhVY1JixeNSObPQqV4v5H4VVpQ==}
+  /hexo-theme-icarus@5.3.0:
+    resolution: {integrity: sha512-VqVkms5ykIoCkPEbPJShuTT/BVWPZi24gEFesf6reVCzbR0DbLAN4gvsjngEquEJ4HqVpA0NoZpcvjXw44iBoQ==}
     engines: {node: '>=12.4.0'}
     dependencies:
       bulma-stylus: 0.8.0
@@ -2209,7 +2209,7 @@ packages:
       inferno: 7.4.11
       inferno-create-element: 7.4.11
       moment: 2.29.4
-      semver: 6.3.0
+      semver: 7.3.8
     transitivePeerDependencies:
       - chokidar
       - supports-color
